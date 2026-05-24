@@ -1,0 +1,49 @@
+vllm serve Qwen/Qwen3-4B \
+    --host 0.0.0.0 \
+    --port 8000 \
+    --trust-remote-code \
+    --max-model-len 2048 \
+    --dtype bfloat16 \
+    --kv-cache-dtype auto \
+    --gpu-memory-utilization 0.8 \
+ > vllm.log 2>&1 &
+
+
+
+ sragents rerank \
+    --input results/retrieval/medcalcbench-bm25.json \
+    --output results/retrieval/medcalcbench-rerank_bm25.json \
+    --instances data/bench/instances/medcalcbench.json \
+    --model Qwen/Qwen3-4B --api-base http://localhost:8000/v1 \
+    --top-k 50 \
+    --workers 64
+
+mkdir -p results/inference/
+sragents infer \
+    --instances SR-Agents/data/bench/instances/medcalcbench.json \
+    --output SR-Agents/results/inference/medcalcbench-Qwen3-4B-bm25_top1.jsonl \
+    --model Qwen/Qwen3-4B --api-base http://localhost:8000/v1 \
+    --provider topk \
+      --provider-arg source=/network-volume/SR-Agents/results/final_medcalcbench.json \
+      --provider-arg k=1 \
+    --workers 16 \
+    --engine direct 
+
+nohup sragents infer \
+    --instances data/bench/instances/toolqa.json \
+    --output results/inference/toolqa-Qwen3-4B-rag_fusion.jsonl \
+    --model Qwen/Qwen3-4B --api-base http://localhost:8000/v1 \
+    --provider topk \
+    --provider-arg source=/network-volume/SR-Agents/results/retrieval/final_toolqa.json \
+    --provider-arg k=1 \
+    --workers 8 \
+    --engine react \
+    > infer.log 2>&1 &
+
+sragents evaluate \
+    --input /network-volume/SR-Agents/results/inference/medcalcbench-Qwen3-4B-bm25_top1.jsonl \
+    --instances /network-volume/SR-Agents/data/bench/instances/medcalcbench.json \
+    --output SR-Agents/results/eval/medcalcbench-Qwen3-4B-rag_fusion.json \
+    --workers 32
+    
+    

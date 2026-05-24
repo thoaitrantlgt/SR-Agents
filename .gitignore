@@ -2,7 +2,7 @@
 # (`huggingface-cli download WeihangSu/SRA-Bench --repo-type dataset --local-dir data/bench`).
 data/bench/
 data/external/
-
+data/
 # Experiment outputs
 results/
 

@@ -1,0 +1,24 @@
+{
+  "dataset_path": "data/bench/instances/theoremqa.json",
+  "output_base_dir": "./when2tool_outputs",
+  "train_ratio": 0.3,
+  "split_by_dataset_type": false,
+  "random_seed": 42,
+  "model_name": "Qwen/Qwen3-4B",
+  "device": "cuda",
+  "api_base": "http://localhost:8000/v1",
+  "use_vllm": false,
+  "batch_size_extraction": 4,
+  "max_length": 512,
+  "regularization": 1.0,
+  "concatenate_layers": true,
+  "validation_split": 0.1,
+  "prefill_mode": "soft",
+  "threshold_values": [
+    0.5
+  ],
+  "max_new_tokens": 128,
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "steps": "1,2,3"
+}

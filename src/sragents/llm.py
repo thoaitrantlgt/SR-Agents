@@ -46,7 +46,7 @@ def get_extra_body(model: str, thinking: bool = False) -> dict | None:
       - Qwen3: chat_template_kwargs.enable_thinking
       - GLM-5 / Kimi: enable_thinking
       - GPT-5: reasoning_effort="minimal" (always)
-      - Others (Llama, Mistral, MiniMax, ...): no flag
+      - Others (Llama, Mistral, ...): no flag
     """
     basename = model.lower().rsplit("/", 1)[-1]
 
@@ -68,8 +68,10 @@ def chat(
     max_tokens: int = 2048,
     stop: list[str] | None = None,
     extra_body: dict | None = None,
-) -> str:
-    """Send chat completion request, return content string."""
+    logprobs: bool = False,
+    top_logprobs: int | None = None,
+) -> str | tuple[str, list]:
+    """Send chat completion request. If logprobs=True, returns (content, logprobs_list)."""
     messages = []
     if system:
         messages.append({"role": "system", "content": system})
@@ -85,9 +87,20 @@ def chat(
         kwargs["stop"] = stop
     if extra_body:
         kwargs["extra_body"] = extra_body
+    if logprobs:
+        kwargs["logprobs"] = True
+        if top_logprobs:
+            kwargs["top_logprobs"] = top_logprobs
 
     response = client.chat.completions.create(**kwargs)
-    return response.choices[0].message.content
+    content = response.choices[0].message.content
+    
+    if logprobs:
+        # Extract logprobs from the response
+        lp_data = response.choices[0].logprobs.content
+        return content, lp_data
+    
+    return content
 
 
 def chat_messages(

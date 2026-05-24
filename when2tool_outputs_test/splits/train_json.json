@@ -1,0 +1,2690 @@
+[
+  {
+    "instance_id": "theoremqa_00280",
+    "dataset": "theoremqa",
+    "question": "In how many ways can a group of 10 people be divided into 3 non-empty subsets?",
+    "skill_annotations": [
+      "theoremqa_241"
+    ],
+    "eval_data": {
+      "answer": "9330",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00507",
+    "dataset": "theoremqa",
+    "question": "A young couple has made a non-refundable deposit of the first month's rent (equal to $1, 000) on a 6-month apartment lease. The next day they find a different apartment that they like just as well, but its monthly rent is only $900. They plan to be in the apartment only 6 months. Should they switch to the new apartment?",
+    "skill_annotations": [
+      "theoremqa_040"
+    ],
+    "eval_data": {
+      "answer": "0.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00444",
+    "dataset": "theoremqa",
+    "question": "Assume that the Black-Scholes framework holds. The price of a nondividened-paying stock is $30. The price of a put option on this stock is $4.00. You are given $(i) $\\Delta=-0.28$. (ii) $\\Gamma=0.10$ Using the delta-gamma approximation, determine the price of the put option if the stock price changes to $31.50.",
+    "skill_annotations": [
+      "theoremqa_272"
+    ],
+    "eval_data": {
+      "answer": "3.7",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00302",
+    "dataset": "theoremqa",
+    "question": "Calculate the Fermi temperature for copper in eV.",
+    "skill_annotations": [
+      "theoremqa_302"
+    ],
+    "eval_data": {
+      "answer": "81600.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00192",
+    "dataset": "theoremqa",
+    "question": "How many ways are there to arrange the letters in the word *BANANA* up to the symmetries of the word?",
+    "skill_annotations": [
+      "theoremqa_001"
+    ],
+    "eval_data": {
+      "answer": "30",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00378",
+    "dataset": "theoremqa",
+    "question": "How many ways are there to divide a set of 6 elements into 3 non-empty ordered subsets?",
+    "skill_annotations": [
+      "theoremqa_000"
+    ],
+    "eval_data": {
+      "answer": "1200",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00297",
+    "dataset": "theoremqa",
+    "question": "What is the order of the element 5 in U_8?",
+    "skill_annotations": [
+      "theoremqa_246"
+    ],
+    "eval_data": {
+      "answer": "2",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00557",
+    "dataset": "theoremqa",
+    "question": "Let S be the set of integers between 1 and 2^40 that contain two 1\u2019s when written in base 2. What is the probability that a random integer from S is divisible by 9?",
+    "skill_annotations": [
+      "theoremqa_212"
+    ],
+    "eval_data": {
+      "answer": "0.1705",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00013",
+    "dataset": "theoremqa",
+    "question": "True of false: one can draw a simple connected planar graph with 200 vertices and 400 faces",
+    "skill_annotations": [
+      "theoremqa_226"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00036",
+    "dataset": "theoremqa",
+    "question": "In how many ways can a group of 9 people be divided into 3 non-empty subsets?",
+    "skill_annotations": [
+      "theoremqa_241"
+    ],
+    "eval_data": {
+      "answer": "3025",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00058",
+    "dataset": "theoremqa",
+    "question": "dy/dt = \\sqrt{t}, y(1) = 1. What is y(4)?",
+    "skill_annotations": [
+      "theoremqa_292"
+    ],
+    "eval_data": {
+      "answer": "5.667",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00198",
+    "dataset": "theoremqa",
+    "question": "A camper pours 0.300 kg of coffee, initially in a pot at 70.0\u00b0C into a 0.120-kg aluminum cup initially at 20.0\u00b0C. What is the equilibrium temperature? Assume that coffee has the same specific heat as water and that no heat is exchanged with the surroundings. (Unit: \u00b0C)",
+    "skill_annotations": [
+      "theoremqa_055"
+    ],
+    "eval_data": {
+      "answer": "66.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00306",
+    "dataset": "theoremqa",
+    "question": "An airplane is flying at Mach 1.75 at an altitude of 8000 m, where the speed of sound is How long after the plane passes directly overhead will you hear the sonic boom? (Unit: m/s)",
+    "skill_annotations": [
+      "theoremqa_026"
+    ],
+    "eval_data": {
+      "answer": "560",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00105",
+    "dataset": "theoremqa",
+    "question": "How many ways are there to arrange 9 people in a line such that no one is standing in their correct position?",
+    "skill_annotations": [
+      "theoremqa_025"
+    ],
+    "eval_data": {
+      "answer": "133496",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00086",
+    "dataset": "theoremqa",
+    "question": "What is the effective rates for 3% compounded monthly?",
+    "skill_annotations": [
+      "theoremqa_266"
+    ],
+    "eval_data": {
+      "answer": "0.0304",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00231",
+    "dataset": "theoremqa",
+    "question": "suppose sequence x_n satisfies x_n*x_{n+1}=n for all n>=1, and $\\lim_{n\\rightarrow\\infty}\\frac{x_n}{x_{n+1}}=1$. What's the value of $\\pi*x_1^2$?",
+    "skill_annotations": [
+      "theoremqa_193"
+    ],
+    "eval_data": {
+      "answer": "2.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00174",
+    "dataset": "theoremqa",
+    "question": "Your firm is trying to decide whether to buy an e-commerce software company. The company has $100,000 in total capital assets: $60,000 in equity and $40,000 in debt. The cost of the company\u2019s equity is 10%, while the cost of the company's debt is 5%. The corporate tax rate is 21%. What is the WACC of the company?",
+    "skill_annotations": [
+      "theoremqa_010"
+    ],
+    "eval_data": {
+      "answer": "0.0758",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00524",
+    "dataset": "theoremqa",
+    "question": "Let h(x) = (x^{-1/2} + 2x)(7 - x^{-1}). What is h'(x) when x = 4?",
+    "skill_annotations": [
+      "theoremqa_279"
+    ],
+    "eval_data": {
+      "answer": "13.609",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00325",
+    "dataset": "theoremqa",
+    "question": "The following data related the rubber percentage of two types of rubber plants, where the sample have been drawn independently. Test for their mean difference. Type 1: 6.21 5.70 6.04 4.47 5.22 4.45 4.84 5.84 5.88 5.82 6.09 5.59 6.06 5.59 6.74 5.55, Type 2: 4.28 7.71 6.48 7.71 7.37 7.20 7.06 6.40 8.93 5.91 5.51 6.36. Are there difference between these two rubber plants?",
+    "skill_annotations": [
+      "theoremqa_121"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00272",
+    "dataset": "theoremqa",
+    "question": "Both A, B are n-by-n matrices with rank(A)=n, rank(A*B)=0. What is rank(B)?",
+    "skill_annotations": [
+      "theoremqa_182"
+    ],
+    "eval_data": {
+      "answer": "0.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00685",
+    "dataset": "theoremqa",
+    "question": "Compute the double integrals over indicated rectangles $\\iint\\limits_{R}{{2x - 4{y^3}\\,dA}}$, $R = [-5,4] \\times [0, 3]",
+    "skill_annotations": [
+      "theoremqa_285"
+    ],
+    "eval_data": {
+      "answer": "-756",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00465",
+    "dataset": "theoremqa",
+    "question": "Find the smallest positive integer that leaves a remainder of 1 when divided by 4, a remainder of 2 when divided by 3, and a remainder of 5 when divided by 7.",
+    "skill_annotations": [
+      "theoremqa_232"
+    ],
+    "eval_data": {
+      "answer": "17",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00454",
+    "dataset": "theoremqa",
+    "question": "suppose f is differentiable in [0,+\\infty) and f(0)=0. When x>=0, |f'(x)|<=|f(x)| where f' stands for the derivative of f. What is f(2687) and f(35)? answer the two values in a list",
+    "skill_annotations": [
+      "theoremqa_211"
+    ],
+    "eval_data": {
+      "answer": "[0, 0]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00350",
+    "dataset": "theoremqa",
+    "question": "what is the limit of $(n!)^{1/n}/n$ as n goes to infinity? Round the answer to the thousands decimal.",
+    "skill_annotations": [
+      "theoremqa_196"
+    ],
+    "eval_data": {
+      "answer": "0.367879441",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00595",
+    "dataset": "theoremqa",
+    "question": "Let m and n be the roots of the equation 2x^2 + 15x + 16 = 0. What is the value of 1/m + 1/n?",
+    "skill_annotations": [
+      "theoremqa_153"
+    ],
+    "eval_data": {
+      "answer": "-0.9375",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00255",
+    "dataset": "theoremqa",
+    "question": "Consider a probability density $p_x(x)$ defined over a continuous variable x, and suppose that we make a nonlinear change of variable using $x = g(y)$. In the case of a linear transformation, the location of the maximum density transforms in the same way as the variable itself.",
+    "skill_annotations": [
+      "theoremqa_093"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00466",
+    "dataset": "theoremqa",
+    "question": "A disadvantage of the contention approach for LANs, such as CSMA/CD, is the capacity wasted due to multiple stations attempting to access the channel at the same time. Suppose that time is divided into discrete slots, with each of 5 stations attempting to transmit with probability 0.35 during each slot. What fraction of slots is wasted due to multiple simultaneous transmission attempts?",
+    "skill_annotations": [
+      "theoremqa_225"
+    ],
+    "eval_data": {
+      "answer": "0.572",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00741",
+    "dataset": "theoremqa",
+    "question": "The open mapping theorem can be proved by (a) Baire category theorem; (b) Cauchy integral theorem; (c) random graph theorem; (d) None of the above. Which option is correct?",
+    "skill_annotations": [
+      "theoremqa_152"
+    ],
+    "eval_data": {
+      "answer": "(a)",
+      "answer_type": "option"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00380",
+    "dataset": "theoremqa",
+    "question": "A function f(x) is given by f(0)=3, f(2)=7, f(4)=11, f(6)=9, f(8)=3. Approximate the area under the curve y=f(x) between x=0 and x=8 using Trapezoidal rule with n=4 subintervals.",
+    "skill_annotations": [
+      "theoremqa_108"
+    ],
+    "eval_data": {
+      "answer": "60.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00695",
+    "dataset": "theoremqa",
+    "question": "Find the smallest positive integer that leaves a remainder of 3 when divided by 5, a remainder of 4 when divided by 7, and a remainder of 2 when divided by 9.",
+    "skill_annotations": [
+      "theoremqa_232"
+    ],
+    "eval_data": {
+      "answer": "263",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00396",
+    "dataset": "theoremqa",
+    "question": "What is \\lim_{x \\to 1} ((x - 1) sin((\\pi)/(x - 1))?",
+    "skill_annotations": [
+      "theoremqa_105"
+    ],
+    "eval_data": {
+      "answer": "0",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00453",
+    "dataset": "theoremqa",
+    "question": "Let W(t) be the standard Brownian motion. Find P(W(1) + W(2) > 2).",
+    "skill_annotations": [
+      "theoremqa_076"
+    ],
+    "eval_data": {
+      "answer": "0.186",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00683",
+    "dataset": "theoremqa",
+    "question": "Let h(x) = 1/(\\sqrt{x} + 1). What is h''(x) when x = 1?",
+    "skill_annotations": [
+      "theoremqa_287"
+    ],
+    "eval_data": {
+      "answer": "0.125",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00628",
+    "dataset": "theoremqa",
+    "question": "In how many ways can 8 people be seated at 5 identical round tables? Each table must have at least 1 person seated.",
+    "skill_annotations": [
+      "theoremqa_014"
+    ],
+    "eval_data": {
+      "answer": "1960",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00525",
+    "dataset": "theoremqa",
+    "question": "If $u(x, y) = 4x^3y - 4xy^3$, is there a function v(x, y) such that u(x,y) + iv(x,y) is an analytical function?",
+    "skill_annotations": [
+      "theoremqa_114"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00009",
+    "dataset": "theoremqa",
+    "question": "Find the x value of the solutions to the linear system: 7x - y = 15x, -6x + 8y = 15y.",
+    "skill_annotations": [
+      "theoremqa_176"
+    ],
+    "eval_data": {
+      "answer": "0",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00039",
+    "dataset": "theoremqa",
+    "question": "Does $p(x) = x^5 + x \u2212 1$ have any real roots?",
+    "skill_annotations": [
+      "theoremqa_293"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00480",
+    "dataset": "theoremqa",
+    "question": "In triangle RST, X is located on the side RS, Y is located on the side RT, Z is located on the side ST, and XY and XZ are midsegments of \u25b3RST. If the length of side XY is 7, the length of side RT is 13, and the measure of angle YXZ is 124\u00b0, what is the length of side ST?",
+    "skill_annotations": [
+      "theoremqa_248"
+    ],
+    "eval_data": {
+      "answer": "14",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00015",
+    "dataset": "theoremqa",
+    "question": "What is the number of labelled forests on 10 vertices with 5 connected components, such that vertices 1, 2, 3, 4, 5 all belong to different connected components?",
+    "skill_annotations": [
+      "theoremqa_219"
+    ],
+    "eval_data": {
+      "answer": "50000",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00503",
+    "dataset": "theoremqa",
+    "question": "Find the maximum entropy density $f$, defined for $x\\geq 0$, satisfying $E(X)=\\alpha_1$, $E(\\ln{X})=\\alpha_2$. Which family of densities is this? (a) Exponential. (b) Gamma. (c) Beta. (d) Uniform.",
+    "skill_annotations": [
+      "theoremqa_184"
+    ],
+    "eval_data": {
+      "answer": "(b)",
+      "answer_type": "option"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00723",
+    "dataset": "theoremqa",
+    "question": "Calculate the Fermi energy for copper in eV.",
+    "skill_annotations": [
+      "theoremqa_302"
+    ],
+    "eval_data": {
+      "answer": "7.03",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00311",
+    "dataset": "theoremqa",
+    "question": "Suppose C[0,1] denotes the space of all the continuous functions on the interval [0,1]. Is (C[0,1],\\|\\cdot\\|_1 ) a Banach space? Here $\\|f(x)\\|_1=\\int_0^1 |f(t)|dt$ with $f\\in C[0,1]$. Answer 1 for yes and 0 for no.",
+    "skill_annotations": [
+      "theoremqa_134"
+    ],
+    "eval_data": {
+      "answer": "0.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00491",
+    "dataset": "theoremqa",
+    "question": "Suppose H=L^2[0,1]. Operator $A: u(t) \\mapsto t\\times u(t)$ is a map from H to H. Then A is a bounded linear operator. Then the spectrum of A is: (a) [0,1], (b) [0,1/2], (c) [1/2, 1], (d) none of the above. Which one is correct?",
+    "skill_annotations": [
+      "theoremqa_157"
+    ],
+    "eval_data": {
+      "answer": "(a)",
+      "answer_type": "option"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00064",
+    "dataset": "theoremqa",
+    "question": "If there exists an ordered numbering of the nodes such that for each node there are no links going to a lower-numbered node, then there are no directed cycles in a directed graph. True or false?",
+    "skill_annotations": [
+      "theoremqa_221"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00391",
+    "dataset": "theoremqa",
+    "question": "the monotone function f on [0,1] is differentiable almost everywhere. This can be proved by: (a) Fubini Theorem; (b) Tonelli Theorem; (c) Vitali Cover Theorem; (d) None of the above. Which option is correct?",
+    "skill_annotations": [
+      "theoremqa_206"
+    ],
+    "eval_data": {
+      "answer": "(c)",
+      "answer_type": "option"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00678",
+    "dataset": "theoremqa",
+    "question": "A pure lead bar 10 cm long is maintained with one end at T &=300 K and the other at 310 K. The thermoelectric potential difference thus induced across the ends is 12.8 micro-volts. Find the thermoelectric power for lead in this temperature range in V/K. (Note: Q varies nonlinearly with temperature, but over this narrow temperature range, you may use a linear approximation.)",
+    "skill_annotations": [
+      "theoremqa_303"
+    ],
+    "eval_data": {
+      "answer": "1.28e-06",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00101",
+    "dataset": "theoremqa",
+    "question": "In how many ways can 10 people be seated at 1 identical round tables? Each table must have at least 1 person seated.",
+    "skill_annotations": [
+      "theoremqa_014"
+    ],
+    "eval_data": {
+      "answer": "362880",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00573",
+    "dataset": "theoremqa",
+    "question": "suppose $x=\\sqrt{17}/17$. what is the value of $\\frac{2}{\\pi} \\int_0^{+\\infty} \\frac{\\sin ^2 t}{t^2} cos(2xt) dt$? Rounding it to the hundredths place and return the value.",
+    "skill_annotations": [
+      "theoremqa_198"
+    ],
+    "eval_data": {
+      "answer": "0.757",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00735",
+    "dataset": "theoremqa",
+    "question": "A box contains 4 red, 3 green, and 2 blue balls. Balls are identical besides of their colors. In how many ways can we choose 4 balls, if at least 2 are red?",
+    "skill_annotations": [
+      "theoremqa_253"
+    ],
+    "eval_data": {
+      "answer": "6",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00673",
+    "dataset": "theoremqa",
+    "question": "Consider a file with a size of 350 Kbytes storing in a web server. Client A sends a request to the server to retrieve the file from a remote location. It is known that the link capacity between client A and the server is 10 Mbps and the round trip time (RTT) between the server and client is fixed at 20ms. Assume that the segment size is 20 Kbytes and the client has a receiver buffer of 200Kbytes. Assume that the window size (W) is fixed at 2. How long (in ms) does client A take to receive the whole file from the server after sending a request?",
+    "skill_annotations": [
+      "theoremqa_213"
+    ],
+    "eval_data": {
+      "answer": "352",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00567",
+    "dataset": "theoremqa",
+    "question": "Calculate the required memory size in Mebibytes (MiB) (in 3 sig.fig.) for storing a frame in 720p if the sampling scheme Y'CbCr 4:2:0 is used. Note that There are 1280 \u00d7 720 pixels in one 720p frame. Each pixel contains three primary-colour components. Each primary-colour component requires 1 byte of memory for storage. 1 Mebibyte has 1024^2 bytes.",
+    "skill_annotations": [
+      "theoremqa_168"
+    ],
+    "eval_data": {
+      "answer": "1.32",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00005",
+    "dataset": "theoremqa",
+    "question": "Let a undirected graph G with edges E = {<0,2>,<2,1>,<2,3>,<3,4>,<4,1>}, which <A,B> represent Node A is connected to Node B. What is the shortest path from node 4 to node 0? Represent the path as a list.",
+    "skill_annotations": [
+      "theoremqa_220"
+    ],
+    "eval_data": {
+      "answer": "[4, 1, 2, 0]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00078",
+    "dataset": "theoremqa",
+    "question": "Let {X_n: n \\geq 1} be independent, identically distributed random variables taking integer values {1,-1}. Let S_0=0, S_n=\\sum_{i=1}^n X_i. Let P(X_i=1)=0.8 and P(X_i=-1)=0.2. The range R_n of S_0,S_1,...,S_n is the number of distinct values taken by the sequence. Then what is the limit of n^{-1}E[R_n] as n goes to infinity? Here E[R_n] is the expectation over the random variable R_n.",
+    "skill_annotations": [
+      "theoremqa_102"
+    ],
+    "eval_data": {
+      "answer": "0.6",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00335",
+    "dataset": "theoremqa",
+    "question": "Suppose Host A wants to send a large file to Host B. The path from Host A to Host B has three links, of rates R1 = 500 kbps, R2 = 2 Mbps, and R3 = Mbps. Suppose the file is 4 million bytes. Dividing the file size by the throughput, roughly how many seconds will it take to transfer the file to Host B?",
+    "skill_annotations": [
+      "theoremqa_227"
+    ],
+    "eval_data": {
+      "answer": "64",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00706",
+    "dataset": "theoremqa",
+    "question": "Passengers on a carnival ride move at constant speed in a horizontal circle of radius 5.0 m, making a complete circle in 4.0 s. What is their acceleration? (Unit: m/s^2))",
+    "skill_annotations": [
+      "theoremqa_036"
+    ],
+    "eval_data": {
+      "answer": "12",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00092",
+    "dataset": "theoremqa",
+    "question": "Consider a source X with a distortion measure $d(x, \\hat{x})$ that satisfies the following property: all columns of the distortion matrix are permutations of the set $\\{d_1, d_2, \\ldots, d_m\\}$. The function $\\phi(D) = \\max_{b:\\sum_{i=1}^m p_i d_i \\leq D} H(p)$ is concave. True or False?",
+    "skill_annotations": [
+      "theoremqa_216"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00152",
+    "dataset": "theoremqa",
+    "question": "Two sets of points are linearly separable if and only if their convex hulls are disjoint. True or False?",
+    "skill_annotations": [
+      "theoremqa_216"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00024",
+    "dataset": "theoremqa",
+    "question": "Aisha graduates college and starts a job. She saves $1000 each quarter, depositing it into a retirement savings account. Suppose that Aisha saves for 30 years and then retires. At retirement she wants to withdraw money as an annuity that pays a constant amount every month for 25 years. During the savings phase, the retirement account earns 6% interest compounded quarterly. During the annuity payout phase, the retirement account earns 4.8% interest compounded monthly. Calculate Aisha\u2019s monthly retirement annuity payout.",
+    "skill_annotations": [
+      "theoremqa_311"
+    ],
+    "eval_data": {
+      "answer": "1898.27",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00619",
+    "dataset": "theoremqa",
+    "question": "True or false: there exists a graph with score (1, 1, 2, 2, 3, 3, 4, 4).",
+    "skill_annotations": [
+      "theoremqa_223"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00644",
+    "dataset": "theoremqa",
+    "question": "suppose F(x,y,z)=0. What is $\\frac{\\partial x}{\\partial y} \\frac{\\partial y}{\\partial z} \\frac{\\partial z}{\\partial x}$?",
+    "skill_annotations": [
+      "theoremqa_203"
+    ],
+    "eval_data": {
+      "answer": "-1.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00247",
+    "dataset": "theoremqa",
+    "question": "CheckMate forecasts that its dividend will grow at 20% per year for the next four years before settling down at a constant 8% forever. Dividend (current year,2016) = $12; expected rate of return = 15%. What is the fair value of the stock now?",
+    "skill_annotations": [
+      "theoremqa_257"
+    ],
+    "eval_data": {
+      "answer": "273.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00301",
+    "dataset": "theoremqa",
+    "question": "The spontaneous fission activity rate of U-238 is 6.7 fissions/kg s. A sample of shale contains 0.055% U-238 by weight. Calculate the number of spontaneous fissions in one day in a 106-kg pile of the shale by determining the mass of U-238 present in kg.",
+    "skill_annotations": [
+      "theoremqa_301"
+    ],
+    "eval_data": {
+      "answer": "550.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00137",
+    "dataset": "theoremqa",
+    "question": "what is the value of $\\prod_{n=0}^{\\infty}(1+(\\frac{1}{2})^{2^n})$?",
+    "skill_annotations": [
+      "theoremqa_193"
+    ],
+    "eval_data": {
+      "answer": "2.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00207",
+    "dataset": "theoremqa",
+    "question": "You have a coin and you would like to check whether it is fair or biased. More specifically, let $\\theta$ be the probability of heads, $\\theta = P(H)$. Suppose that you need to choose between the following hypotheses: H_0 (null hypothesis): The coin is fair, i.e. $\\theta = \\theta_0 = 1 / 2$. H_1 (the alternative hypothesis): The coin is not fair, i.e. $\\theta > 1 / 2$. We toss 100 times and observe 60 heads. Can we reject H_0 at significance level $\\alpha = 0.01$?",
+    "skill_annotations": [
+      "theoremqa_126"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00520",
+    "dataset": "theoremqa",
+    "question": "Consider a two-layer fully-connected neural network in which the hidden-unit nonlinear activation functions are given by logistic sigmoid functions. Does there exist an equivalent network in which the hidden unit nonlinear activation functions are given by hyperbolic tangent functions?",
+    "skill_annotations": [
+      "theoremqa_222"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00256",
+    "dataset": "theoremqa",
+    "question": "An object 11cm tall is 9cm from a mirror. If the image distance is -3cm from the mirror, what is the image height in terms of cm?",
+    "skill_annotations": [
+      "theoremqa_050"
+    ],
+    "eval_data": {
+      "answer": "3.67",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00033",
+    "dataset": "theoremqa",
+    "question": "Does the following transformation have an eigenvector: Counterclockwise rotation through an angle of 45 degrees followed by a scaling by 2 in R^2.",
+    "skill_annotations": [
+      "theoremqa_147"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00421",
+    "dataset": "theoremqa",
+    "question": "Compute the are of that part of the helicoid z = arctan(y/x) which lies in the first octant between the cylinder $x^2+y^2 = 1^2$ and $x^2+y^2 = 2^2$.",
+    "skill_annotations": [
+      "theoremqa_292"
+    ],
+    "eval_data": {
+      "answer": "2.843",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00190",
+    "dataset": "theoremqa",
+    "question": "Find the fraction of the standard solar flux reaching the Earth (about 1000 W/m^22) available to a solar collector lying flat on the Earth\u2019s surface at Regina, Saskatchewan (latitude 50\u00b0N) at noon on the summer solstice.",
+    "skill_annotations": [
+      "theoremqa_303"
+    ],
+    "eval_data": {
+      "answer": "0.891",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00187",
+    "dataset": "theoremqa",
+    "question": "Let C[0,1] be all the continuous function on in the interval [0,1]. For the integral equation $x(t)-\\lambda \\int_0^1 e^{t-s} x(s) ds=y(t)$, where $y(t)\\in C[0,1]$ is a given function. \\lambda is a constant and |\\lambda|<1. Then there exists a unique solution x(t)\\in C[0,1]. This conclusion can be proved by: 1. Implicit function theorem, 2. Riesz representation theorem, 3. Banach fixed point theorem, 4. None of the above. Return the number as the answer.",
+    "skill_annotations": [
+      "theoremqa_209"
+    ],
+    "eval_data": {
+      "answer": "3.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00171",
+    "dataset": "theoremqa",
+    "question": "The diagonals of rhombus QRST intersect at P. If m\u2220QTS = 76, find m\u2220TSP.",
+    "skill_annotations": [
+      "theoremqa_234"
+    ],
+    "eval_data": {
+      "answer": "52",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00590",
+    "dataset": "theoremqa",
+    "question": "Suppose f is analytic on the closed unit disk, f(0) = 0, and |f(z)| $\\leq$ |e^z| whenever |z| = 1. How big can f((1 + i)/2) be? Return a numerical number.",
+    "skill_annotations": [
+      "theoremqa_095"
+    ],
+    "eval_data": {
+      "answer": "1.9221",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00010",
+    "dataset": "theoremqa",
+    "question": "In Jules Verne's 1865 story with this title, three men went to the moon in a shell fired from a giant cannon sunk in the earth in Florida. Find the minimum muzzle speed that would allow a shell to escape from the earth completely (the escape speed). Neglect air resistance, the earth's rotation, and the gravitational pull of the moon. The earth's radius and mass are $R_E}=$ $6.38 \\times 10^6 m$ and $m_E=5.97 \\times 10^{24} kg$. (Unit: 10 ^ 4 m/s)",
+    "skill_annotations": [
+      "theoremqa_034"
+    ],
+    "eval_data": {
+      "answer": "1.12",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00241",
+    "dataset": "theoremqa",
+    "question": "for the matrix $A=(\\begin{array}{rrrrr} 1 & 2 & 3 & 4 & -3 \\1 & 2 & 0 & -5 & 1 \\2 & 4 & -3 & -19 & 6 \\3 & 6 & -3 & -24 & 7\\end{array})$, what is its row rank and column rank? return the two numbers as a list.",
+    "skill_annotations": [
+      "theoremqa_159"
+    ],
+    "eval_data": {
+      "answer": "[2, 2]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00642",
+    "dataset": "theoremqa",
+    "question": "Suppose that feedback is used on a binary symmetric channel with parameter $p=0.5$. Each time a $Y$ is received, it becomes the next transmission. Thus $X_1$ is Bern(1/2), $X_2=Y_1$, $X_3=Y_2$, \\ldots, X_n=Y_{n-1}. Find $\\lim_{n\\to\\infty} \\frac{1}{n} I(X_n;Y_n)$ in bits.",
+    "skill_annotations": [
+      "theoremqa_178"
+    ],
+    "eval_data": {
+      "answer": "0.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00185",
+    "dataset": "theoremqa",
+    "question": "In a set of 20 positive integers, at least how many pairs of numbers have a difference that is a multiple of 10?",
+    "skill_annotations": [
+      "theoremqa_273"
+    ],
+    "eval_data": {
+      "answer": "10",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00457",
+    "dataset": "theoremqa",
+    "question": "Consider two 5 year bonds: one has a 9% coupon and sells for 101.00; the other has a 7% coupon and sells for 93.20. What is the price of a 5-year zero-coupon bond.",
+    "skill_annotations": [
+      "theoremqa_258"
+    ],
+    "eval_data": {
+      "answer": "65.9",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00624",
+    "dataset": "theoremqa",
+    "question": "Let L^1[0,2] be the space of all the Lebesgue integrable functions on the interval [0,2], and C[0,2] be the space of all the continuous functions on the interval [0,2]. Suppose H=L^1[0,2], and X=C[0,2]. For any f\\in L^1[0,2], define operator T as $(Tf)(x)=\\int_0^x f(t)dt$. For the linear operator T from H to X, what is the norm of T? For the linear operator T from H to H, what is the norm of T? Return the answers of two questions as a list. For example, if the norm for the first question is 2, the second is 3, then return [2,3].",
+    "skill_annotations": [
+      "theoremqa_132"
+    ],
+    "eval_data": {
+      "answer": "[1, 2]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00016",
+    "dataset": "theoremqa",
+    "question": "Let g(x) be the inverse of f(x) = x + cos(x). What is g'(1)?",
+    "skill_annotations": [
+      "theoremqa_294"
+    ],
+    "eval_data": {
+      "answer": "1",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00149",
+    "dataset": "theoremqa",
+    "question": "What is the value of the integral $\\int_0^{\\pi/2} 1/(1+(tan(x))^{\\sqrt{2}}) dx$?",
+    "skill_annotations": [
+      "theoremqa_292"
+    ],
+    "eval_data": {
+      "answer": "0.78539815",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00262",
+    "dataset": "theoremqa",
+    "question": "Consider a resistor made from a hollow cylinder of carbon as shown below. The inner radius of the cylinder is $R_i=0.2$mm and the outer radius is $R_o=0.3$mm. The length of the resistor is $L=0.9$mm. The resistivity of the carbon is $\\rho=3.5 * 10^{-5} \\Omega \\cdot m$. What is the resistance in $\\Omega \\cdot m$?",
+    "skill_annotations": [
+      "theoremqa_023"
+    ],
+    "eval_data": {
+      "answer": "2.5",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00393",
+    "dataset": "theoremqa",
+    "question": "Obtain the number of real roots between 0 and 3 of the equation P(x) = x^4 -4x^3 + 3x^2 + 4x - 4 = 0 using Sturm's sequence.",
+    "skill_annotations": [
+      "theoremqa_127"
+    ],
+    "eval_data": {
+      "answer": "2",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00698",
+    "dataset": "theoremqa",
+    "question": "Electrons used to produce medical x rays are accelerated from rest through a potential difference of 25,000 volts before striking a metal target. Calculate the speed of the electrons in m/s.",
+    "skill_annotations": [
+      "theoremqa_300"
+    ],
+    "eval_data": {
+      "answer": "90000000.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00528",
+    "dataset": "theoremqa",
+    "question": "You throw a ball from your window $8.0 \\mathrm{~m}$ above the ground. When the ball leaves your hand, it is moving at $10.0 \\mathrm{~m} / \\athrm{s}$ at an angle of $20^{\\circ}$ below the horizontal. How far horizontally from your window will the ball hit the ground? Ignore air resistance. (Unit: m)",
+    "skill_annotations": [
+      "theoremqa_020"
+    ],
+    "eval_data": {
+      "answer": "9.2",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00632",
+    "dataset": "theoremqa",
+    "question": "Is the set of 3 * 3 matrices in reduced row-echelon form a subspace of R^{3 * 3}?",
+    "skill_annotations": [
+      "theoremqa_177"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00237",
+    "dataset": "theoremqa",
+    "question": "The perfectly competitive videotape-copying industry is composed of many firms that can copy five tapes per day at an average cost of $10 per tape. Each firm must also pay a royalty to film studios, and the per-film royalty rate (r) is an increasing function of total industry output (Q): r = 0.002Q. Demand is given by Q = D(P) = 1,050 - 50P. Assuming the industry is in long-run equilibrium, what will be the equilibrium price of copied tapes?",
+    "skill_annotations": [
+      "theoremqa_054"
+    ],
+    "eval_data": {
+      "answer": "11",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00630",
+    "dataset": "theoremqa",
+    "question": "Find the interval in which the smallest positive root of the following equations lies: x^3 - x - 4 = 0. Determine the roots correct to two decimal places using the bisection method",
+    "skill_annotations": [
+      "theoremqa_099"
+    ],
+    "eval_data": {
+      "answer": "1.8",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00377",
+    "dataset": "theoremqa",
+    "question": "As scotch whiskey ages, its value increases. One dollar of scotch at year 0 is worth $V(t) = exp{2\\sqrt{t} - 0.15t}$ dollars at time t. If the interest rate is 5 percent, after how many years should a person sell scotch in order to maximize the PDV of this sale?",
+    "skill_annotations": [
+      "theoremqa_314"
+    ],
+    "eval_data": {
+      "answer": "25",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00720",
+    "dataset": "theoremqa",
+    "question": "The difference equation of a digital system is given by $$ y[n]-y[n-1]=2 x[n-1]-x[n-2], $$ where $x[n]$ and $y[n]$ are, respectively the current samples of the input and the output signals of the system. Determine if the system is a stable system.",
+    "skill_annotations": [
+      "theoremqa_162"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00582",
+    "dataset": "theoremqa",
+    "question": "Suppose a convex 3d-object has k pentagonal faces and m hexagonal faces. All faces are regular. What is k?",
+    "skill_annotations": [
+      "theoremqa_231"
+    ],
+    "eval_data": {
+      "answer": "12",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00028",
+    "dataset": "theoremqa",
+    "question": "In how many ways can a set of 6 distinct letters be partitioned into 3 non-empty groups if each group must contain at least 2 letters?",
+    "skill_annotations": [
+      "theoremqa_241"
+    ],
+    "eval_data": {
+      "answer": "15",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00548",
+    "dataset": "theoremqa",
+    "question": "Given the following equation: x - e^{-x} = 0. determine the initial approximations for finding the smallest positive root. Use these to find the root correct to three decimal places with Regula-Falsi method.",
+    "skill_annotations": [
+      "theoremqa_122"
+    ],
+    "eval_data": {
+      "answer": "0.567",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00268",
+    "dataset": "theoremqa",
+    "question": "Assume a temperature of 300 K and find the wavelength of the photon necessary to cause an electron to jump from the valence to the conduction band in silicon in nm.",
+    "skill_annotations": [
+      "theoremqa_303"
+    ],
+    "eval_data": {
+      "answer": "1130.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00458",
+    "dataset": "theoremqa",
+    "question": "Based on field experiments, a new variety green gram is expected to given an yield of 12.0 quintals per hectare. The variety was tested on 10 randomly selected farmers fields. The yield ( quintals/hectare) were recorded as 14.3,12.6,13.7,10.9,13.7,12.0,11.4,12.0,12.6,13.1. Do the results conform the expectation with Level of significance being 5%?",
+    "skill_annotations": [
+      "theoremqa_121"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00164",
+    "dataset": "theoremqa",
+    "question": "Given 2 colors whose HSI representations are given as follows: which color looks closer to blue? (a) Color 1: $(\\pi, 0.3,0.5)$, (b) Color 2: $(0.5 \\pi, 0.8,0.3)$",
+    "skill_annotations": [
+      "theoremqa_169"
+    ],
+    "eval_data": {
+      "answer": "(a)",
+      "answer_type": "option"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00508",
+    "dataset": "theoremqa",
+    "question": "If at the beginning of each month a deposit of $500 is made in an account that pays 8% compounded monthly, what will the final amount be after five years?",
+    "skill_annotations": [
+      "theoremqa_309"
+    ],
+    "eval_data": {
+      "answer": "36983.35",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00583",
+    "dataset": "theoremqa",
+    "question": "If r(t) = (6t+2)i + 5t^2j - 8tk, find the Binormal vector as [xi, yj, zk]. What are x, y, z? Return them as a list.",
+    "skill_annotations": [
+      "theoremqa_276"
+    ],
+    "eval_data": {
+      "answer": "[0.8, 0.0, 0.6]",
+      "answer_type": "list of float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00193",
+    "dataset": "theoremqa",
+    "question": "What's the maximum number of edges in a simple triangle free planar graph with 30 vertices?",
+    "skill_annotations": [
+      "theoremqa_226"
+    ],
+    "eval_data": {
+      "answer": "56",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00577",
+    "dataset": "theoremqa",
+    "question": "Let $P(r,t,T)$ denote the price at time $t$ of $1 to be paid with certainty at time $T, t\\leT$, if the short rate at time $t$ is equal to $r$. For a Vasicek model you are given: $P(0.04, 0, 2)=0.9445$, $P(0.05, 1, 3)=0.9321$, $P(r^*, 2, 4)=0.8960$. What is $r^*$?",
+    "skill_annotations": [
+      "theoremqa_254"
+    ],
+    "eval_data": {
+      "answer": "0.08",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00602",
+    "dataset": "theoremqa",
+    "question": "While a person is walking, his arms swing through approximately a 45\u00b0 angle in 0.5s.As a reasonable approximation, we can assume that the arm moves with constant speed during each swing. A typical arm is 70.0 cm long, measured from the shoulder joint. What is the acceleration (in metre per second squared) of a 1.0 g drop of blood in the fingertips at the bottom of the swing?",
+    "skill_annotations": [
+      "theoremqa_017"
+    ],
+    "eval_data": {
+      "answer": "1.73",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00622",
+    "dataset": "theoremqa",
+    "question": "Let $X \\sim N(0,1)$ and let the distortion measure be squared error. Here we do not allow block descriptions. Compute the minimum expected distortion for one bit quantization of $X$ using a squared error distortion measure.",
+    "skill_annotations": [
+      "theoremqa_155"
+    ],
+    "eval_data": {
+      "answer": "0.363",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00357",
+    "dataset": "theoremqa",
+    "question": "Sally is driving along a straight highway in her 1965 Mustang. At when she is moving at in the positive x-direction, she passes a signpost at Her x-acceleration as a function of time is\na_x = 2.0 m/s^2 - (0.10 m / s^3) t\n At X meter's, the car reaches maximum x-velocity? What is X?",
+    "skill_annotations": [
+      "theoremqa_020"
+    ],
+    "eval_data": {
+      "answer": "517",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00227",
+    "dataset": "theoremqa",
+    "question": "In how many ways can we form a 7-digit number using the digits 1, 2, 2, 3, 3, 3, 3?",
+    "skill_annotations": [
+      "theoremqa_253"
+    ],
+    "eval_data": {
+      "answer": "105",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00002",
+    "dataset": "theoremqa",
+    "question": "Please solve the equation 2*x^3 + e^x = 10 using newton-raphson method.",
+    "skill_annotations": [
+      "theoremqa_086"
+    ],
+    "eval_data": {
+      "answer": "1.42",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00736",
+    "dataset": "theoremqa",
+    "question": "A steel rod 2.0 m long has a cross-sectional area of $0.30 cm ^ 2$. It is hung by one end from a support, and a 550-kg milling machine is hung from its other end. Determine the stress on the rod and the resulting strain and elongation. (Unit: mm)",
+    "skill_annotations": [
+      "theoremqa_022"
+    ],
+    "eval_data": {
+      "answer": "1.8",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00074",
+    "dataset": "theoremqa",
+    "question": "A glider with mass m = 0.200 kg sits on a frictionless horizontalair track, connected to a spring with force constant k = 5.00 N/m.You pull on the glider, stretching the spring 0.100 m, and release itfrom rest. The glider moves back toward its equilibrium position (x = 0).What is its x-velocity when  x = 0.080 m? (Unit: m/s))",
+    "skill_annotations": [
+      "theoremqa_013"
+    ],
+    "eval_data": {
+      "answer": "-0.3",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00200",
+    "dataset": "theoremqa",
+    "question": "Suppose that $X_1,X_2,...$ are real numbers between 0 and 1 that are chosen independently and uniformly at random. Let $S=\\sum_{i=1}^k X_i/2^i$, where $k$ is the least positive integer such that $X_k<X_{k+1}$, or $k=\\infty$ if there is no such integer. Find the expected value of S.",
+    "skill_annotations": [
+      "theoremqa_066"
+    ],
+    "eval_data": {
+      "answer": "0.29744254",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00560",
+    "dataset": "theoremqa",
+    "question": "The Relativistic Heavy Ion Collider (RHIC) at the Brookhaven National Laboratory collides gold ions onto other gold ions head on. The energy of the gold ions is 100 GeV per nucleon. What is the center-of-mass energy of the collision in TeV?",
+    "skill_annotations": [
+      "theoremqa_318"
+    ],
+    "eval_data": {
+      "answer": "39.4",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00369",
+    "dataset": "theoremqa",
+    "question": "The equation of a digital filter is given by $y(n)=1 / 3(x(n)+x(n-1)+x(n-2))$, where $y(n)$ and $x(n)$ are, respectively, the nth samples of the output and input signals. Is it a FIR?",
+    "skill_annotations": [
+      "theoremqa_162"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00415",
+    "dataset": "theoremqa",
+    "question": "What is the vector that spans the kernel of A = [[1, 0, 2, 4], [0, 1, -3, -1], [3, 4, -6, 8], [0, -1, 3, 4]]?",
+    "skill_annotations": [
+      "theoremqa_165"
+    ],
+    "eval_data": {
+      "answer": "[-2, 3, 1, 0]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00349",
+    "dataset": "theoremqa",
+    "question": "What's the value of a > 0, such that the tangent line to the graph of f(x) = (x^2) (e^(-x)) at x = a passes through the origin?",
+    "skill_annotations": [
+      "theoremqa_277"
+    ],
+    "eval_data": {
+      "answer": "1",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00488",
+    "dataset": "theoremqa",
+    "question": "The distortion rate function $D(R)=\\min_{p(\\hat{x}|x):I(X;\\hat{X})\\leq R} E(d(X,\\hat{X}))$ is nonincreasing. True or False?",
+    "skill_annotations": [
+      "theoremqa_155"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00607",
+    "dataset": "theoremqa",
+    "question": "Let f be a bounded entire function, z_1,z_2 be two points in the ball B(0,r). What is the value of the integral $\\int_{|z|=r} f(z)/(z-z_1)(z-z_2) dz$?",
+    "skill_annotations": [
+      "theoremqa_103"
+    ],
+    "eval_data": {
+      "answer": "0.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00263",
+    "dataset": "theoremqa",
+    "question": "Use the Birge-Vieta method to find a real root correct to three decimals of the following equation: x^3 - 11x^2 + 32x - 22 = 0, p = 0.5",
+    "skill_annotations": [
+      "theoremqa_111"
+    ],
+    "eval_data": {
+      "answer": "1",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00406",
+    "dataset": "theoremqa",
+    "question": "Company A is currently trading at $150 per share, and earnings per share are calculated as $10. What is the P/E ratio?",
+    "skill_annotations": [
+      "theoremqa_260"
+    ],
+    "eval_data": {
+      "answer": "15.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00042",
+    "dataset": "theoremqa",
+    "question": "Find $\\int_{0}^{\\sqrt{3}} \\frac{dx}{1+x^2}$.",
+    "skill_annotations": [
+      "theoremqa_292"
+    ],
+    "eval_data": {
+      "answer": "1.0472",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00578",
+    "dataset": "theoremqa",
+    "question": "Is 10 a quadratic residue modulo 19? Use Gauss's Lemma to answer it.",
+    "skill_annotations": [
+      "theoremqa_164"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00419",
+    "dataset": "theoremqa",
+    "question": "Let rectangle R = [1, 2.5] * [1, 2]. Calculate the Riemann Sum S_{3,2} for \\int \\int_{R} xy dA for the integral, using the lower-left vertex of rectangles as sample points.",
+    "skill_annotations": [
+      "theoremqa_087"
+    ],
+    "eval_data": {
+      "answer": "2.812",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00008",
+    "dataset": "theoremqa",
+    "question": "Let M be the set of bounded functions (i.e. \\sup_{x\\in[a,b]}|f(x)|<\\infty) in C[0,1]. Is the set ${F(x)=\\int_0^x f(t) dt | f \\in M }$ a sequentially compact set? Answer 1 for yes and 0 for no. Furthermore, it can be proved using 1. Arzel\u00e0-Ascoli theorem, 2. Riesz representation theorem, 3. Banach fixed point theorem, 4. None of the above. Return the answers of the two questions in a list. For example, if you think the answer is no and Riesz representation theorem, then return [0,2].",
+    "skill_annotations": [
+      "theoremqa_142"
+    ],
+    "eval_data": {
+      "answer": "[1, 1]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00587",
+    "dataset": "theoremqa",
+    "question": "Let a undirected graph G with edges E = {<2,1>,<2,0>,<2,3>,<1,4>,<4,3>}, which <A,B> represent Node A is connected to Node B. What is the minimum vertex cover of G? Represent the vertex cover in a list of ascending order.",
+    "skill_annotations": [
+      "theoremqa_218"
+    ],
+    "eval_data": {
+      "answer": "[2, 4]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00307",
+    "dataset": "theoremqa",
+    "question": "True or false: there exists a graph with score (1, 2, 3, 4, 5).",
+    "skill_annotations": [
+      "theoremqa_223"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00399",
+    "dataset": "theoremqa",
+    "question": "We are interested in the capacity of photographic film. The film consists of silver iodide crystals, Poisson distributed, with a density of 100 particles per unit area. The film is illuminated without knowledge of the position of the silver iodide particles. It is then developed and the receiver sees only the silver iodide particles that have been illuminated. It is assumed that light incident on a cell exposes the grain if it is there and otherwise results in a blank response. Silver iodide particles that are not illuminated and vacant portions of the film remain blank. We make the following assumptions: We grid the film very finely into cells of area $dA$. It is assumed that there is at most one silver iodide particle per cell and that no silver iodide particle is intersected by the cell boundaries. Thus, the film can be considered to be a large number of parallel binary asymmetric channels with crossover probability $1 - 100dA$. What is the capacity of a 0.1 unit area film?",
+    "skill_annotations": [
+      "theoremqa_144"
+    ],
+    "eval_data": {
+      "answer": "10.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00088",
+    "dataset": "theoremqa",
+    "question": "If a stock pays a $5 dividend this year, and the dividend has been growing 6% annually, what will be the stock\u2019s intrinsic value, assuming a required rate of return of 12%?",
+    "skill_annotations": [
+      "theoremqa_257"
+    ],
+    "eval_data": {
+      "answer": "88.33",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00337",
+    "dataset": "theoremqa",
+    "question": "All walking animals, including humans, have a natural walking pace\u2014a number of steps per minute that is more comfortable than a faster or slower pace. Suppose that this pace corresponds to the oscillation of the leg as a physical pendulum.  Fossil evidence shows that T. rex, a two-legged dinosaur that lived about 65 million years ago, had a leg length L = 3.1 m and a stride length S = 4.0 m (the distance from one footprint to the next print of the same foot).  Estimate the walking speed of T. rex. (Unit: m/s)",
+    "skill_annotations": [
+      "theoremqa_016"
+    ],
+    "eval_data": {
+      "answer": "1.4",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00437",
+    "dataset": "theoremqa",
+    "question": "Is there an eigenbasis for the identity matrix I_n?",
+    "skill_annotations": [
+      "theoremqa_147"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00138",
+    "dataset": "theoremqa",
+    "question": "The diagonals of kite WXYZ intersect at P. If XP = 8, PZ = 8, WP = 6, and PY = 24, find ZY.",
+    "skill_annotations": [
+      "theoremqa_233"
+    ],
+    "eval_data": {
+      "answer": "25.3",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00634",
+    "dataset": "theoremqa",
+    "question": "Suppose 100 cars will be offered on the used-car market. Let 50 of them be good cars, each worth $10,000 to a buyer, and let 50 be lemons, each worth only $2,000. Suppose that there are enough buyers relative to sellers that competition among them leads cars to be sold at their maximum willingness to pay. What would the market equilibrium price for good cars be if sellers value good cars at $6,000?",
+    "skill_annotations": [
+      "theoremqa_058"
+    ],
+    "eval_data": {
+      "answer": "6000",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00395",
+    "dataset": "theoremqa",
+    "question": "Let a undirected graph G with edges E = {<0,4>,<4,1>,<0,3>,<3,4>,<3,2>,<1,3>}, which <A,B> represent Node A is connected to Node B. What is the minimum vertex cover of G? Represent the vertex cover in a list of ascending order.",
+    "skill_annotations": [
+      "theoremqa_218"
+    ],
+    "eval_data": {
+      "answer": "[3, 4]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00150",
+    "dataset": "theoremqa",
+    "question": "How many labeled graphs with a score of (6, 2, 2, 2, 2, 2, 2) are there?",
+    "skill_annotations": [
+      "theoremqa_223"
+    ],
+    "eval_data": {
+      "answer": "15",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00656",
+    "dataset": "theoremqa",
+    "question": "You have a coin and you would like to check whether it is fair or biased. More specifically, let $\\theta$ be the probability of heads, $\\theta = P(H)$. Suppose that you need to choose between the following hypotheses: H_0 (null hypothesis): The coin is fair, i.e. $\\theta = \\theta_0 = 1 / 2$. H_1 (the alternative hypothesis): The coin is not fair, i.e. $\\theta > 1 / 2$. We toss 100 times and observe 60 heads. Can we reject H_0 at significance level $\\alpha = 0.05$?",
+    "skill_annotations": [
+      "theoremqa_126"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00563",
+    "dataset": "theoremqa",
+    "question": "A company has 8 employees, including 3 managers and 5 engineers. How many different ways are there to form a team of 4 employees that includes at least 1 manager and at least 2 engineers?",
+    "skill_annotations": [
+      "theoremqa_291"
+    ],
+    "eval_data": {
+      "answer": "60",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00327",
+    "dataset": "theoremqa",
+    "question": "What is the minimum kinetic energy in MeV of a proton in a medium-sized nucleus having a diameter of 8.0 x 10^-15 m?",
+    "skill_annotations": [
+      "theoremqa_304"
+    ],
+    "eval_data": {
+      "answer": "0.08",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00215",
+    "dataset": "theoremqa",
+    "question": "What is the Fisher information for the Gaussian distribution family $f_\\theta(x)=N(0,\\theta)$? (a) $2\\theta$. (b) $2\\theta^2$. (c) $0.5\\theta^{-1}$. (d) $0.5\\theta^{-2}$. Which option is correct?",
+    "skill_annotations": [
+      "theoremqa_131"
+    ],
+    "eval_data": {
+      "answer": "(d)",
+      "answer_type": "option"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00475",
+    "dataset": "theoremqa",
+    "question": "Adding a row to a channel transition matrix does not decrease capacity. True or False?",
+    "skill_annotations": [
+      "theoremqa_149"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00621",
+    "dataset": "theoremqa",
+    "question": "Compute the integral $\\iint_D xy^2 dA$, where $D$ is the rectangle defined by 0 <= x <= 2 and 0 <= y <= 1.",
+    "skill_annotations": [
+      "theoremqa_283"
+    ],
+    "eval_data": {
+      "answer": "0.66667",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00361",
+    "dataset": "theoremqa",
+    "question": "In the process of searching circles in an image, object O is detected. The contour of the object O is represented with the Fourier Descriptors (35,129,0,1,0,0,-1,0). Given that the Fourier Descriptors of a circle are (0,40,0,0,0,0,0,0). Is the object O a circle-like polygon in the image? Bear in mind that there is some high frequency noise in the image. You should take this into account when you make your judgment.",
+    "skill_annotations": [
+      "theoremqa_163"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00427",
+    "dataset": "theoremqa",
+    "question": "What is \\lim_{x \\to (\\pi)/2} (cos(x)cos(tan(x)))?",
+    "skill_annotations": [
+      "theoremqa_105"
+    ],
+    "eval_data": {
+      "answer": "0",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00124",
+    "dataset": "theoremqa",
+    "question": "Let M be the inverse of the group element ((3, 5), (4, 6)) in Z_7. What is M[0][1]?",
+    "skill_annotations": [
+      "theoremqa_238"
+    ],
+    "eval_data": {
+      "answer": "6",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00605",
+    "dataset": "theoremqa",
+    "question": "what is the limit of (2n)!!/(2n+1)!! as n goes to infinity?",
+    "skill_annotations": [
+      "theoremqa_292"
+    ],
+    "eval_data": {
+      "answer": "0.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00571",
+    "dataset": "theoremqa",
+    "question": "Compute $\\int_{|z| = 2} (5z - 2) / (z * (z - 1)) dz$. The answer is Ai with i denoting the imaginary unit, what is A?",
+    "skill_annotations": [
+      "theoremqa_101"
+    ],
+    "eval_data": {
+      "answer": "31.4",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00702",
+    "dataset": "theoremqa",
+    "question": "You are interviewing two investment managers. Mr. Wong shows that the average return on his portfolio for the past 10 years has been 14%, with a standard deviation of 8% and a beta of 1.2. Ms. Petrov shows that the average return on her portfolio for the past 10 years has been 16%, with a standard deviation of 10% and a beta of 1.6. You know that over the past 10 years, the US Treasury security rate has averaged 2% and the return on the S&P 500 has averaged 11%. By measuring Jensen\u2019s alpha, Mr. Wong has done the better job. Is this correct? Answer True or False.",
+    "skill_annotations": [
+      "theoremqa_006"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00372",
+    "dataset": "theoremqa",
+    "question": "If a preferred share of stock pays dividends of $1.90 per year, and the required rate of return for the stock is 9%, then what is its intrinsic value?",
+    "skill_annotations": [
+      "theoremqa_257"
+    ],
+    "eval_data": {
+      "answer": "22.11",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00115",
+    "dataset": "theoremqa",
+    "question": "The atomic mass of the 4He atom is 4.002603 u. Find the binding energy of the 4He nucleus in MeV.",
+    "skill_annotations": [
+      "theoremqa_300"
+    ],
+    "eval_data": {
+      "answer": "28.3",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00180",
+    "dataset": "theoremqa",
+    "question": "Let x \\in R with 0 < x < 1 and n \\in N. Is (1 - x)^n >= 1/(1+nx)?",
+    "skill_annotations": [
+      "theoremqa_289"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00040",
+    "dataset": "theoremqa",
+    "question": "Find integer $n \\ge 1$, such that $n \\cdot 2^{n+1}+1$ is a perfect square.",
+    "skill_annotations": [
+      "theoremqa_202"
+    ],
+    "eval_data": {
+      "answer": "3",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00615",
+    "dataset": "theoremqa",
+    "question": "What are the real eigenvalues of the matrix [[3, -2, 5], [1, 0, 7], [0, 0, 2]]?",
+    "skill_annotations": [
+      "theoremqa_147"
+    ],
+    "eval_data": {
+      "answer": "[1, 2, 2]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00532",
+    "dataset": "theoremqa",
+    "question": "A Chord based distributed hash table (DHT) with 26 address space is used in a peer- to-peer file sharing network. There are currently 10 active peers in the network with node ID N1, N11, N15, N23, N31, N40, N45, N51, N60, and N63. Show all the target key (in ascending order, ignore the node's identifier itself) for N1.",
+    "skill_annotations": [
+      "theoremqa_214"
+    ],
+    "eval_data": {
+      "answer": "[2, 3, 5, 9, 17, 33]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00614",
+    "dataset": "theoremqa",
+    "question": "A network with one primary and four secondary stations uses polling. The size of a data frame is 1000 bytes. The size of the poll, ACK, and NAK frames are 32 bytes each. Each station has 5 frames to send. How many total bytes are exchanged if each station can send only one frame in response to a poll?",
+    "skill_annotations": [
+      "theoremqa_217"
+    ],
+    "eval_data": {
+      "answer": "21536",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00295",
+    "dataset": "theoremqa",
+    "question": "Let $F_0(x)=log(x)$. For $n\\geq 0$ and $x>0$, let $F_{n+1}(x)=\\int_0^x F_n(t)dt$. Evaluate $\\lim _{n \\rightarrow \\infty} (n! F_n(1))/(log(n))$.",
+    "skill_annotations": [
+      "theoremqa_292"
+    ],
+    "eval_data": {
+      "answer": "-1.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00476",
+    "dataset": "theoremqa",
+    "question": "Find the curvature for f(x) = \\sqrt{4x - x^2}, x = 2.",
+    "skill_annotations": [
+      "theoremqa_276"
+    ],
+    "eval_data": {
+      "answer": "0.5",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00443",
+    "dataset": "theoremqa",
+    "question": "what is the value of $\\int_{0}^\\pi (sin(123*x/2)/sin(x/2))^2dx$? Round the answer to the thousands decimal.",
+    "skill_annotations": [
+      "theoremqa_292"
+    ],
+    "eval_data": {
+      "answer": "386.4158898",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00143",
+    "dataset": "theoremqa",
+    "question": "RS is the midsegment of trapezoid MNOP. If MN = 10x+3, RS=9x-1, and PO = 4x+7, what is the length of RS?",
+    "skill_annotations": [
+      "theoremqa_108"
+    ],
+    "eval_data": {
+      "answer": "26",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00439",
+    "dataset": "theoremqa",
+    "question": "For an American perpetual option within the Black-Scholes framework, you are given: (i) $h_1 + h_2$ = 7/9 (ii) The continuously compounded risk-free interest rate is 5%. (iii) \u03c3 = 0.30. What is the value of $h_1$?",
+    "skill_annotations": [
+      "theoremqa_259"
+    ],
+    "eval_data": {
+      "answer": "1.51",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00266",
+    "dataset": "theoremqa",
+    "question": "Let $a_0=5/2$ and $a_k=(a_{k-1})^2-2$ for $k\\geq 1$. Compute $\\prod_{k=0}^{\\infty}(1-1/a_k)$ in closed form.",
+    "skill_annotations": [
+      "theoremqa_197"
+    ],
+    "eval_data": {
+      "answer": "0.42857",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00431",
+    "dataset": "theoremqa",
+    "question": "Perform 2 iterations with the M\u00fcller method for the following equation: log_{10}(x) - x + 3 = 0, x_0 = 1/4, x_1 = 1/2, x_2 = 1. What's the decimal value of x_3?",
+    "skill_annotations": [
+      "theoremqa_118"
+    ],
+    "eval_data": {
+      "answer": "3.2",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00177",
+    "dataset": "theoremqa",
+    "question": "An ultrasonic transducer used for medical diagnosis oscillates at 6.7 Mhz.How long does each oscillation take, and what is the angular frequency? (Unit: 10^7 rad/s)",
+    "skill_annotations": [
+      "theoremqa_019"
+    ],
+    "eval_data": {
+      "answer": "4.2",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00477",
+    "dataset": "theoremqa",
+    "question": "Find the absolute minimum value of the function $f(x,y)=x^2+y^2$ subject to the constraint $x^2+2*y^2=1$.",
+    "skill_annotations": [
+      "theoremqa_199"
+    ],
+    "eval_data": {
+      "answer": "0.5",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00063",
+    "dataset": "theoremqa",
+    "question": "Assuming we are underground, and the only thing we can observe is whether a person brings an umbrella or not. The weather could be either rainy or sunny. Assuming the P(rain)=0.6 and P(sunny)=0.4. Assuming the weather on day $k$ is dependent on the weather on day $k-1$. We can write the transition probability as P(sunny $\\mid$ sunny) = P(rain $\\mid$ rain) = 0.55. The person has 60\\% chance to bring an umbrella when the weather is rainy, and 40\\% chance to bring an umbrella when the weather is sunny, i.e. P(umbrella $\\mid$ rain) = 0.6 and P(umbrella $\\mid$ sunny) = 0.4. If we observe that the person (1) brought an umbrella on day 1, (2) did not bring an umbrella on day 2, (3) brought an umbrella on day 3.  What are the most likely weather from day 1 to day 3? Return the answer as a list of binary values, where 1 represents rain and 0 represents sunny.",
+    "skill_annotations": [
+      "theoremqa_081"
+    ],
+    "eval_data": {
+      "answer": "[1, 0, 1]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00494",
+    "dataset": "theoremqa",
+    "question": "Is cos(\\pi/8) equal to (\\sqrt{2+\\sqrt{2}})/2?",
+    "skill_annotations": [
+      "theoremqa_282"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00375",
+    "dataset": "theoremqa",
+    "question": "Calculate the momentum uncertainty of an electron within the smallest diameter of a hydrogen atom in kg m/s.",
+    "skill_annotations": [
+      "theoremqa_319"
+    ],
+    "eval_data": {
+      "answer": "1e-24",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00118",
+    "dataset": "theoremqa",
+    "question": "A debt of $25,000 is to be amortized over 7 years at 7% interest. What value of monthly payments will achieve this?",
+    "skill_annotations": [
+      "theoremqa_252"
+    ],
+    "eval_data": {
+      "answer": "4638.83",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00132",
+    "dataset": "theoremqa",
+    "question": "Is the function of f(x) = sin(x) / |x| continuous everywhere?",
+    "skill_annotations": [
+      "theoremqa_297"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00045",
+    "dataset": "theoremqa",
+    "question": "Sum the series $\\sum_{m=1}^{\\infty} \\sum_{n=1}^{\\infty}\\frac{m^2 n}{3^m(n3^m+m3^n)}$",
+    "skill_annotations": [
+      "theoremqa_197"
+    ],
+    "eval_data": {
+      "answer": "0.28125",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00056",
+    "dataset": "theoremqa",
+    "question": "Is x-1 a factor of 2*x^4+3*x^2-5x+7?",
+    "skill_annotations": [
+      "theoremqa_186"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00593",
+    "dataset": "theoremqa",
+    "question": "For a $1,000 investment, what is the future value of the investment if the interest rate is 8% compounded annually for 3 years?",
+    "skill_annotations": [
+      "theoremqa_312"
+    ],
+    "eval_data": {
+      "answer": "1259.71",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00726",
+    "dataset": "theoremqa",
+    "question": "What is the coefficient of $x^2y^5$ for the formula $(x + 2y)^7$?",
+    "skill_annotations": [
+      "theoremqa_291"
+    ],
+    "eval_data": {
+      "answer": "672",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00404",
+    "dataset": "theoremqa",
+    "question": "Universal Fur is located in Clyde, Baffin Island, and sells high-quality fur bow ties throughout the world at a price of $5 each. The production function for fur bow ties (q) is given by q = 240x - 2x^2, where x is the quantity of pelts used each week. Pelts are supplied only by Dan's Trading Post, which obtains them by hiring Eskimo trappers at a rate of $10 per day. Dan's weekly production function for pelts is given by x = \\sqrt{l}, where l represents the number of days of Eskimo time used each week. For a quasi-competitive case in which both Universal Fur and Dan's Trading Post act as price-takers for pelts, what will be the equilibrium price (p_x) for pelt?",
+    "skill_annotations": [
+      "theoremqa_072"
+    ],
+    "eval_data": {
+      "answer": "600",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00209",
+    "dataset": "theoremqa",
+    "question": "What is $(\\frac{1 + cos(2x) + i*sin(2x)}{1 + cos(2x) - i*sin(2x)})^30$ with $x = \\pi / 60$?",
+    "skill_annotations": [
+      "theoremqa_109"
+    ],
+    "eval_data": {
+      "answer": "-1.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00535",
+    "dataset": "theoremqa",
+    "question": "Derive the solution y = f(t) to the following IVP. $ty' - 2y = t^5sin(2t) - t^3 + 4t^4$, where $y(\\pi) = 3\\pi^4/2$. What is y(t) when $t=pi/2$.",
+    "skill_annotations": [
+      "theoremqa_071"
+    ],
+    "eval_data": {
+      "answer": "19.095",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00450",
+    "dataset": "theoremqa",
+    "question": "For which 2 * 2 matrices A does there exist a nonzero matrix M such that AM = MD, where D = [[2, 0], [0, 3]]? Give your answer in terms of eigenvalues of A.",
+    "skill_annotations": [
+      "theoremqa_147"
+    ],
+    "eval_data": {
+      "answer": "[2, 3]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00293",
+    "dataset": "theoremqa",
+    "question": "Find the mass and weight of the air at $20^{\\circ} C$ in a living room with a $4.0 m \\times 5.0 m$ floor and a ceiling 3.0 m high, and the mass and weight of an equal volume of water. (Unit: 10 ^ 5 N)",
+    "skill_annotations": [
+      "theoremqa_041"
+    ],
+    "eval_data": {
+      "answer": "5.9",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00425",
+    "dataset": "theoremqa",
+    "question": "Calculate the Gross Domestic Product using the total expenditure approach:\nConsumption Expenditures | $500 billion\nWages and salaries | $400 billion\n(Gross Private) Investments Expenditures | $80 billion\nGovernment Expenditures | $100 billion\nTaxes | $70 billion\nImports | $50 billion\nExports | $30 billion\nWhat is the GDP (in billions)?",
+    "skill_annotations": [
+      "theoremqa_068"
+    ],
+    "eval_data": {
+      "answer": "660",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00312",
+    "dataset": "theoremqa",
+    "question": "An athlete whirls a discus in a circle of radius 80.0 cm. At a certain instant, the athlete is rotating at 10.0 rad / s and the angular speed is increasing at 50.0 rad / s^2. At this instant, find the magnitude (Unit: m / s^2) of the acceleration. Return the numeric value.",
+    "skill_annotations": [
+      "theoremqa_030"
+    ],
+    "eval_data": {
+      "answer": "89.4",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00636",
+    "dataset": "theoremqa",
+    "question": "For any poitie integer $n$, let $\\langle n\\rangle$ denote the closest integer to $\\sqrt{n}$. Evaluate $\\sum_{n=1}^{\\infty} \\frac{2^{\\langle n \\rangle}+2^{-\\langle n \\rangle}}{2^n}$.",
+    "skill_annotations": [
+      "theoremqa_197"
+    ],
+    "eval_data": {
+      "answer": "3.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00147",
+    "dataset": "theoremqa",
+    "question": "Let f_1, ..., f_n be polynomials. Do they span the space P of all polynomials?",
+    "skill_annotations": [
+      "theoremqa_187"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00400",
+    "dataset": "theoremqa",
+    "question": "Let $x_1$ and $x_2$ be the roots of the equation $x^2 + 3x + 1 =0$. Compute $(x_1/(x_2 + 1))^2 + (x_2 / (x_1 + 1))^2$.",
+    "skill_annotations": [
+      "theoremqa_153"
+    ],
+    "eval_data": {
+      "answer": "18.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00106",
+    "dataset": "theoremqa",
+    "question": "Ms. Fogg is planning an around-the-world trip on which she plans to spend $10,000. The utility from the trip is a function of how much she actually spends on it (Y), given by U(Y) = ln Y. If there is a 25 percent probability that Ms. Fogg will lose $1,000 of her cash on the trip, what is the trip\u2019s expected utility?",
+    "skill_annotations": [
+      "theoremqa_047"
+    ],
+    "eval_data": {
+      "answer": "9.184",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00527",
+    "dataset": "theoremqa",
+    "question": "Estimate the PEG ratio for a firm that has the following characteristics:\nLength of high growth = five years\nGrowth rate in first five years = 25%\nPayout ratio in first five years = 20%\nGrowth rate after five years = 8%\nPayout ratio after five years = 50%\nBeta = 1.0 \nRisk-free rate = T-bond rate = 6%\nCost of equity = 6% + 1(5.5%) = 11.5%\nRisk premium = 5.5%\nWhat is the estimated PEG ratio for this firm?",
+    "skill_annotations": [
+      "theoremqa_260"
+    ],
+    "eval_data": {
+      "answer": "1.15",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00328",
+    "dataset": "theoremqa",
+    "question": "Given that each cone can contain two ice cream balls, how many different ice cream cones can you make if you have 6 flavors of ice cream and 5 types of cones?",
+    "skill_annotations": [
+      "theoremqa_274"
+    ],
+    "eval_data": {
+      "answer": "180",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00290",
+    "dataset": "theoremqa",
+    "question": "The Chi-square statistic $\\chi^2=\\sum_c\\frac{(P(x)-Q(x))^2}{Q(x)}$ is (twice) the first term in the Taylor series expansion of $D(P||Q)$ about $Q$. True or False?",
+    "skill_annotations": [
+      "theoremqa_139"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00212",
+    "dataset": "theoremqa",
+    "question": "Let a undirected graph G with edges E = {<0,2>, <2,4>, <3,4>, <1,4>}, which <A,B> represent Node A is connected to Node B. What is the minimum vertex cover of G if 0 is one of vertex cover? Represent the vertex cover in a list of ascending order.",
+    "skill_annotations": [
+      "theoremqa_218"
+    ],
+    "eval_data": {
+      "answer": "[0, 4]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00516",
+    "dataset": "theoremqa",
+    "question": "The cross section for a 2.0-MeV neutron (a typical energy for a neutron released in fission) being absorbed by a U-238 nucleus and producing fission is 0.68 barn. For a pure U-238 sample of thickness 3.2 cm, what is the probability of a 2.0-MeV neutron producing fission?",
+    "skill_annotations": [
+      "theoremqa_301"
+    ],
+    "eval_data": {
+      "answer": "0.1",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00608",
+    "dataset": "theoremqa",
+    "question": "One end of a 2.00-kg rope is tied to a support at the top of a mine shaft 80.0 m deep. The rope is stretched taut by a 20.0-kg box of rocks attached at the bottom. If a point on the rope is in transverse SHM with f = 2.00 Hz, how many cycles of the wave are there in the rope\u2019s length?",
+    "skill_annotations": [
+      "theoremqa_073"
+    ],
+    "eval_data": {
+      "answer": "1.81",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00715",
+    "dataset": "theoremqa",
+    "question": "In how many ways can a group of 6 people be divided into 2 teams? Notice that members in each team are ordered.",
+    "skill_annotations": [
+      "theoremqa_000"
+    ],
+    "eval_data": {
+      "answer": "1800",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00392",
+    "dataset": "theoremqa",
+    "question": "Suppose a fair coin is tossed 50 times. The bound on the probability that the number of heads will be greater than 35 or less than 15 can be found using Chebyshev's Inequality. What is the upper bound of the probability?",
+    "skill_annotations": [
+      "theoremqa_104"
+    ],
+    "eval_data": {
+      "answer": "0.125",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00493",
+    "dataset": "theoremqa",
+    "question": "for a given function f(x)=x^2*sin(x). Is there a value $x$ between 10pi and 11pi such that $f'(x) = 0$?",
+    "skill_annotations": [
+      "theoremqa_091"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00746",
+    "dataset": "theoremqa",
+    "question": "Denote m(\\cdot) to be Lebesgue measure. Given a point set E. Suppose for any closed set F and open set G with F \\subset E \\subset G, it holds $\\sup _F {m(F)}<\\inf _G {m(G)}$. Is set E Lebesgue measurable? Answer 1 for yes and 0 for no. Return the number",
+    "skill_annotations": [
+      "theoremqa_200"
+    ],
+    "eval_data": {
+      "answer": "0.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00239",
+    "dataset": "theoremqa",
+    "question": "Your company has just written one million units of a one-year European asset-or-nothing put option on an equity index fund. The equity index fund is currently trading at 1000. It pays dividends continuously at a rate proportional to its price; the dividend yield is 2%. It has a volatility of 20%. The option\u2019s payoff will be made only if the equity index fund is down by more than 40% at the end of one year. The continuously compounded risk-free interest rate is 2.5% Using the Black-Scholes model, determine the price of the asset-or-nothing put options. Give the answer in millions.",
+    "skill_annotations": [
+      "theoremqa_259"
+    ],
+    "eval_data": {
+      "answer": "3.6",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00672",
+    "dataset": "theoremqa",
+    "question": "If four points are picked independently at random inside the triangle ABC, what is the probability that no one of them lies inside the triangle formed by the other three?",
+    "skill_annotations": [
+      "theoremqa_092"
+    ],
+    "eval_data": {
+      "answer": "0.6667",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00542",
+    "dataset": "theoremqa",
+    "question": "Does r(t) = [8 - 4t^3, 2 + 5t^2, 9t^3] parametrize a line?",
+    "skill_annotations": [
+      "theoremqa_124"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00023",
+    "dataset": "theoremqa",
+    "question": "$\\lim_{x \\to c}((x^2 - 5x - 6) / (x - c))$ exists. What is the value of c?",
+    "skill_annotations": [
+      "theoremqa_288"
+    ],
+    "eval_data": {
+      "answer": "[-1, 6]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00482",
+    "dataset": "theoremqa",
+    "question": "Mrs. Walter gave an exam in a mathematics class of five students. She entered the scores in random order into a spreadsheet, which recalculated the class average after each score was entered. Mrs. Walter noticed that after each score was entered, the average was always an integer. The scores (listed in ascending order) were 71,76,80,82,and 91. What was the last score Mrs. Walter entered?",
+    "skill_annotations": [
+      "theoremqa_212"
+    ],
+    "eval_data": {
+      "answer": "80",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00158",
+    "dataset": "theoremqa",
+    "question": "Find the curvature for r(t) = 5cos(t)i + 4sin(t)j + 3tk, t=4\\pi/3.",
+    "skill_annotations": [
+      "theoremqa_276"
+    ],
+    "eval_data": {
+      "answer": "0.16",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00162",
+    "dataset": "theoremqa",
+    "question": "Consider a 26-key typewriter. Suppose that pushing a key results in printing that letter or the next (with equal probability). Thus A results in A or B, ..., Z results in Z or A. What is the capacity of this channel in bits?",
+    "skill_annotations": [
+      "theoremqa_149"
+    ],
+    "eval_data": {
+      "answer": "3.7",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00612",
+    "dataset": "theoremqa",
+    "question": "In the process of searching circles in an image, object O is detected. The contour of the object O is represented with the Fourier Descriptors (-20,60,-20,20,-20,21,-20,20). Given that the Fourier Descriptors of a circle are (0,40,0,0,0,0,0,0). Is the object O a circle-like polygon in the image? Bear in mind that there is some high frequency noise in the image. You should take this into account when you make your judgment.",
+    "skill_annotations": [
+      "theoremqa_163"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00568",
+    "dataset": "theoremqa",
+    "question": "Find all positive integers $n<2^{250}$ for which simultaneously $n$ divides $2^n$, $n-1$ divides $2^n-1$, and $n-2$ divides $2^n - 2$. Return all positive integers as an ascending list.",
+    "skill_annotations": [
+      "theoremqa_090"
+    ],
+    "eval_data": {
+      "answer": "[4, 16, 65536]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00537",
+    "dataset": "theoremqa",
+    "question": "Let X_2,X_3,... be independent random variables such that $P(X_n=n)=P(X_n=-n)=1/(2n\\log (n)), P(X_n=0)=1-1/(n*\\log(n))$. Does $n^{-1}\\sum_{i=2}^n X_i$ converges in probability? Does $n^{-1}\\sum_{i=2}^n X_i$ converges in almost surely? Return the answers of the two questions as a list.",
+    "skill_annotations": [
+      "theoremqa_107"
+    ],
+    "eval_data": {
+      "answer": "[1, 0]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00321",
+    "dataset": "theoremqa",
+    "question": "\\lim_{x \\to c} |f(x)| = 0. What is \\lim_{x \\to c} f(x)?",
+    "skill_annotations": [
+      "theoremqa_105"
+    ],
+    "eval_data": {
+      "answer": "0",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00460",
+    "dataset": "theoremqa",
+    "question": "Is the transformation [[-1, 0], [0, -1]] invertible?",
+    "skill_annotations": [
+      "theoremqa_190"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00043",
+    "dataset": "theoremqa",
+    "question": "A box contains 4 red, 3 green, and 2 blue balls. Balls are distinct even with the same color. In how many ways can we choose 4 balls, if at least 2 are red?",
+    "skill_annotations": [
+      "theoremqa_253"
+    ],
+    "eval_data": {
+      "answer": "81",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00188",
+    "dataset": "theoremqa",
+    "question": "A neutron at rest decays (breaks up) to a proton and an electron. Energy is released in the decay and appears as kinetic energy of the proton and electron. The mass of a proton is 1836 times the mass of an electron. What fraction of the total energy released goes into the kinetic energy of the proton?",
+    "skill_annotations": [
+      "theoremqa_018"
+    ],
+    "eval_data": {
+      "answer": "0.000544",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00359",
+    "dataset": "theoremqa",
+    "question": "suppose a,b,c,\\alpha,\\beta,\\gamma are six real numbers with a^2+b^2+c^2>0.  In addition, $a=b*cos(\\gamma)+c*cos(\\beta), b=c*cos(\\alpha)+a*cos(\\gamma), c=a*cos(\\beta)+b*cos(\\alpha)$. What is the value of $cos^2(\\alpha)+cos^2(\\beta)+cos^2(\\gamma)+2*cos(\\alpha)*cos(\\beta)*cos(\\gamma)? return the numeric.",
+    "skill_annotations": [
+      "theoremqa_156"
+    ],
+    "eval_data": {
+      "answer": "1.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00329",
+    "dataset": "theoremqa",
+    "question": "In Image processing, closing is a process in which first dilation operation is performed and then erosion operation is performed. Is it true?",
+    "skill_annotations": [
+      "theoremqa_167"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00364",
+    "dataset": "theoremqa",
+    "question": "Find which digit is at 1001th place after the decimal point in the decimal expansion of the fraction 9/28.",
+    "skill_annotations": [
+      "theoremqa_212"
+    ],
+    "eval_data": {
+      "answer": "2",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00172",
+    "dataset": "theoremqa",
+    "question": "What is the determinant of the matrix A = [[1, 0, 0, 0, 0, 0], [2, 7, 0, 0, 0, 0], [3, 8, 6, 0, 0, 0], [4, 9, 5, 2, 1, 4], [5, 8, 4, 0, 2, 5], [6, 7, 3, 0, 3, 6]]?",
+    "skill_annotations": [
+      "theoremqa_150"
+    ],
+    "eval_data": {
+      "answer": "-252",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00489",
+    "dataset": "theoremqa",
+    "question": "In complex analysis, define U^n={(z_1, \\cdots, z_n): |z_j|<1, j=1, \\cdots, n} and B_n={(z_1, \\cdots, z_n): \\sum_{j=1}^n |z_j|^2<1 }. Are they conformally equivalent in C^n? Here C^n is the d-dimensional complex space. Return 1 for yes and 0 for no.",
+    "skill_annotations": [
+      "theoremqa_138"
+    ],
+    "eval_data": {
+      "answer": "0.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00294",
+    "dataset": "theoremqa",
+    "question": "Compute the mean translational kinetic energy of a mole of ideal gas in J, both at room temperature 293 K.",
+    "skill_annotations": [
+      "theoremqa_302"
+    ],
+    "eval_data": {
+      "answer": "3650.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00119",
+    "dataset": "theoremqa",
+    "question": "Assume that half of the mass of a 62-kg person consists of protons. If the half-life of the proton is 10^33 years, calculate the number of proton decays per day from the body.",
+    "skill_annotations": [
+      "theoremqa_318"
+    ],
+    "eval_data": {
+      "answer": "3.5e-08",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00722",
+    "dataset": "theoremqa",
+    "question": "Use euler's method to find the solution to the differential equation $\\frac{\\partial y}{\\partial x} = 3x + 4y$ at $x=1$ with the initial condition y(0) = 0 and step size $h=0.25$. What is y(1)?",
+    "skill_annotations": [
+      "theoremqa_098"
+    ],
+    "eval_data": {
+      "answer": "2.0625",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00661",
+    "dataset": "theoremqa",
+    "question": "The stock of the CCC Corporation is currently valued at $12 and is assumed to possess all the properties of geometric Brownian motion. It has an expected annual return of 15%, an annual volatility of 20%, and the annual risk-free is 10%. Using a binomial lattice, determine the price of a call option on CCC stock maturing in 10 monthes time with a strike price of $14 (Let the distance between nodes on your tree be 1 month in length).",
+    "skill_annotations": [
+      "theoremqa_255"
+    ],
+    "eval_data": {
+      "answer": "53.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00155",
+    "dataset": "theoremqa",
+    "question": "Find the interval in which the smallest positive root of the following equations lies: tan x + tanh x = 0. Determine the roots correct to two decimal places using the bisection method",
+    "skill_annotations": [
+      "theoremqa_099"
+    ],
+    "eval_data": {
+      "answer": "2.37",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00148",
+    "dataset": "theoremqa",
+    "question": "If a cash flow of $100 has a discount rate of 5% and to be received in 5 years, what is the present value of the cash flow?",
+    "skill_annotations": [
+      "theoremqa_315"
+    ],
+    "eval_data": {
+      "answer": "78.3526",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00201",
+    "dataset": "theoremqa",
+    "question": "Given a color image of size 28 x 28 x 3 pixels, how many convolutional filters in the first layer of a Convolutional Neural Network if the first layer's output tensor has size 26 x 26 x 64?",
+    "skill_annotations": [
+      "theoremqa_222"
+    ],
+    "eval_data": {
+      "answer": "64",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00596",
+    "dataset": "theoremqa",
+    "question": "Let a undirected graph G with edges E = {<0,2>,<1,4>,<9,6>,<8,12>,<2,4>,<1,3>,<1,5>,<12,1>,<8,1>,<5,9>,<0,10>,<5,2>,<0,8>,<3,4>,<3,11>,<7,1>,<2,1>,<0,12>,<1,0>,<7,8>}, which <A,B> represent Node A is connected to Node B. What is the minimum vertex cover of G? Represent the vertex cover in a list of ascending order.",
+    "skill_annotations": [
+      "theoremqa_218"
+    ],
+    "eval_data": {
+      "answer": "[0, 1, 2, 3, 8, 9]",
+      "answer_type": "list of integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00368",
+    "dataset": "theoremqa",
+    "question": "What is the minimum number of people needed in a room to guarantee that there are 3 mutual friends or 3 mutual strangers?",
+    "skill_annotations": [
+      "theoremqa_251"
+    ],
+    "eval_data": {
+      "answer": "6",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00667",
+    "dataset": "theoremqa",
+    "question": "If the sum-product algorithm is run on a factor graph with a tree structure (no loops), then after a finite number of messages have been sent, there will be no pending messages. True or false?",
+    "skill_annotations": [
+      "theoremqa_229"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00221",
+    "dataset": "theoremqa",
+    "question": "Let I=[0,1]\\times[0,1]. Suppose $E={(x, y) \\in I: sin(x)<\\frac{1}{2}, cos(x+y) is irrational}$, what is the Lebesgue measure of E?",
+    "skill_annotations": [
+      "theoremqa_200"
+    ],
+    "eval_data": {
+      "answer": "0.5235987667",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00496",
+    "dataset": "theoremqa",
+    "question": "Is there exist a holomorphic function $f$ on the unit disk $B(0,1)$ (boundary excluded) such that $f(B(0,1))=C$? Here C is the complex space. Return 1 for yes and 0 for no.",
+    "skill_annotations": [
+      "theoremqa_097"
+    ],
+    "eval_data": {
+      "answer": "1.0",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00213",
+    "dataset": "theoremqa",
+    "question": "Let $R(D)$ be the rate distortion function for an i.i.d. process with probability mass function $p(x)$ and distortion function $d(x, \\hat{x})$ , $x \\in \\mathcal{X}$ , $\\hat{x} \\in \\hat{\\mathcal{X}}$. If we add a new reproduction symbol $\\hat{x}_0$ to $\\hat{\\mathcal{X}}$ with associated distortion $d(x, \\hat{x}_0)$, $x \\in \\mathcal{X}$, $R(D)$ will decrease. True or False?",
+    "skill_annotations": [
+      "theoremqa_155"
+    ],
+    "eval_data": {
+      "answer": "True",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00140",
+    "dataset": "theoremqa",
+    "question": "Light travel from water n=1.33 to diamond n=2.42. If the angle of incidence was 13 degree, determine the angle of refraction.",
+    "skill_annotations": [
+      "theoremqa_046"
+    ],
+    "eval_data": {
+      "answer": "7.1",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00355",
+    "dataset": "theoremqa",
+    "question": "A group of 5 patients treated with medicine. A is of weight 42,39,38,60 &41 kgs. Second group of 7 patients from the same hospital treated with medicine B is of weight 38, 42, 56, 64, 68, 69, & 62 kgs. Is there any difference between medicines under significance level of 5%?",
+    "skill_annotations": [
+      "theoremqa_121"
+    ],
+    "eval_data": {
+      "answer": "False",
+      "answer_type": "bool"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00077",
+    "dataset": "theoremqa",
+    "question": "Calculate the momentum uncertainty of a tennis ball constrained to be in a fence enclosure of length 35 m surrounding the court in kg m/s.",
+    "skill_annotations": [
+      "theoremqa_319"
+    ],
+    "eval_data": {
+      "answer": "3e-36",
+      "answer_type": "float"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00501",
+    "dataset": "theoremqa",
+    "question": "Let $X$ be uniformly distributed over $\\{1, 2, \\ldots, 256\\}$. We ask random questions: Is $X\\in S_1$? Is $X\\in S_2$? ... until only one integer remains. All $2^256$ subsets of $\\{1, 2, \\ldots, 256\\}$ are equally likely. How many deterministic questions are needed to determine $X$?",
+    "skill_annotations": [
+      "theoremqa_154"
+    ],
+    "eval_data": {
+      "answer": "8",
+      "answer_type": "integer"
+    }
+  },
+  {
+    "instance_id": "theoremqa_00320",
+    "dataset": "theoremqa",
+    "question": "Does the following series $\\sum_{i=0}^{\\infty} \\frac{n!}{n^2 cos(n)}$ converge?",
+    "skill_annotations": [
+      "theoremqa_197"
+    ],
+    "eval_data": {
+      "answer": "0.0",
+      "answer_type": "float"
+    }
+  }
+]
