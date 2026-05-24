@@ -253,6 +253,48 @@ sragents evaluate \
     --output results/eval/theoremqa-Qwen3-32B-bm25_top1.json
 ```
 
+## When2Tool Pipeline (Probe Gating)
+
+The repository integrates **When2Tool**, a method that extracts latent tool necessity directly from the agent's hidden states during the prefill phase, training a linear probe (logistic regression) to decide whether to load external skills.
+
+### 1. Running the Pipeline
+
+You can run the entire When2Tool pipeline (dataset splitting, feature extraction, and linear probe training) using the CLI:
+
+```bash
+python3 -m sragents.when2tool.pipeline \
+    data/bench/instances/theoremqa.json \
+    --output-dir ./when2tool_outputs_theoremqa \
+    --train-ratio 0.5 \
+    --model Qwen/Qwen3-4B \
+    --device cuda \
+    --regularization 1000.0 \
+    --pca-components 32
+```
+
+This runs:
+- **Step 1 (Split):** Splits the dataset (e.g. 50/50 train/test).
+- **Step 2 (Feature Extraction):** Extracts hidden states from the served model's last token position across all layers.
+- **Step 3 (Probe Training):** Trains an L2-regularized logistic regression classifier with optional PCA dimensionality reduction.
+- **Step 4 (Prefill Inference, Optional):** Guided generation using the trained probe to prefill the model's decision.
+
+### 2. Hyperparameter Sweeping
+
+Find the optimal PCA components and L2 regularization strengths using cross-validation on the training set:
+
+```bash
+python3 sweep_probe.py
+```
+
+### 3. Evaluation and Analysis Scripts
+
+We provide several analysis scripts in the root directory to evaluate the trained probe and compare it with the model's self-decision (DSTL-Gate rejector) on the same test set:
+
+- **[eval_probe_vs_noskill.py](file:///network-volume/SR-Agents/eval_probe_vs_noskill.py)** / **[eval_probe_vs_noskill_all.py](file:///network-volume/SR-Agents/eval_probe_vs_noskill_all.py)**: Predicts tool necessity using the trained probe on the test set of one or all datasets and evaluates precision, recall, F1, and accuracy compared to the no-skill baseline.
+- **[eval_probe_vs_noskill_all_log.py](file:///network-volume/SR-Agents/eval_probe_vs_noskill_all_log.py)**: Logs the exact breakdown of probe decisions (load vs skip) for cases where the no-skill model was wrong versus correct on the test set.
+- **[eval_model_loadskill_all_log_test.py](file:///network-volume/SR-Agents/eval_model_loadskill_all_log_test.py)**: Evaluates the **model's actual self-decision (rejector/DSTL-Gate)** on the **same test set** used by the probe. This ensures a fair, head-to-head comparison between the probe and the DSTL-Gate on identical test instances.
+- **[summary_table.py](file:///network-volume/SR-Agents/summary_table.py)**: Summarizes the overall impact of the oracle/rejector decisions (cases saved, wasted, or broken by using skills).
+
 ## Reproducing our experiments
 
 The retrievers used across all experiments are BM25, TF-IDF, BGE,
