@@ -40,6 +40,20 @@ class HiddenStateExtractor:
             api_base: vLLM API base URL (for future use)
         """
         self.device = device
+        
+        # Automatically select float16/bfloat16 on CUDA to save 50% VRAM and prevent NVML/OOM failures
+        if device == "cuda" and dtype == torch.float32:
+            try:
+                if torch.cuda.is_bf16_supported():
+                    dtype = torch.bfloat16
+                    print("Automatically setting dtype to bfloat16 to optimize VRAM usage on CUDA")
+                else:
+                    dtype = torch.float16
+                    print("Automatically setting dtype to float16 to optimize VRAM usage on CUDA")
+            except Exception:
+                dtype = torch.float16
+                print("Automatically setting dtype to float16 to optimize VRAM usage on CUDA")
+                
         self.dtype = dtype
         self.use_vllm = use_vllm
         self.api_base = api_base
@@ -131,7 +145,10 @@ class HiddenStateExtractor:
                 for layer_idx in range(len(hidden_states)):
                     # hidden_states[layer_idx] shape: (batch_size, seq_len, hidden_dim)
                     last_hidden = hidden_states[layer_idx][j, seq_len - 1, :]  # (hidden_dim,)
-                    layer_hidden_states.append(last_hidden.cpu().numpy())
+                    last_hidden = last_hidden.detach().cpu()
+                    if last_hidden.dtype in (torch.bfloat16, torch.float16):
+                        last_hidden = last_hidden.to(torch.float32)
+                    layer_hidden_states.append(last_hidden.numpy())
                 
                 # Stack layers: (n_layers, hidden_dim)
                 batch_hidden_states.append(np.stack(layer_hidden_states))

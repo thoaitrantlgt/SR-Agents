@@ -34,6 +34,7 @@ class PipelineConfig:
     device: str = "cuda"
     api_base: Optional[str] = None  # vLLM API base URL (e.g., http://localhost:8000/v1)
     use_vllm: bool = False  # Use vLLM backend locally
+    eval_file: Optional[str] = None  # Path to eval_noskill JSON file to derive labels
     
     # Feature extraction
     batch_size_extraction: int = 4
@@ -41,8 +42,9 @@ class PipelineConfig:
     
     # Linear probe training
     regularization: float = 1.0
-    concatenate_layers: bool = True
+    concatenate_layers: bool = False  # Default: last layer only (safer for small datasets)
     validation_split: float = 0.1
+    n_pca_components: int = 64  # PCA components; 0 = disabled
     
     # Prefill inference
     prefill_mode: str = "soft"  # soft or hard
@@ -166,6 +168,8 @@ class When2ToolPipeline:
             regularization=self.config.regularization,
             concatenate_layers=self.config.concatenate_layers,
             validation_split=self.config.validation_split,
+            eval_file_path=self.config.eval_file,
+            n_pca_components=self.config.n_pca_components if self.config.n_pca_components > 0 else None,
         )
         
         return {
@@ -297,10 +301,16 @@ def main():
     parser.add_argument("--device", default="cuda", choices=["cuda", "cpu"])
     parser.add_argument("--api-base", default=None, help="vLLM API base URL (e.g., http://localhost:8000/v1)")
     parser.add_argument("--use-vllm", action="store_true", help="Use vLLM backend for extraction (requires vllm package)")
+    parser.add_argument("--eval-file", default=None, help="Path to eval_noskill JSON file to derive labels (optional)")
     parser.add_argument("--batch-size", type=int, default=4, help="Batch size for extraction")
     parser.add_argument("--max-length", type=int, default=512, help="Max sequence length")
     parser.add_argument("--steps", default="1,2,3", help="Steps to run (comma-separated)")
-    parser.add_argument("--regularization", type=float, default=1.0, help="L2 regularization")
+    parser.add_argument("--regularization", type=float, default=1.0, help="L2 regularization (default: 1.0)")
+    parser.add_argument("--concat-layers", action="store_true", default=False,
+                        help="Concatenate ALL layers (default: False — uses last layer only, safer for small datasets)")
+    parser.add_argument("--validation-split", type=float, default=0.1, help="Validation split ratio (default: 0.1)")
+    parser.add_argument("--pca-components", type=int, default=64,
+                        help="PCA components for dimensionality reduction (0=disable, default: 64)")
     parser.add_argument("--prefill-mode", choices=["soft", "hard"], default="soft")
     parser.add_argument("--thresholds", nargs="+", type=float, default=[0.5], help="Thresholds to sweep")
     parser.add_argument("--seed", type=int, default=42, help="Random seed")
@@ -317,10 +327,14 @@ def main():
         device=args.device,
         api_base=args.api_base,
         use_vllm=args.use_vllm,
+        eval_file=args.eval_file,
         batch_size_extraction=args.batch_size,
         max_length=args.max_length,
         steps=args.steps,
         regularization=args.regularization,
+        concatenate_layers=args.concat_layers,
+        validation_split=args.validation_split,
+        n_pca_components=args.pca_components,
         prefill_mode=args.prefill_mode,
         threshold_values=args.thresholds,
         random_seed=args.seed,

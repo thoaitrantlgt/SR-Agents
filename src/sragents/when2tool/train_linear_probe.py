@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Dict, Tuple, Optional, Union
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
 from sklearn.metrics import accuracy_score, roc_auc_score, roc_curve
 from tqdm import tqdm
 import pickle
@@ -24,6 +25,7 @@ class LinearProbe:
         regularization: float = 1.0,
         solver: str = "lbfgs",
         max_iter: int = 1000,
+        n_pca_components: Optional[int] = 64,
     ):
         """
         Initialize linear probe.
@@ -33,12 +35,19 @@ class LinearProbe:
             regularization: L2 regularization strength (1/C in sklearn)
             solver: Optimization solver
             max_iter: Maximum iterations
+            n_pca_components: Number of PCA components for dimensionality reduction.
+                Set to None to disable PCA. Recommended: 32-128 for small datasets.
         """
         self.n_features = n_features
         self.regularization = regularization
+        self.n_pca_components = n_pca_components
         
         # Initialize scaler and classifier
         self.scaler = StandardScaler()
+        
+        # PCA for dimensionality reduction (helps with overfitting when n_features >> n_samples)
+        self.pca = PCA(n_components=n_pca_components) if n_pca_components else None
+        
         self.classifier = LogisticRegression(
             C=1.0 / regularization,
             solver=solver,
@@ -89,6 +98,22 @@ class LinearProbe:
         X_train_scaled = self.scaler.transform(X_train)
         X_val_scaled = self.scaler.transform(X_val)
         
+        # Apply PCA for dimensionality reduction
+        if self.pca is not None:
+            # Clamp n_components to min(n_samples, n_features)
+            max_components = min(X_train_scaled.shape[0], X_train_scaled.shape[1])
+            actual_components = min(self.n_pca_components, max_components)
+            if actual_components != self.n_pca_components:
+                print(f"  Adjusting PCA components: {self.n_pca_components} → {actual_components} (limited by data size)")
+                self.pca = PCA(n_components=actual_components)
+            
+            print(f"Fitting PCA ({self.n_pca_components} components): {X_train_scaled.shape} → ", end="")
+            self.pca.fit(X_train_scaled)
+            X_train_scaled = self.pca.transform(X_train_scaled)
+            X_val_scaled = self.pca.transform(X_val_scaled)
+            explained = self.pca.explained_variance_ratio_.sum()
+            print(f"{X_train_scaled.shape}  (explained variance: {explained:.1%})")
+        
         # Train classifier
         print("Training classifier...")
         self.classifier.fit(X_train_scaled, y_train)
@@ -127,6 +152,8 @@ class LinearProbe:
             raise RuntimeError("Probe must be fitted before prediction")
         
         X_scaled = self.scaler.transform(X)
+        if self.pca is not None:
+            X_scaled = self.pca.transform(X_scaled)
         predictions = self.classifier.predict(X_scaled)
         probabilities = self.classifier.predict_proba(X_scaled)[:, 1]
         
@@ -139,8 +166,10 @@ class LinearProbe:
         
         state = {
             "scaler": self.scaler,
+            "pca": self.pca,
             "classifier": self.classifier,
             "n_features": self.n_features,
+            "n_pca_components": self.n_pca_components,
             "is_fitted": self.is_fitted,
         }
         
@@ -155,8 +184,12 @@ class LinearProbe:
         with open(checkpoint_path, "rb") as f:
             state = pickle.load(f)
         
-        probe = cls(n_features=state["n_features"])
+        probe = cls(
+            n_features=state["n_features"],
+            n_pca_components=state.get("n_pca_components", None),
+        )
         probe.scaler = state["scaler"]
+        probe.pca = state.get("pca", None)
         probe.classifier = state["classifier"]
         probe.is_fitted = state["is_fitted"]
         
@@ -213,14 +246,78 @@ def generate_labels_from_evaluation(
     )
 
 
+def load_labels_from_eval_file(
+    items: list,
+    eval_file_path: Union[str, Path] = None,
+) -> np.ndarray:
+    """
+    Extract binary labels indicating if tool is necessary.
+    
+    Strategy:
+    1. If eval_file provided, use it: correct=false → tool_necessary=1, correct=true → tool_necessary=0
+    2. Otherwise, use explicit tool_necessary field or infer from skill_annotations
+    
+    Args:
+        items: List of dataset items with instance_id
+        eval_file_path: Path to eval JSON file (from noskill inference)
+        
+    Returns:
+        Binary labels array (1 = tool needed, 0 = no tool needed)
+    """
+    labels = []
+    
+    # If eval file provided, build mapping
+    eval_map = {}
+    if eval_file_path and Path(eval_file_path).exists():
+        print(f"Loading evaluation results from {eval_file_path}...")
+        with open(eval_file_path, 'r') as f:
+            eval_data = json.load(f)
+            if isinstance(eval_data, dict) and 'details' in eval_data:
+                details = eval_data['details']
+                if isinstance(details, list):
+                    for detail in details:
+                        instance_id = detail.get('instance_id')
+                        correct = detail.get('correct', True)
+                        # If noskill model got it wrong, tool is necessary
+                        eval_map[instance_id] = 1 if not correct else 0
+                elif isinstance(details, dict):
+                    for instance_id, detail in details.items():
+                        correct = detail.get('correct', True)
+                        eval_map[instance_id] = 1 if not correct else 0
+        
+        print(f"Loaded eval mapping for {len(eval_map)} instances")
+    
+    # Extract labels for each item
+    for item in items:
+        instance_id = item.get('instance_id')
+        
+        # Try eval file first
+        if instance_id in eval_map:
+            label = eval_map[instance_id]
+        # Fall back to explicit field
+        elif 'tool_necessary' in item:
+            label = item['tool_necessary']
+        # Infer from skill_annotations
+        elif 'skill_annotations' in item and item['skill_annotations']:
+            label = 1
+        else:
+            label = 0
+        
+        labels.append(label)
+    
+    return np.array(labels)
+
+
 def train_probe(
     train_hidden_states_path: Union[str, Path],
     test_hidden_states_path: Union[str, Path],
     train_labels_path: Union[str, Path],
     output_dir: Union[str, Path],
     regularization: float = 1.0,
-    concatenate_layers: bool = True,
+    concatenate_layers: bool = False,
     validation_split: float = 0.1,
+    eval_file_path: Union[str, Path] = None,
+    n_pca_components: Optional[int] = 64,
 ) -> Dict:
     """
     Train linear probe on hidden states.
@@ -231,8 +328,9 @@ def train_probe(
         train_labels_path: Path to training labels (JSON file with tool_necessary field)
         output_dir: Directory to save probe
         regularization: L2 regularization strength
-        concatenate_layers: Whether to concatenate all layers
+        concatenate_layers: Whether to concatenate all layers (default: False = last layer only)
         validation_split: Validation split ratio
+        n_pca_components: PCA components for dim reduction (None to disable, default: 64)
         
     Returns:
         Dictionary with results
@@ -254,10 +352,18 @@ def train_probe(
         items = json.load(f)
         if isinstance(items, dict):
             items = list(items.values())
-    
-    # Extract labels (tool_necessary: 1 if tool is needed, 0 otherwise)
-    train_labels = np.array([item.get("tool_necessary", 0) for item in items])
+
+    # Extract labels using eval file if available
+    train_labels = load_labels_from_eval_file(items, eval_file_path)
     print(f"Labels distribution: {np.bincount(train_labels)}")
+
+    if len(np.unique(train_labels)) < 2:
+        raise ValueError(
+            f"Training data has only {len(np.unique(train_labels))} class(es). "
+            "Need at least 2 classes (tool_necessary=0 and tool_necessary=1) to train probe. "
+            "If not using eval file, pass --eval-file <path> to extract labels from evaluation results. "
+            "Expected format: JSON with 'details' list/dict containing 'instance_id' and 'correct' fields."
+        )
     
     # Prepare features
     print("\nPreparing features...")
@@ -272,6 +378,7 @@ def train_probe(
     probe = LinearProbe(
         n_features=X_train.shape[1],
         regularization=regularization,
+        n_pca_components=n_pca_components,
     )
     
     metrics = probe.fit(X_train, train_labels, validation_split=validation_split)
@@ -288,11 +395,12 @@ def train_probe(
     # Save results
     results = {
         "train_metrics": metrics,
-        "train_hidden_states_shape": train_hidden_states.shape,
-        "test_hidden_states_shape": test_hidden_states.shape,
-        "features_shape": X_train.shape,
+        "train_hidden_states_shape": list(train_hidden_states.shape),
+        "test_hidden_states_shape": list(test_hidden_states.shape),
+        "features_shape": list(X_train.shape),
         "concatenate_layers": concatenate_layers,
         "regularization": regularization,
+        "n_pca_components": n_pca_components,
     }
     
     # Save probe
@@ -319,8 +427,11 @@ if __name__ == "__main__":
     parser.add_argument("--train-labels", required=True, help="Path to training labels")
     parser.add_argument("--output-dir", required=True, help="Output directory")
     parser.add_argument("--regularization", type=float, default=1.0, help="L2 regularization")
-    parser.add_argument("--concatenate-layers", action="store_true", help="Concatenate all layers")
+    parser.add_argument("--concat-layers", action="store_true", default=False,
+                        help="Concatenate all layers (default: last layer only)")
     parser.add_argument("--validation-split", type=float, default=0.1, help="Validation split")
+    parser.add_argument("--pca-components", type=int, default=64,
+                        help="PCA components for dim reduction (0 to disable, default: 64)")
     
     args = parser.parse_args()
     
@@ -330,6 +441,7 @@ if __name__ == "__main__":
         args.train_labels,
         args.output_dir,
         regularization=args.regularization,
-        concatenate_layers=args.concatenate_layers,
+        concatenate_layers=args.concat_layers,
         validation_split=args.validation_split,
+        n_pca_components=args.pca_components if args.pca_components > 0 else None,
     )

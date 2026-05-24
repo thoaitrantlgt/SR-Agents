@@ -6,7 +6,7 @@ Handles multiple dataset formats (JSON, JSONL).
 import json
 import random
 from pathlib import Path
-from typing import Dict, List, Tuple, Union
+from typing import Dict, List, Tuple, Union, Optional
 from tqdm import tqdm
 
 
@@ -70,7 +70,7 @@ def save_dataset(items: List[Dict], output_path: Union[str, Path], format: str =
 def split_dataset(
     data_path: Union[str, Path],
     train_ratio: float = 0.3,
-    test_ratio: float = 0.7,
+    test_ratio: Optional[float] = None,
     random_seed: int = 42,
     output_dir: Union[str, Path] = None,
 ) -> Tuple[List[Dict], List[Dict]]:
@@ -80,13 +80,16 @@ def split_dataset(
     Args:
         data_path: Path to dataset file
         train_ratio: Ratio of training data (default: 0.3 for 30%)
-        test_ratio: Ratio of test data (default: 0.7 for 70%)
+        test_ratio: Ratio of test data (default: None, computed as 1.0 - train_ratio)
         random_seed: Random seed for reproducibility
         output_dir: If provided, save split datasets to this directory
         
     Returns:
         Tuple of (train_items, test_items)
     """
+    if test_ratio is None:
+        test_ratio = 1.0 - train_ratio
+        
     if abs((train_ratio + test_ratio) - 1.0) > 1e-6:
         raise ValueError(f"Ratios must sum to 1.0, got {train_ratio + test_ratio}")
     

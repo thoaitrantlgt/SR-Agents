@@ -1,0 +1,682 @@
+nohup: ignoring input
+======================================================================
+Starting When2Tool Pipeline for all 6 datasets
+Model: Qwen/Qwen3-4B | Device: cuda
+Optimal Hyperparameters: --train-ratio 0.5 --regularization 1000.0 --pca-components 32
+======================================================================
+
+----------------------------------------------------------------------
+Processing dataset: medcalcbench
+----------------------------------------------------------------------
+`torch_dtype` is deprecated! Use `dtype` instead!
+Pipeline output directory: when2tool_outputs_medcalcbench
+Configuration saved to when2tool_outputs_medcalcbench/config.json
+
+======================================================================
+When2Tool Pipeline for SR-Agents
+======================================================================
+
+======================================================================
+STEP 1: Dataset Splitting (30% train / 70% test)
+======================================================================
+Splitting uniformly...
+Loading dataset from data/bench/instances/medcalcbench.json...
+Total items loaded: 1100
+Train set: 550 items (50.0%)
+Test set: 550 items (50.0%)
+
+Saving train set to when2tool_outputs_medcalcbench/splits/train_json.json...
+Saving test set to when2tool_outputs_medcalcbench/splits/test_json.json...
+
+======================================================================
+STEP 2: Feature Extraction (Hidden States)
+======================================================================
+Automatically setting dtype to bfloat16 to optimize VRAM usage on CUDA
+Loading model Qwen/Qwen3-4B using transformers...
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:01<00:02,  1.01s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:02<00:01,  1.10s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:02<00:00,  1.36it/s]
+
+==================================================
+Extracting hidden states for TRAINING set
+==================================================
+Loading dataset from when2tool_outputs_medcalcbench/splits/train_json.json...
+Loaded 550 items
+Extracting hidden states...
+Extracting hidden states:   0%|          | 0/138 [00:00<?, ?it/s]Extracting hidden states:   1%|          | 1/138 [00:00<01:52,  1.22it/s]Extracting hidden states:   1%|▏         | 2/138 [00:01<01:05,  2.09it/s]Extracting hidden states:   2%|▏         | 3/138 [00:01<00:49,  2.71it/s]Extracting hidden states:   3%|▎         | 4/138 [00:01<00:45,  2.97it/s]Extracting hidden states:   4%|▎         | 5/138 [00:02<00:49,  2.68it/s]Extracting hidden states:   4%|▍         | 6/138 [00:02<01:04,  2.06it/s]Extracting hidden states:   5%|▌         | 7/138 [00:02<00:52,  2.48it/s]Extracting hidden states:   6%|▌         | 8/138 [00:03<00:45,  2.86it/s]Extracting hidden states:   7%|▋         | 9/138 [00:03<00:39,  3.26it/s]Extracting hidden states:   7%|▋         | 10/138 [00:03<00:38,  3.36it/s]Extracting hidden states:   8%|▊         | 11/138 [00:04<00:40,  3.13it/s]Extracting hidden states:   9%|▊         | 12/138 [00:04<00:35,  3.59it/s]Extracting hidden states:   9%|▉         | 13/138 [00:04<00:33,  3.75it/s]Extracting hidden states:  10%|█         | 14/138 [00:04<00:32,  3.87it/s]Extracting hidden states:  11%|█         | 15/138 [00:05<00:35,  3.45it/s]Extracting hidden states:  12%|█▏        | 16/138 [00:05<00:38,  3.15it/s]Extracting hidden states:  12%|█▏        | 17/138 [00:05<00:35,  3.41it/s]Extracting hidden states:  13%|█▎        | 18/138 [00:05<00:32,  3.74it/s]Extracting hidden states:  14%|█▍        | 19/138 [00:06<00:29,  4.00it/s]Extracting hidden states:  14%|█▍        | 20/138 [00:06<00:28,  4.19it/s]Extracting hidden states:  15%|█▌        | 21/138 [00:06<00:28,  4.17it/s]Extracting hidden states:  16%|█▌        | 22/138 [00:07<00:34,  3.32it/s]Extracting hidden states:  17%|█▋        | 23/138 [00:07<00:31,  3.64it/s]Extracting hidden states:  17%|█▋        | 24/138 [00:07<00:29,  3.80it/s]Extracting hidden states:  18%|█▊        | 25/138 [00:07<00:28,  3.90it/s]Extracting hidden states:  19%|█▉        | 26/138 [00:07<00:29,  3.79it/s]Extracting hidden states:  20%|█▉        | 27/138 [00:08<00:28,  3.93it/s]Extracting hidden states:  20%|██        | 28/138 [00:08<00:27,  4.01it/s]Extracting hidden states:  21%|██        | 29/138 [00:08<00:26,  4.07it/s]Extracting hidden states:  22%|██▏       | 30/138 [00:08<00:26,  4.10it/s]Extracting hidden states:  22%|██▏       | 31/138 [00:09<00:29,  3.62it/s]Extracting hidden states:  23%|██▎       | 32/138 [00:09<00:30,  3.48it/s]Extracting hidden states:  24%|██▍       | 33/138 [00:09<00:28,  3.65it/s]Extracting hidden states:  25%|██▍       | 34/138 [00:10<00:27,  3.79it/s]Extracting hidden states:  25%|██▌       | 35/138 [00:10<00:31,  3.26it/s]Extracting hidden states:  26%|██▌       | 36/138 [00:10<00:29,  3.49it/s]Extracting hidden states:  27%|██▋       | 37/138 [00:10<00:27,  3.66it/s]Extracting hidden states:  28%|██▊       | 38/138 [00:11<00:25,  3.91it/s]Extracting hidden states:  28%|██▊       | 39/138 [00:11<00:29,  3.36it/s]Extracting hidden states:  29%|██▉       | 40/138 [00:12<00:32,  2.99it/s]Extracting hidden states:  30%|██▉       | 41/138 [00:12<00:29,  3.27it/s]Extracting hidden states:  30%|███       | 42/138 [00:12<00:26,  3.59it/s]Extracting hidden states:  31%|███       | 43/138 [00:12<00:24,  3.86it/s]Extracting hidden states:  32%|███▏      | 44/138 [00:13<00:26,  3.53it/s]Extracting hidden states:  33%|███▎      | 45/138 [00:13<00:25,  3.69it/s]Extracting hidden states:  33%|███▎      | 46/138 [00:13<00:24,  3.82it/s]Extracting hidden states:  34%|███▍      | 47/138 [00:13<00:22,  4.01it/s]Extracting hidden states:  35%|███▍      | 48/138 [00:13<00:22,  4.06it/s]Extracting hidden states:  36%|███▌      | 49/138 [00:14<00:21,  4.10it/s]Extracting hidden states:  36%|███▌      | 50/138 [00:14<00:20,  4.23it/s]Extracting hidden states:  37%|███▋      | 51/138 [00:14<00:20,  4.22it/s]Extracting hidden states:  38%|███▊      | 52/138 [00:14<00:20,  4.22it/s]Extracting hidden states:  38%|███▊      | 53/138 [00:15<00:20,  4.18it/s]Extracting hidden states:  39%|███▉      | 54/138 [00:15<00:24,  3.41it/s]Extracting hidden states:  40%|███▉      | 55/138 [00:15<00:23,  3.60it/s]Extracting hidden states:  41%|████      | 56/138 [00:16<00:21,  3.85it/s]Extracting hidden states:  41%|████▏     | 57/138 [00:16<00:20,  3.95it/s]Extracting hidden states:  42%|████▏     | 58/138 [00:16<00:22,  3.57it/s]Extracting hidden states:  43%|████▎     | 59/138 [00:16<00:20,  3.85it/s]Extracting hidden states:  43%|████▎     | 60/138 [00:17<00:19,  3.95it/s]Extracting hidden states:  44%|████▍     | 61/138 [00:17<00:19,  4.03it/s]Extracting hidden states:  45%|████▍     | 62/138 [00:17<00:18,  4.22it/s]Extracting hidden states:  46%|████▌     | 63/138 [00:17<00:19,  3.90it/s]Extracting hidden states:  46%|████▋     | 64/138 [00:18<00:22,  3.27it/s]Extracting hidden states:  47%|████▋     | 65/138 [00:18<00:20,  3.52it/s]Extracting hidden states:  48%|████▊     | 66/138 [00:18<00:19,  3.71it/s]Extracting hidden states:  49%|████▊     | 67/138 [00:18<00:17,  3.96it/s]Extracting hidden states:  49%|████▉     | 68/138 [00:19<00:20,  3.39it/s]Extracting hidden states:  50%|█████     | 69/138 [00:19<00:19,  3.58it/s]Extracting hidden states:  51%|█████     | 70/138 [00:19<00:17,  3.86it/s]Extracting hidden states:  51%|█████▏    | 71/138 [00:19<00:16,  3.94it/s]Extracting hidden states:  52%|█████▏    | 72/138 [00:20<00:15,  4.15it/s]Extracting hidden states:  53%|█████▎    | 73/138 [00:20<00:16,  3.88it/s]Extracting hidden states:  54%|█████▎    | 74/138 [00:20<00:15,  4.01it/s]Extracting hidden states:  54%|█████▍    | 75/138 [00:20<00:15,  4.07it/s]Extracting hidden states:  55%|█████▌    | 76/138 [00:21<00:14,  4.23it/s]Extracting hidden states:  56%|█████▌    | 77/138 [00:21<00:14,  4.18it/s]Extracting hidden states:  57%|█████▋    | 78/138 [00:21<00:16,  3.57it/s]Extracting hidden states:  57%|█████▋    | 79/138 [00:22<00:15,  3.70it/s]Extracting hidden states:  58%|█████▊    | 80/138 [00:22<00:14,  3.95it/s]Extracting hidden states:  59%|█████▊    | 81/138 [00:22<00:14,  4.01it/s]Extracting hidden states:  59%|█████▉    | 82/138 [00:22<00:14,  3.79it/s]Extracting hidden states:  60%|██████    | 83/138 [00:23<00:16,  3.26it/s]Extracting hidden states:  61%|██████    | 84/138 [00:23<00:15,  3.57it/s]Extracting hidden states:  62%|██████▏   | 85/138 [00:23<00:14,  3.75it/s]Extracting hidden states:  62%|██████▏   | 86/138 [00:23<00:13,  3.87it/s]Extracting hidden states:  63%|██████▎   | 87/138 [00:24<00:12,  3.96it/s]Extracting hidden states:  64%|██████▍   | 88/138 [00:24<00:17,  2.92it/s]Extracting hidden states:  64%|██████▍   | 89/138 [00:24<00:14,  3.31it/s]Extracting hidden states:  65%|██████▌   | 90/138 [00:25<00:13,  3.59it/s]Extracting hidden states:  66%|██████▌   | 91/138 [00:25<00:12,  3.81it/s]Extracting hidden states:  67%|██████▋   | 92/138 [00:25<00:12,  3.77it/s]Extracting hidden states:  67%|██████▋   | 93/138 [00:25<00:11,  3.93it/s]Extracting hidden states:  68%|██████▊   | 94/138 [00:26<00:11,  3.87it/s]Extracting hidden states:  69%|██████▉   | 95/138 [00:26<00:10,  4.03it/s]Extracting hidden states:  70%|██████▉   | 96/138 [00:26<00:13,  3.19it/s]Extracting hidden states:  70%|███████   | 97/138 [00:27<00:12,  3.21it/s]Extracting hidden states:  71%|███████   | 98/138 [00:27<00:12,  3.30it/s]Extracting hidden states:  72%|███████▏  | 99/138 [00:27<00:10,  3.56it/s]Extracting hidden states:  72%|███████▏  | 100/138 [00:27<00:10,  3.79it/s]Extracting hidden states:  73%|███████▎  | 101/138 [00:28<00:09,  3.77it/s]Extracting hidden states:  74%|███████▍  | 102/138 [00:28<00:09,  3.94it/s]Extracting hidden states:  75%|███████▍  | 103/138 [00:28<00:09,  3.54it/s]Extracting hidden states:  75%|███████▌  | 104/138 [00:29<00:11,  2.87it/s]Extracting hidden states:  76%|███████▌  | 105/138 [00:29<00:10,  3.17it/s]Extracting hidden states:  77%|███████▋  | 106/138 [00:29<00:09,  3.34it/s]Extracting hidden states:  78%|███████▊  | 107/138 [00:29<00:08,  3.59it/s]Extracting hidden states:  78%|███████▊  | 108/138 [00:30<00:07,  3.81it/s]Extracting hidden states:  79%|███████▉  | 109/138 [00:30<00:07,  3.88it/s]Extracting hidden states:  80%|███████▉  | 110/138 [00:30<00:09,  3.02it/s]Extracting hidden states:  80%|████████  | 111/138 [00:31<00:08,  3.30it/s]Extracting hidden states:  81%|████████  | 112/138 [00:31<00:07,  3.52it/s]Extracting hidden states:  82%|████████▏ | 113/138 [00:31<00:06,  3.69it/s]Extracting hidden states:  83%|████████▎ | 114/138 [00:31<00:06,  3.84it/s]Extracting hidden states:  83%|████████▎ | 115/138 [00:32<00:07,  3.17it/s]Extracting hidden states:  84%|████████▍ | 116/138 [00:32<00:06,  3.41it/s]Extracting hidden states:  85%|████████▍ | 117/138 [00:32<00:05,  3.60it/s]Extracting hidden states:  86%|████████▌ | 118/138 [00:33<00:05,  3.75it/s]Extracting hidden states:  86%|████████▌ | 119/138 [00:33<00:06,  2.75it/s]Extracting hidden states:  87%|████████▋ | 120/138 [00:33<00:05,  3.05it/s]Extracting hidden states:  88%|████████▊ | 121/138 [00:34<00:05,  3.32it/s]Extracting hidden states:  88%|████████▊ | 122/138 [00:34<00:04,  3.61it/s]Extracting hidden states:  89%|████████▉ | 123/138 [00:34<00:04,  3.44it/s]Extracting hidden states:  90%|████████▉ | 124/138 [00:34<00:04,  3.47it/s]Extracting hidden states:  91%|█████████ | 125/138 [00:35<00:03,  3.66it/s]Extracting hidden states:  91%|█████████▏| 126/138 [00:35<00:03,  3.80it/s]Extracting hidden states:  92%|█████████▏| 127/138 [00:35<00:02,  3.68it/s]Extracting hidden states:  93%|█████████▎| 128/138 [00:36<00:03,  2.86it/s]Extracting hidden states:  93%|█████████▎| 129/138 [00:36<00:02,  3.16it/s]Extracting hidden states:  94%|█████████▍| 130/138 [00:36<00:02,  3.40it/s]Extracting hidden states:  95%|█████████▍| 131/138 [00:36<00:01,  3.69it/s]Extracting hidden states:  96%|█████████▌| 132/138 [00:37<00:01,  3.67it/s]Extracting hidden states:  96%|█████████▋| 133/138 [00:37<00:01,  3.81it/s]Extracting hidden states:  97%|█████████▋| 134/138 [00:37<00:00,  4.04it/s]Extracting hidden states:  98%|█████████▊| 135/138 [00:37<00:00,  4.07it/s]Extracting hidden states:  99%|█████████▊| 136/138 [00:38<00:00,  4.10it/s]Extracting hidden states:  99%|█████████▉| 137/138 [00:38<00:00,  3.99it/s]Extracting hidden states: 100%|██████████| 138/138 [00:38<00:00,  3.53it/s]Extracting hidden states: 100%|██████████| 138/138 [00:38<00:00,  3.56it/s]
+Hidden states shape: (550, 37, 2560)
+Saved hidden states to when2tool_outputs_medcalcbench/features/train/hidden_states.pt
+Saved metadata to when2tool_outputs_medcalcbench/features/train/metadata.json
+Saved items to when2tool_outputs_medcalcbench/features/train/items.json
+
+==================================================
+Extracting hidden states for TEST set
+==================================================
+Loading dataset from when2tool_outputs_medcalcbench/splits/test_json.json...
+Loaded 550 items
+Extracting hidden states...
+Extracting hidden states:   0%|          | 0/138 [00:00<?, ?it/s]Extracting hidden states:   1%|          | 1/138 [00:00<00:32,  4.22it/s]Extracting hidden states:   1%|▏         | 2/138 [00:00<00:31,  4.26it/s]Extracting hidden states:   2%|▏         | 3/138 [00:00<00:32,  4.10it/s]Extracting hidden states:   3%|▎         | 4/138 [00:01<00:38,  3.52it/s]Extracting hidden states:   4%|▎         | 5/138 [00:01<00:37,  3.57it/s]Extracting hidden states:   4%|▍         | 6/138 [00:01<00:34,  3.86it/s]Extracting hidden states:   5%|▌         | 7/138 [00:01<00:33,  3.95it/s]Extracting hidden states:   6%|▌         | 8/138 [00:02<00:31,  4.08it/s]Extracting hidden states:   7%|▋         | 9/138 [00:02<00:39,  3.29it/s]Extracting hidden states:   7%|▋         | 10/138 [00:02<00:36,  3.51it/s]Extracting hidden states:   8%|▊         | 11/138 [00:02<00:34,  3.67it/s]Extracting hidden states:   9%|▊         | 12/138 [00:03<00:34,  3.65it/s]Extracting hidden states:   9%|▉         | 13/138 [00:03<00:36,  3.42it/s]Extracting hidden states:  10%|█         | 14/138 [00:03<00:34,  3.62it/s]Extracting hidden states:  11%|█         | 15/138 [00:04<00:32,  3.78it/s]Extracting hidden states:  12%|█▏        | 16/138 [00:04<00:33,  3.67it/s]Extracting hidden states:  12%|█▏        | 17/138 [00:04<00:35,  3.36it/s]Extracting hidden states:  13%|█▎        | 18/138 [00:04<00:33,  3.54it/s]Extracting hidden states:  14%|█▍        | 19/138 [00:05<00:31,  3.72it/s]Extracting hidden states:  14%|█▍        | 20/138 [00:05<00:29,  3.95it/s]Extracting hidden states:  15%|█▌        | 21/138 [00:05<00:28,  4.13it/s]Extracting hidden states:  16%|█▌        | 22/138 [00:05<00:27,  4.21it/s]Extracting hidden states:  17%|█▋        | 23/138 [00:06<00:33,  3.45it/s]Extracting hidden states:  17%|█▋        | 24/138 [00:06<00:31,  3.64it/s]Extracting hidden states:  18%|█▊        | 25/138 [00:06<00:29,  3.79it/s]Extracting hidden states:  19%|█▉        | 26/138 [00:06<00:28,  3.90it/s]Extracting hidden states:  20%|█▉        | 27/138 [00:07<00:35,  3.16it/s]Extracting hidden states:  20%|██        | 28/138 [00:07<00:32,  3.41it/s]Extracting hidden states:  21%|██        | 29/138 [00:07<00:30,  3.61it/s]Extracting hidden states:  22%|██▏       | 30/138 [00:08<00:28,  3.76it/s]Extracting hidden states:  22%|██▏       | 31/138 [00:08<00:36,  2.91it/s]Extracting hidden states:  23%|██▎       | 32/138 [00:08<00:32,  3.24it/s]Extracting hidden states:  24%|██▍       | 33/138 [00:09<00:30,  3.48it/s]Extracting hidden states:  25%|██▍       | 34/138 [00:09<00:27,  3.81it/s]Extracting hidden states:  25%|██▌       | 35/138 [00:09<00:25,  4.10it/s]Extracting hidden states:  26%|██▌       | 36/138 [00:09<00:24,  4.17it/s]Extracting hidden states:  27%|██▋       | 37/138 [00:10<00:31,  3.25it/s]Extracting hidden states:  28%|██▊       | 38/138 [00:10<00:33,  2.97it/s]Extracting hidden states:  28%|██▊       | 39/138 [00:10<00:29,  3.31it/s]Extracting hidden states:  29%|██▉       | 40/138 [00:11<00:27,  3.57it/s]Extracting hidden states:  30%|██▉       | 41/138 [00:11<00:26,  3.63it/s]Extracting hidden states:  30%|███       | 42/138 [00:11<00:24,  3.84it/s]Extracting hidden states:  31%|███       | 43/138 [00:11<00:24,  3.86it/s]Extracting hidden states:  32%|███▏      | 44/138 [00:12<00:23,  4.01it/s]Extracting hidden states:  33%|███▎      | 45/138 [00:12<00:23,  3.89it/s]Extracting hidden states:  33%|███▎      | 46/138 [00:12<00:27,  3.30it/s]Extracting hidden states:  34%|███▍      | 47/138 [00:12<00:25,  3.59it/s]Extracting hidden states:  35%|███▍      | 48/138 [00:13<00:24,  3.63it/s]Extracting hidden states:  36%|███▌      | 49/138 [00:13<00:23,  3.78it/s]Extracting hidden states:  36%|███▌      | 50/138 [00:13<00:22,  3.91it/s]Extracting hidden states:  37%|███▋      | 51/138 [00:14<00:23,  3.63it/s]Extracting hidden states:  38%|███▊      | 52/138 [00:14<00:21,  3.95it/s]Extracting hidden states:  38%|███▊      | 53/138 [00:14<00:21,  4.04it/s]Extracting hidden states:  39%|███▉      | 54/138 [00:14<00:20,  4.10it/s]Extracting hidden states:  40%|███▉      | 55/138 [00:14<00:19,  4.27it/s]Extracting hidden states:  41%|████      | 56/138 [00:15<00:18,  4.37it/s]Extracting hidden states:  41%|████▏     | 57/138 [00:15<00:20,  3.96it/s]Extracting hidden states:  42%|████▏     | 58/138 [00:15<00:19,  4.02it/s]Extracting hidden states:  43%|████▎     | 59/138 [00:15<00:18,  4.20it/s]Extracting hidden states:  43%|████▎     | 60/138 [00:16<00:18,  4.20it/s]Extracting hidden states:  44%|████▍     | 61/138 [00:16<00:19,  3.86it/s]Extracting hidden states:  45%|████▍     | 62/138 [00:16<00:22,  3.33it/s]Extracting hidden states:  46%|████▌     | 63/138 [00:17<00:21,  3.54it/s]Extracting hidden states:  46%|████▋     | 64/138 [00:17<00:20,  3.69it/s]Extracting hidden states:  47%|████▋     | 65/138 [00:17<00:20,  3.51it/s]Extracting hidden states:  48%|████▊     | 66/138 [00:17<00:22,  3.23it/s]Extracting hidden states:  49%|████▊     | 67/138 [00:18<00:20,  3.47it/s]Extracting hidden states:  49%|████▉     | 68/138 [00:18<00:18,  3.77it/s]Extracting hidden states:  50%|█████     | 69/138 [00:18<00:17,  3.89it/s]Extracting hidden states:  51%|█████     | 70/138 [00:18<00:17,  3.94it/s]Extracting hidden states:  51%|█████▏    | 71/138 [00:19<00:18,  3.62it/s]Extracting hidden states:  52%|█████▏    | 72/138 [00:19<00:17,  3.78it/s]Extracting hidden states:  53%|█████▎    | 73/138 [00:19<00:16,  3.89it/s]Extracting hidden states:  54%|█████▎    | 74/138 [00:19<00:16,  3.98it/s]Extracting hidden states:  54%|█████▍    | 75/138 [00:20<00:16,  3.85it/s]Extracting hidden states:  55%|█████▌    | 76/138 [00:20<00:15,  3.97it/s]Extracting hidden states:  56%|█████▌    | 77/138 [00:20<00:15,  4.02it/s]Extracting hidden states:  57%|█████▋    | 78/138 [00:20<00:14,  4.08it/s]Extracting hidden states:  57%|█████▋    | 79/138 [00:21<00:14,  3.98it/s]Extracting hidden states:  58%|█████▊    | 80/138 [00:21<00:17,  3.37it/s]Extracting hidden states:  59%|█████▊    | 81/138 [00:21<00:15,  3.69it/s]Extracting hidden states:  59%|█████▉    | 82/138 [00:22<00:14,  3.83it/s]Extracting hidden states:  60%|██████    | 83/138 [00:22<00:13,  3.94it/s]Extracting hidden states:  61%|██████    | 84/138 [00:22<00:14,  3.70it/s]Extracting hidden states:  62%|██████▏   | 85/138 [00:22<00:13,  3.88it/s]Extracting hidden states:  62%|██████▏   | 86/138 [00:23<00:13,  3.98it/s]Extracting hidden states:  63%|██████▎   | 87/138 [00:23<00:12,  4.03it/s]Extracting hidden states:  64%|██████▍   | 88/138 [00:23<00:16,  3.11it/s]Extracting hidden states:  64%|██████▍   | 89/138 [00:24<00:14,  3.39it/s]Extracting hidden states:  65%|██████▌   | 90/138 [00:24<00:13,  3.61it/s]Extracting hidden states:  66%|██████▌   | 91/138 [00:24<00:12,  3.76it/s]Extracting hidden states:  67%|██████▋   | 92/138 [00:24<00:11,  3.99it/s]Extracting hidden states:  67%|██████▋   | 93/138 [00:25<00:11,  3.85it/s]Extracting hidden states:  68%|██████▊   | 94/138 [00:25<00:12,  3.39it/s]Extracting hidden states:  69%|██████▉   | 95/138 [00:25<00:11,  3.59it/s]Extracting hidden states:  70%|██████▉   | 96/138 [00:25<00:10,  3.86it/s]Extracting hidden states:  70%|███████   | 97/138 [00:26<00:10,  4.06it/s]Extracting hidden states:  71%|███████   | 98/138 [00:26<00:09,  4.24it/s]Extracting hidden states:  72%|███████▏  | 99/138 [00:26<00:10,  3.74it/s]Extracting hidden states:  72%|███████▏  | 100/138 [00:26<00:09,  3.84it/s]Extracting hidden states:  73%|███████▎  | 101/138 [00:27<00:09,  3.95it/s]Extracting hidden states:  74%|███████▍  | 102/138 [00:27<00:08,  4.03it/s]Extracting hidden states:  75%|███████▍  | 103/138 [00:27<00:08,  4.10it/s]Extracting hidden states:  75%|███████▌  | 104/138 [00:27<00:09,  3.59it/s]Extracting hidden states:  76%|███████▌  | 105/138 [00:28<00:08,  3.84it/s]Extracting hidden states:  77%|███████▋  | 106/138 [00:28<00:08,  3.98it/s]Extracting hidden states:  78%|███████▊  | 107/138 [00:28<00:07,  3.95it/s]Extracting hidden states:  78%|███████▊  | 108/138 [00:28<00:07,  4.03it/s]Extracting hidden states:  79%|███████▉  | 109/138 [00:29<00:08,  3.60it/s]Extracting hidden states:  80%|███████▉  | 110/138 [00:29<00:08,  3.48it/s]Extracting hidden states:  80%|████████  | 111/138 [00:29<00:07,  3.80it/s]Extracting hidden states:  81%|████████  | 112/138 [00:29<00:06,  3.92it/s]Extracting hidden states:  82%|████████▏ | 113/138 [00:30<00:06,  4.12it/s]Extracting hidden states:  83%|████████▎ | 114/138 [00:30<00:05,  4.17it/s]Extracting hidden states:  83%|████████▎ | 115/138 [00:30<00:06,  3.38it/s]Extracting hidden states:  84%|████████▍ | 116/138 [00:31<00:05,  3.69it/s]Extracting hidden states:  85%|████████▍ | 117/138 [00:31<00:05,  3.82it/s]Extracting hidden states:  86%|████████▌ | 118/138 [00:31<00:05,  3.90it/s]Extracting hidden states:  86%|████████▌ | 119/138 [00:31<00:04,  3.80it/s]Extracting hidden states:  87%|████████▋ | 120/138 [00:32<00:04,  3.92it/s]Extracting hidden states:  88%|████████▊ | 121/138 [00:32<00:04,  4.01it/s]Extracting hidden states:  88%|████████▊ | 122/138 [00:32<00:03,  4.04it/s]Extracting hidden states:  89%|████████▉ | 123/138 [00:32<00:03,  4.20it/s]Extracting hidden states:  90%|████████▉ | 124/138 [00:33<00:03,  3.56it/s]Extracting hidden states:  91%|█████████ | 125/138 [00:33<00:03,  3.71it/s]Extracting hidden states:  91%|█████████▏| 126/138 [00:33<00:03,  3.85it/s]Extracting hidden states:  92%|█████████▏| 127/138 [00:33<00:02,  3.93it/s]Extracting hidden states:  93%|█████████▎| 128/138 [00:34<00:02,  3.49it/s]Extracting hidden states:  93%|█████████▎| 129/138 [00:34<00:02,  3.02it/s]Extracting hidden states:  94%|█████████▍| 130/138 [00:34<00:02,  3.29it/s]Extracting hidden states:  95%|█████████▍| 131/138 [00:35<00:01,  3.52it/s]Extracting hidden states:  96%|█████████▌| 132/138 [00:35<00:01,  3.50it/s]Extracting hidden states:  96%|█████████▋| 133/138 [00:35<00:01,  3.12it/s]Extracting hidden states:  97%|█████████▋| 134/138 [00:36<00:01,  3.38it/s]Extracting hidden states:  98%|█████████▊| 135/138 [00:36<00:00,  3.60it/s]Extracting hidden states:  99%|█████████▊| 136/138 [00:36<00:00,  3.43it/s]Extracting hidden states:  99%|█████████▉| 137/138 [00:37<00:00,  2.78it/s]Extracting hidden states: 100%|██████████| 138/138 [00:37<00:00,  3.48it/s]Extracting hidden states: 100%|██████████| 138/138 [00:37<00:00,  3.70it/s]
+[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:    0.1s finished
+Hidden states shape: (550, 37, 2560)
+Saved hidden states to when2tool_outputs_medcalcbench/features/test/hidden_states.pt
+Saved metadata to when2tool_outputs_medcalcbench/features/test/metadata.json
+Saved items to when2tool_outputs_medcalcbench/features/test/items.json
+
+==================================================
+Hidden state extraction completed!
+Train: (550, 37, 2560)
+Test: (550, 37, 2560)
+==================================================
+
+======================================================================
+STEP 3: Linear Probe Training
+======================================================================
+Loading hidden states...
+Train hidden states shape: (550, 37, 2560)
+Test hidden states shape: (550, 37, 2560)
+Loading labels from when2tool_outputs_medcalcbench/features/train/items.json...
+Loading evaluation results from results/eval_noskill_medcalcbench.json...
+Loaded eval mapping for 1100 instances
+Labels distribution: [134 416]
+
+Preparing features...
+Prepared features shape: (550, 2560)
+Prepared features shape: (550, 2560)
+
+==================================================
+Training Linear Probe
+==================================================
+Training set shape: (550, 2560)
+Labels distribution: [134 416]
+
+Train set: (495, 2560), Labels: [118 377]
+Val set: (55, 2560), Labels: [16 39]
+
+Fitting scaler...
+Fitting PCA (32 components): (495, 2560) → (495, 32)  (explained variance: 47.5%)
+Training classifier...
+
+Training Results:
+  train_accuracy: 0.7717
+  val_accuracy: 0.7091
+  train_auc: 0.6736
+  val_auc: 0.4984
+
+==================================================
+Test Set Evaluation
+==================================================
+Test predictions shape: (550,)
+Test predictions distribution: [  0 550]
+Probe saved to when2tool_outputs_medcalcbench/probe/probe.pkl
+
+Probe saved to when2tool_outputs_medcalcbench/probe/probe.pkl
+Results saved to when2tool_outputs_medcalcbench/probe/results.json
+
+======================================================================
+Pipeline Completed!
+Results saved to when2tool_outputs_medcalcbench
+======================================================================
+✅ Completed pipeline for medcalcbench!
+Results saved to: ./when2tool_outputs_medcalcbench
+
+----------------------------------------------------------------------
+Processing dataset: theoremqa
+----------------------------------------------------------------------
+`torch_dtype` is deprecated! Use `dtype` instead!
+Pipeline output directory: when2tool_outputs_theoremqa
+Configuration saved to when2tool_outputs_theoremqa/config.json
+
+======================================================================
+When2Tool Pipeline for SR-Agents
+======================================================================
+
+======================================================================
+STEP 1: Dataset Splitting (30% train / 70% test)
+======================================================================
+Splitting uniformly...
+Loading dataset from data/bench/instances/theoremqa.json...
+Total items loaded: 747
+Train set: 373 items (49.9%)
+Test set: 374 items (50.1%)
+
+Saving train set to when2tool_outputs_theoremqa/splits/train_json.json...
+Saving test set to when2tool_outputs_theoremqa/splits/test_json.json...
+
+======================================================================
+STEP 2: Feature Extraction (Hidden States)
+======================================================================
+Automatically setting dtype to bfloat16 to optimize VRAM usage on CUDA
+Loading model Qwen/Qwen3-4B using transformers...
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:01<00:03,  1.97s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:03<00:01,  1.67s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:03<00:00,  1.15s/it]
+
+==================================================
+Extracting hidden states for TRAINING set
+==================================================
+Loading dataset from when2tool_outputs_theoremqa/splits/train_json.json...
+Loaded 373 items
+Extracting hidden states...
+Extracting hidden states:   0%|          | 0/94 [00:00<?, ?it/s]Extracting hidden states:   1%|          | 1/94 [00:01<01:52,  1.21s/it]Extracting hidden states:   2%|▏         | 2/94 [00:01<00:53,  1.72it/s]Extracting hidden states:   4%|▍         | 4/94 [00:01<00:23,  3.79it/s]Extracting hidden states:   5%|▌         | 5/94 [00:01<00:19,  4.60it/s]Extracting hidden states:   7%|▋         | 7/94 [00:01<00:12,  6.86it/s]Extracting hidden states:  10%|▉         | 9/94 [00:02<00:16,  5.22it/s]Extracting hidden states:  11%|█         | 10/94 [00:02<00:18,  4.48it/s]Extracting hidden states:  13%|█▎        | 12/94 [00:02<00:13,  5.98it/s]Extracting hidden states:  15%|█▍        | 14/94 [00:02<00:11,  7.15it/s]Extracting hidden states:  17%|█▋        | 16/94 [00:03<00:09,  8.29it/s]Extracting hidden states:  19%|█▉        | 18/94 [00:03<00:07,  9.53it/s]Extracting hidden states:  21%|██▏       | 20/94 [00:03<00:09,  7.93it/s]Extracting hidden states:  23%|██▎       | 22/94 [00:03<00:07,  9.11it/s]Extracting hidden states:  26%|██▌       | 24/94 [00:03<00:06, 10.36it/s]Extracting hidden states:  28%|██▊       | 26/94 [00:04<00:06, 11.12it/s]Extracting hidden states:  30%|██▉       | 28/94 [00:04<00:05, 12.48it/s]Extracting hidden states:  32%|███▏      | 30/94 [00:04<00:05, 12.34it/s]Extracting hidden states:  34%|███▍      | 32/94 [00:04<00:08,  7.38it/s]Extracting hidden states:  36%|███▌      | 34/94 [00:04<00:06,  8.67it/s]Extracting hidden states:  38%|███▊      | 36/94 [00:05<00:05,  9.94it/s]Extracting hidden states:  40%|████      | 38/94 [00:05<00:05, 11.04it/s]Extracting hidden states:  43%|████▎     | 40/94 [00:05<00:04, 10.95it/s]Extracting hidden states:  45%|████▍     | 42/94 [00:05<00:05,  9.79it/s]Extracting hidden states:  47%|████▋     | 44/94 [00:05<00:05,  9.09it/s]Extracting hidden states:  49%|████▉     | 46/94 [00:06<00:04, 10.18it/s]Extracting hidden states:  51%|█████     | 48/94 [00:06<00:04, 11.18it/s]Extracting hidden states:  53%|█████▎    | 50/94 [00:06<00:03, 12.09it/s]Extracting hidden states:  55%|█████▌    | 52/94 [00:06<00:03, 12.47it/s]Extracting hidden states:  57%|█████▋    | 54/94 [00:06<00:04,  8.83it/s]Extracting hidden states:  60%|█████▉    | 56/94 [00:07<00:03,  9.91it/s]Extracting hidden states:  62%|██████▏   | 58/94 [00:07<00:03, 11.08it/s]Extracting hidden states:  64%|██████▍   | 60/94 [00:07<00:02, 12.24it/s]Extracting hidden states:  66%|██████▌   | 62/94 [00:07<00:02, 11.95it/s]Extracting hidden states:  68%|██████▊   | 64/94 [00:07<00:03,  9.84it/s]Extracting hidden states:  70%|███████   | 66/94 [00:07<00:02,  9.73it/s]Extracting hidden states:  72%|███████▏  | 68/94 [00:08<00:02, 10.76it/s]Extracting hidden states:  74%|███████▍  | 70/94 [00:08<00:02, 11.99it/s]Extracting hidden states:  77%|███████▋  | 72/94 [00:08<00:01, 12.49it/s]Extracting hidden states:  79%|███████▊  | 74/94 [00:08<00:02,  8.95it/s]Extracting hidden states:  81%|████████  | 76/94 [00:08<00:01,  9.86it/s]Extracting hidden states:  83%|████████▎ | 78/94 [00:09<00:01, 11.08it/s]Extracting hidden states:  85%|████████▌ | 80/94 [00:09<00:01, 11.96it/s]Extracting hidden states:  87%|████████▋ | 82/94 [00:09<00:00, 13.04it/s]Extracting hidden states:  89%|████████▉ | 84/94 [00:09<00:00, 10.12it/s]Extracting hidden states:  91%|█████████▏| 86/94 [00:09<00:00,  8.48it/s]Extracting hidden states:  94%|█████████▎| 88/94 [00:10<00:00,  9.85it/s]Extracting hidden states:  96%|█████████▌| 90/94 [00:10<00:00, 10.16it/s]Extracting hidden states:  98%|█████████▊| 92/94 [00:10<00:00, 10.79it/s]Extracting hidden states: 100%|██████████| 94/94 [00:10<00:00, 12.40it/s]Extracting hidden states: 100%|██████████| 94/94 [00:10<00:00,  8.99it/s]
+Hidden states shape: (373, 37, 2560)
+Saved hidden states to when2tool_outputs_theoremqa/features/train/hidden_states.pt
+Saved metadata to when2tool_outputs_theoremqa/features/train/metadata.json
+Saved items to when2tool_outputs_theoremqa/features/train/items.json
+
+==================================================
+Extracting hidden states for TEST set
+==================================================
+Loading dataset from when2tool_outputs_theoremqa/splits/test_json.json...
+Loaded 374 items
+Extracting hidden states...
+Extracting hidden states:   0%|          | 0/94 [00:00<?, ?it/s]Extracting hidden states:   2%|▏         | 2/94 [00:00<00:06, 15.09it/s]Extracting hidden states:   4%|▍         | 4/94 [00:00<00:05, 17.03it/s]Extracting hidden states:   6%|▋         | 6/94 [00:00<00:09,  9.11it/s]Extracting hidden states:   9%|▊         | 8/94 [00:00<00:07, 10.88it/s]Extracting hidden states:  11%|█         | 10/94 [00:00<00:07, 11.41it/s]Extracting hidden states:  13%|█▎        | 12/94 [00:00<00:06, 12.77it/s]Extracting hidden states:  15%|█▍        | 14/94 [00:01<00:05, 14.47it/s]Extracting hidden states:  17%|█▋        | 16/94 [00:01<00:07, 10.25it/s]Extracting hidden states:  19%|█▉        | 18/94 [00:01<00:06, 11.90it/s]Extracting hidden states:  21%|██▏       | 20/94 [00:01<00:05, 12.97it/s]Extracting hidden states:  23%|██▎       | 22/94 [00:01<00:05, 13.13it/s]Extracting hidden states:  26%|██▌       | 24/94 [00:01<00:05, 13.60it/s]Extracting hidden states:  28%|██▊       | 26/94 [00:02<00:04, 14.59it/s]Extracting hidden states:  30%|██▉       | 28/94 [00:02<00:05, 11.86it/s]Extracting hidden states:  32%|███▏      | 30/94 [00:02<00:05, 12.36it/s]Extracting hidden states:  34%|███▍      | 32/94 [00:02<00:04, 13.39it/s]Extracting hidden states:  36%|███▌      | 34/94 [00:02<00:04, 14.24it/s]Extracting hidden states:  38%|███▊      | 36/94 [00:02<00:03, 15.17it/s]Extracting hidden states:  40%|████      | 38/94 [00:02<00:03, 15.49it/s]Extracting hidden states:  43%|████▎     | 40/94 [00:03<00:06,  8.41it/s]Extracting hidden states:  45%|████▍     | 42/94 [00:03<00:05, 10.06it/s]Extracting hidden states:  47%|████▋     | 44/94 [00:03<00:04, 11.62it/s]Extracting hidden states:  49%|████▉     | 46/94 [00:03<00:03, 12.53it/s]Extracting hidden states:  51%|█████     | 48/94 [00:03<00:03, 13.61it/s]Extracting hidden states:  53%|█████▎    | 50/94 [00:04<00:03, 13.45it/s]Extracting hidden states:  55%|█████▌    | 52/94 [00:04<00:04,  8.71it/s]Extracting hidden states:  57%|█████▋    | 54/94 [00:04<00:04,  9.53it/s]Extracting hidden states:  60%|█████▉    | 56/94 [00:04<00:04,  9.37it/s]Extracting hidden states:  62%|██████▏   | 58/94 [00:04<00:03, 10.50it/s]Extracting hidden states:  64%|██████▍   | 60/94 [00:05<00:03,  8.90it/s]Extracting hidden states:  66%|██████▌   | 62/94 [00:05<00:03, 10.56it/s]Extracting hidden states:  68%|██████▊   | 64/94 [00:05<00:02, 11.25it/s]Extracting hidden states:  70%|███████   | 66/94 [00:05<00:02, 12.49it/s]Extracting hidden states:  72%|███████▏  | 68/94 [00:05<00:01, 13.39it/s]Extracting hidden states:  74%|███████▍  | 70/94 [00:05<00:01, 14.51it/s]Extracting hidden states:  77%|███████▋  | 72/94 [00:06<00:02, 10.88it/s]Extracting hidden states:  79%|███████▊  | 74/94 [00:06<00:01, 12.11it/s]Extracting hidden states:  81%|████████  | 76/94 [00:06<00:01, 11.95it/s]Extracting hidden states:  83%|████████▎ | 78/94 [00:06<00:01, 12.76it/s]Extracting hidden states:  85%|████████▌ | 80/94 [00:06<00:01, 13.91it/s]Extracting hidden states:  87%|████████▋ | 82/94 [00:06<00:00, 14.46it/s]Extracting hidden states:  89%|████████▉ | 84/94 [00:07<00:01,  9.20it/s]Extracting hidden states:  91%|█████████▏| 86/94 [00:07<00:00, 10.96it/s]Extracting hidden states:  95%|█████████▍| 89/94 [00:07<00:00, 13.19it/s]Extracting hidden states:  97%|█████████▋| 91/94 [00:07<00:00, 14.42it/s]Extracting hidden states:  99%|█████████▉| 93/94 [00:07<00:00, 13.61it/s]Extracting hidden states: 100%|██████████| 94/94 [00:07<00:00, 12.02it/s]
+[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:    0.0s finished
+Hidden states shape: (374, 37, 2560)
+Saved hidden states to when2tool_outputs_theoremqa/features/test/hidden_states.pt
+Saved metadata to when2tool_outputs_theoremqa/features/test/metadata.json
+Saved items to when2tool_outputs_theoremqa/features/test/items.json
+
+==================================================
+Hidden state extraction completed!
+Train: (373, 37, 2560)
+Test: (374, 37, 2560)
+==================================================
+
+======================================================================
+STEP 3: Linear Probe Training
+======================================================================
+Loading hidden states...
+Train hidden states shape: (373, 37, 2560)
+Test hidden states shape: (374, 37, 2560)
+Loading labels from when2tool_outputs_theoremqa/features/train/items.json...
+Loading evaluation results from results/eval_noskill_theoremqa.json...
+Loaded eval mapping for 747 instances
+Labels distribution: [188 185]
+
+Preparing features...
+Prepared features shape: (373, 2560)
+Prepared features shape: (374, 2560)
+
+==================================================
+Training Linear Probe
+==================================================
+Training set shape: (373, 2560)
+Labels distribution: [188 185]
+
+Train set: (336, 2560), Labels: [165 171]
+Val set: (37, 2560), Labels: [23 14]
+
+Fitting scaler...
+Fitting PCA (32 components): (336, 2560) → (336, 32)  (explained variance: 68.2%)
+Training classifier...
+
+Training Results:
+  train_accuracy: 0.6964
+  val_accuracy: 0.7297
+  train_auc: 0.7528
+  val_auc: 0.6739
+
+==================================================
+Test Set Evaluation
+==================================================
+Test predictions shape: (374,)
+Test predictions distribution: [172 202]
+Probe saved to when2tool_outputs_theoremqa/probe/probe.pkl
+
+Probe saved to when2tool_outputs_theoremqa/probe/probe.pkl
+Results saved to when2tool_outputs_theoremqa/probe/results.json
+
+======================================================================
+Pipeline Completed!
+Results saved to when2tool_outputs_theoremqa
+======================================================================
+✅ Completed pipeline for theoremqa!
+Results saved to: ./when2tool_outputs_theoremqa
+
+----------------------------------------------------------------------
+Processing dataset: logicbench
+----------------------------------------------------------------------
+`torch_dtype` is deprecated! Use `dtype` instead!
+Pipeline output directory: when2tool_outputs_logicbench
+Configuration saved to when2tool_outputs_logicbench/config.json
+
+======================================================================
+When2Tool Pipeline for SR-Agents
+======================================================================
+
+======================================================================
+STEP 1: Dataset Splitting (30% train / 70% test)
+======================================================================
+Splitting uniformly...
+Loading dataset from data/bench/instances/logicbench.json...
+Total items loaded: 760
+Train set: 380 items (50.0%)
+Test set: 380 items (50.0%)
+
+Saving train set to when2tool_outputs_logicbench/splits/train_json.json...
+Saving test set to when2tool_outputs_logicbench/splits/test_json.json...
+
+======================================================================
+STEP 2: Feature Extraction (Hidden States)
+======================================================================
+Automatically setting dtype to bfloat16 to optimize VRAM usage on CUDA
+Loading model Qwen/Qwen3-4B using transformers...
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:01<00:03,  1.72s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:03<00:01,  1.56s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:03<00:00,  1.06s/it]
+
+==================================================
+Extracting hidden states for TRAINING set
+==================================================
+Loading dataset from when2tool_outputs_logicbench/splits/train_json.json...
+Loaded 380 items
+Extracting hidden states...
+Extracting hidden states:   0%|          | 0/95 [00:00<?, ?it/s]Extracting hidden states:   1%|          | 1/95 [00:00<00:46,  2.01it/s]Extracting hidden states:   2%|▏         | 2/95 [00:00<00:43,  2.12it/s]Extracting hidden states:   3%|▎         | 3/95 [00:01<00:28,  3.18it/s]Extracting hidden states:   5%|▌         | 5/95 [00:01<00:17,  5.07it/s]Extracting hidden states:   7%|▋         | 7/95 [00:01<00:12,  6.83it/s]Extracting hidden states:   8%|▊         | 8/95 [00:02<00:23,  3.70it/s]Extracting hidden states:   9%|▉         | 9/95 [00:02<00:19,  4.34it/s]Extracting hidden states:  11%|█         | 10/95 [00:02<00:16,  5.05it/s]Extracting hidden states:  13%|█▎        | 12/95 [00:02<00:12,  6.81it/s]Extracting hidden states:  14%|█▎        | 13/95 [00:02<00:15,  5.43it/s]Extracting hidden states:  16%|█▌        | 15/95 [00:02<00:11,  6.94it/s]Extracting hidden states:  17%|█▋        | 16/95 [00:03<00:10,  7.31it/s]Extracting hidden states:  19%|█▉        | 18/95 [00:03<00:08,  8.79it/s]Extracting hidden states:  21%|██        | 20/95 [00:03<00:07,  9.86it/s]Extracting hidden states:  23%|██▎       | 22/95 [00:03<00:11,  6.27it/s]Extracting hidden states:  25%|██▌       | 24/95 [00:04<00:09,  7.48it/s]Extracting hidden states:  27%|██▋       | 26/95 [00:04<00:08,  8.30it/s]Extracting hidden states:  29%|██▉       | 28/95 [00:04<00:06,  9.63it/s]Extracting hidden states:  32%|███▏      | 30/95 [00:04<00:06, 10.17it/s]Extracting hidden states:  34%|███▎      | 32/95 [00:04<00:05, 10.96it/s]Extracting hidden states:  36%|███▌      | 34/95 [00:04<00:05, 11.73it/s]Extracting hidden states:  38%|███▊      | 36/95 [00:05<00:06,  8.49it/s]Extracting hidden states:  40%|████      | 38/95 [00:05<00:05,  9.96it/s]Extracting hidden states:  42%|████▏     | 40/95 [00:05<00:05, 10.14it/s]Extracting hidden states:  44%|████▍     | 42/95 [00:05<00:04, 10.90it/s]Extracting hidden states:  46%|████▋     | 44/95 [00:06<00:06,  7.48it/s]Extracting hidden states:  48%|████▊     | 46/95 [00:06<00:05,  8.44it/s]Extracting hidden states:  51%|█████     | 48/95 [00:06<00:05,  9.37it/s]Extracting hidden states:  53%|█████▎    | 50/95 [00:06<00:04, 10.70it/s]Extracting hidden states:  55%|█████▍    | 52/95 [00:06<00:03, 11.10it/s]Extracting hidden states:  57%|█████▋    | 54/95 [00:07<00:04,  8.21it/s]Extracting hidden states:  59%|█████▉    | 56/95 [00:07<00:04,  9.29it/s]Extracting hidden states:  61%|██████    | 58/95 [00:07<00:03,  9.60it/s]Extracting hidden states:  63%|██████▎   | 60/95 [00:07<00:03, 10.30it/s]Extracting hidden states:  65%|██████▌   | 62/95 [00:07<00:03, 10.91it/s]Extracting hidden states:  67%|██████▋   | 64/95 [00:08<00:02, 11.30it/s]Extracting hidden states:  69%|██████▉   | 66/95 [00:08<00:03,  8.78it/s]Extracting hidden states:  72%|███████▏  | 68/95 [00:08<00:02,  9.55it/s]Extracting hidden states:  74%|███████▎  | 70/95 [00:08<00:02,  9.94it/s]Extracting hidden states:  76%|███████▌  | 72/95 [00:08<00:02, 10.55it/s]Extracting hidden states:  78%|███████▊  | 74/95 [00:09<00:02,  7.80it/s]Extracting hidden states:  80%|████████  | 76/95 [00:09<00:02,  8.63it/s]Extracting hidden states:  82%|████████▏ | 78/95 [00:09<00:01,  9.42it/s]Extracting hidden states:  84%|████████▍ | 80/95 [00:09<00:01,  9.41it/s]Extracting hidden states:  86%|████████▋ | 82/95 [00:10<00:01,  7.05it/s]Extracting hidden states:  88%|████████▊ | 84/95 [00:10<00:01,  8.33it/s]Extracting hidden states:  91%|█████████ | 86/95 [00:10<00:00,  9.07it/s]Extracting hidden states:  93%|█████████▎| 88/95 [00:10<00:00,  9.77it/s]Extracting hidden states:  95%|█████████▍| 90/95 [00:11<00:00,  9.44it/s]Extracting hidden states:  97%|█████████▋| 92/95 [00:11<00:00,  7.51it/s]Extracting hidden states:  98%|█████████▊| 93/95 [00:11<00:00,  7.84it/s]Extracting hidden states: 100%|██████████| 95/95 [00:11<00:00,  8.88it/s]Extracting hidden states: 100%|██████████| 95/95 [00:11<00:00,  8.14it/s]
+Hidden states shape: (380, 37, 2560)
+Saved hidden states to when2tool_outputs_logicbench/features/train/hidden_states.pt
+Saved metadata to when2tool_outputs_logicbench/features/train/metadata.json
+Saved items to when2tool_outputs_logicbench/features/train/items.json
+
+==================================================
+Extracting hidden states for TEST set
+==================================================
+Loading dataset from when2tool_outputs_logicbench/splits/test_json.json...
+Loaded 380 items
+Extracting hidden states...
+Extracting hidden states:   0%|          | 0/95 [00:00<?, ?it/s]Extracting hidden states:   1%|          | 1/95 [00:00<00:31,  2.94it/s]Extracting hidden states:   2%|▏         | 2/95 [00:00<00:18,  5.03it/s]Extracting hidden states:   4%|▍         | 4/95 [00:00<00:11,  7.72it/s]Extracting hidden states:   6%|▋         | 6/95 [00:00<00:09,  9.57it/s]Extracting hidden states:   8%|▊         | 8/95 [00:00<00:08, 10.33it/s]Extracting hidden states:  11%|█         | 10/95 [00:01<00:07, 10.96it/s]Extracting hidden states:  13%|█▎        | 12/95 [00:01<00:12,  6.62it/s]Extracting hidden states:  14%|█▎        | 13/95 [00:01<00:11,  6.98it/s]Extracting hidden states:  16%|█▌        | 15/95 [00:01<00:09,  8.58it/s]Extracting hidden states:  18%|█▊        | 17/95 [00:02<00:08,  9.19it/s]Extracting hidden states:  20%|██        | 19/95 [00:02<00:07,  9.90it/s]Extracting hidden states:  22%|██▏       | 21/95 [00:02<00:06, 10.68it/s]Extracting hidden states:  24%|██▍       | 23/95 [00:02<00:09,  7.75it/s]Extracting hidden states:  25%|██▌       | 24/95 [00:02<00:08,  8.00it/s]Extracting hidden states:  27%|██▋       | 26/95 [00:03<00:07,  9.29it/s]Extracting hidden states:  29%|██▉       | 28/95 [00:03<00:06,  9.82it/s]Extracting hidden states:  32%|███▏      | 30/95 [00:03<00:06, 10.34it/s]Extracting hidden states:  34%|███▎      | 32/95 [00:03<00:08,  7.86it/s]Extracting hidden states:  36%|███▌      | 34/95 [00:03<00:06,  9.01it/s]Extracting hidden states:  38%|███▊      | 36/95 [00:04<00:05,  9.92it/s]Extracting hidden states:  40%|████      | 38/95 [00:04<00:05, 10.78it/s]Extracting hidden states:  42%|████▏     | 40/95 [00:04<00:04, 11.03it/s]Extracting hidden states:  44%|████▍     | 42/95 [00:04<00:04, 11.53it/s]Extracting hidden states:  46%|████▋     | 44/95 [00:05<00:06,  7.48it/s]Extracting hidden states:  47%|████▋     | 45/95 [00:05<00:06,  7.62it/s]Extracting hidden states:  49%|████▉     | 47/95 [00:05<00:05,  9.00it/s]Extracting hidden states:  52%|█████▏    | 49/95 [00:05<00:04,  9.80it/s]Extracting hidden states:  54%|█████▎    | 51/95 [00:05<00:04, 10.78it/s]Extracting hidden states:  56%|█████▌    | 53/95 [00:05<00:03, 11.18it/s]Extracting hidden states:  58%|█████▊    | 55/95 [00:06<00:05,  7.23it/s]Extracting hidden states:  60%|██████    | 57/95 [00:06<00:04,  8.34it/s]Extracting hidden states:  62%|██████▏   | 59/95 [00:06<00:03,  9.31it/s]Extracting hidden states:  64%|██████▍   | 61/95 [00:06<00:03,  9.96it/s]Extracting hidden states:  66%|██████▋   | 63/95 [00:06<00:02, 11.00it/s]Extracting hidden states:  68%|██████▊   | 65/95 [00:07<00:03,  9.47it/s]Extracting hidden states:  71%|███████   | 67/95 [00:07<00:03,  8.28it/s]Extracting hidden states:  73%|███████▎  | 69/95 [00:07<00:02,  8.86it/s]Extracting hidden states:  75%|███████▍  | 71/95 [00:07<00:02,  9.74it/s]Extracting hidden states:  77%|███████▋  | 73/95 [00:08<00:02, 10.56it/s]Extracting hidden states:  79%|███████▉  | 75/95 [00:08<00:01, 10.97it/s]Extracting hidden states:  81%|████████  | 77/95 [00:08<00:02,  8.95it/s]Extracting hidden states:  83%|████████▎ | 79/95 [00:08<00:01,  8.92it/s]Extracting hidden states:  85%|████████▌ | 81/95 [00:08<00:01,  9.66it/s]Extracting hidden states:  87%|████████▋ | 83/95 [00:09<00:01, 10.85it/s]Extracting hidden states:  89%|████████▉ | 85/95 [00:09<00:00, 11.47it/s]Extracting hidden states:  92%|█████████▏| 87/95 [00:09<00:00, 11.70it/s]Extracting hidden states:  94%|█████████▎| 89/95 [00:09<00:00, 12.27it/s]Extracting hidden states:  96%|█████████▌| 91/95 [00:09<00:00, 12.41it/s]Extracting hidden states:  98%|█████████▊| 93/95 [00:10<00:00,  8.37it/s]Extracting hidden states: 100%|██████████| 95/95 [00:10<00:00,  8.80it/s]Extracting hidden states: 100%|██████████| 95/95 [00:10<00:00,  9.26it/s]
+[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:    0.0s finished
+Hidden states shape: (380, 37, 2560)
+Saved hidden states to when2tool_outputs_logicbench/features/test/hidden_states.pt
+Saved metadata to when2tool_outputs_logicbench/features/test/metadata.json
+Saved items to when2tool_outputs_logicbench/features/test/items.json
+
+==================================================
+Hidden state extraction completed!
+Train: (380, 37, 2560)
+Test: (380, 37, 2560)
+==================================================
+
+======================================================================
+STEP 3: Linear Probe Training
+======================================================================
+Loading hidden states...
+Train hidden states shape: (380, 37, 2560)
+Test hidden states shape: (380, 37, 2560)
+Loading labels from when2tool_outputs_logicbench/features/train/items.json...
+Loading evaluation results from results/eval_noskill_logicbench.json...
+Loaded eval mapping for 760 instances
+Labels distribution: [287  93]
+
+Preparing features...
+Prepared features shape: (380, 2560)
+Prepared features shape: (380, 2560)
+
+==================================================
+Training Linear Probe
+==================================================
+Training set shape: (380, 2560)
+Labels distribution: [287  93]
+
+Train set: (342, 2560), Labels: [258  84]
+Val set: (38, 2560), Labels: [29  9]
+
+Fitting scaler...
+Fitting PCA (32 components): (342, 2560) → (342, 32)  (explained variance: 71.0%)
+Training classifier...
+
+Training Results:
+  train_accuracy: 0.7602
+  val_accuracy: 0.7368
+  train_auc: 0.7473
+  val_auc: 0.7586
+
+==================================================
+Test Set Evaluation
+==================================================
+Test predictions shape: (380,)
+Test predictions distribution: [378   2]
+Probe saved to when2tool_outputs_logicbench/probe/probe.pkl
+
+Probe saved to when2tool_outputs_logicbench/probe/probe.pkl
+Results saved to when2tool_outputs_logicbench/probe/results.json
+
+======================================================================
+Pipeline Completed!
+Results saved to when2tool_outputs_logicbench
+======================================================================
+✅ Completed pipeline for logicbench!
+Results saved to: ./when2tool_outputs_logicbench
+
+----------------------------------------------------------------------
+Processing dataset: champ
+----------------------------------------------------------------------
+`torch_dtype` is deprecated! Use `dtype` instead!
+Pipeline output directory: when2tool_outputs_champ
+Configuration saved to when2tool_outputs_champ/config.json
+
+======================================================================
+When2Tool Pipeline for SR-Agents
+======================================================================
+
+======================================================================
+STEP 1: Dataset Splitting (30% train / 70% test)
+======================================================================
+Splitting uniformly...
+Loading dataset from data/bench/instances/champ.json...
+Total items loaded: 223
+Train set: 111 items (49.8%)
+Test set: 112 items (50.2%)
+
+Saving train set to when2tool_outputs_champ/splits/train_json.json...
+Saving test set to when2tool_outputs_champ/splits/test_json.json...
+
+======================================================================
+STEP 2: Feature Extraction (Hidden States)
+======================================================================
+Automatically setting dtype to bfloat16 to optimize VRAM usage on CUDA
+Loading model Qwen/Qwen3-4B using transformers...
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:01<00:03,  1.60s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:02<00:01,  1.44s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:02<00:00,  1.01it/s]
+
+==================================================
+Extracting hidden states for TRAINING set
+==================================================
+Loading dataset from when2tool_outputs_champ/splits/train_json.json...
+Loaded 111 items
+Extracting hidden states...
+Extracting hidden states:   0%|          | 0/28 [00:00<?, ?it/s]Extracting hidden states:   4%|▎         | 1/28 [00:00<00:20,  1.33it/s]Extracting hidden states:   7%|▋         | 2/28 [00:00<00:10,  2.54it/s]Extracting hidden states:  11%|█         | 3/28 [00:01<00:09,  2.73it/s]Extracting hidden states:  14%|█▍        | 4/28 [00:01<00:06,  3.52it/s]Extracting hidden states:  21%|██▏       | 6/28 [00:01<00:03,  6.04it/s]Extracting hidden states:  29%|██▊       | 8/28 [00:01<00:02,  8.54it/s]Extracting hidden states:  36%|███▌      | 10/28 [00:01<00:01, 10.14it/s]Extracting hidden states:  43%|████▎     | 12/28 [00:01<00:01, 12.02it/s]Extracting hidden states:  50%|█████     | 14/28 [00:01<00:01, 13.77it/s]Extracting hidden states:  57%|█████▋    | 16/28 [00:02<00:01,  8.97it/s]Extracting hidden states:  64%|██████▍   | 18/28 [00:02<00:00, 10.81it/s]Extracting hidden states:  71%|███████▏  | 20/28 [00:02<00:00, 12.41it/s]Extracting hidden states:  79%|███████▊  | 22/28 [00:02<00:00, 13.56it/s]Extracting hidden states:  86%|████████▌ | 24/28 [00:03<00:00,  6.53it/s]Extracting hidden states:  93%|█████████▎| 26/28 [00:03<00:00,  7.92it/s]Extracting hidden states: 100%|██████████| 28/28 [00:03<00:00,  9.65it/s]Extracting hidden states: 100%|██████████| 28/28 [00:03<00:00,  7.83it/s]
+Hidden states shape: (111, 37, 2560)
+Saved hidden states to when2tool_outputs_champ/features/train/hidden_states.pt
+Saved metadata to when2tool_outputs_champ/features/train/metadata.json
+Saved items to when2tool_outputs_champ/features/train/items.json
+
+==================================================
+Extracting hidden states for TEST set
+==================================================
+Loading dataset from when2tool_outputs_champ/splits/test_json.json...
+Loaded 112 items
+Extracting hidden states...
+Extracting hidden states:   0%|          | 0/28 [00:00<?, ?it/s]Extracting hidden states:   7%|▋         | 2/28 [00:00<00:01, 19.82it/s]Extracting hidden states:  14%|█▍        | 4/28 [00:00<00:01, 18.96it/s]Extracting hidden states:  21%|██▏       | 6/28 [00:00<00:01, 18.80it/s]Extracting hidden states:  32%|███▏      | 9/28 [00:00<00:01, 18.82it/s]Extracting hidden states:  43%|████▎     | 12/28 [00:00<00:01, 12.93it/s]Extracting hidden states:  50%|█████     | 14/28 [00:00<00:01, 13.71it/s]Extracting hidden states:  57%|█████▋    | 16/28 [00:01<00:00, 13.79it/s]Extracting hidden states:  64%|██████▍   | 18/28 [00:01<00:00, 15.08it/s]Extracting hidden states:  75%|███████▌  | 21/28 [00:01<00:00, 16.71it/s]Extracting hidden states:  82%|████████▏ | 23/28 [00:01<00:00, 17.19it/s]Extracting hidden states:  89%|████████▉ | 25/28 [00:01<00:00, 11.80it/s]Extracting hidden states:  96%|█████████▋| 27/28 [00:01<00:00, 13.35it/s]Extracting hidden states: 100%|██████████| 28/28 [00:01<00:00, 14.74it/s]
+[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:    0.0s finished
+Hidden states shape: (112, 37, 2560)
+Saved hidden states to when2tool_outputs_champ/features/test/hidden_states.pt
+Saved metadata to when2tool_outputs_champ/features/test/metadata.json
+Saved items to when2tool_outputs_champ/features/test/items.json
+
+==================================================
+Hidden state extraction completed!
+Train: (111, 37, 2560)
+Test: (112, 37, 2560)
+==================================================
+
+======================================================================
+STEP 3: Linear Probe Training
+======================================================================
+Loading hidden states...
+Train hidden states shape: (111, 37, 2560)
+Test hidden states shape: (112, 37, 2560)
+Loading labels from when2tool_outputs_champ/features/train/items.json...
+Loading evaluation results from results/eval_noskill_champ.json...
+Loaded eval mapping for 223 instances
+Labels distribution: [59 52]
+
+Preparing features...
+Prepared features shape: (111, 2560)
+Prepared features shape: (112, 2560)
+
+==================================================
+Training Linear Probe
+==================================================
+Training set shape: (111, 2560)
+Labels distribution: [59 52]
+
+Train set: (100, 2560), Labels: [54 46]
+Val set: (11, 2560), Labels: [5 6]
+
+Fitting scaler...
+Fitting PCA (32 components): (100, 2560) → (100, 32)  (explained variance: 81.7%)
+Training classifier...
+
+Training Results:
+  train_accuracy: 0.8000
+  val_accuracy: 0.6364
+  train_auc: 0.8603
+  val_auc: 0.6000
+
+==================================================
+Test Set Evaluation
+==================================================
+Test predictions shape: (112,)
+Test predictions distribution: [69 43]
+Probe saved to when2tool_outputs_champ/probe/probe.pkl
+
+Probe saved to when2tool_outputs_champ/probe/probe.pkl
+Results saved to when2tool_outputs_champ/probe/results.json
+
+======================================================================
+Pipeline Completed!
+Results saved to when2tool_outputs_champ
+======================================================================
+✅ Completed pipeline for champ!
+Results saved to: ./when2tool_outputs_champ
+
+----------------------------------------------------------------------
+Processing dataset: bigcodebench
+----------------------------------------------------------------------
+`torch_dtype` is deprecated! Use `dtype` instead!
+Pipeline output directory: when2tool_outputs_bigcodebench
+Configuration saved to when2tool_outputs_bigcodebench/config.json
+
+======================================================================
+When2Tool Pipeline for SR-Agents
+======================================================================
+
+======================================================================
+STEP 1: Dataset Splitting (30% train / 70% test)
+======================================================================
+Splitting uniformly...
+Loading dataset from data/bench/instances/bigcodebench.json...
+Total items loaded: 1140
+Train set: 570 items (50.0%)
+Test set: 570 items (50.0%)
+
+Saving train set to when2tool_outputs_bigcodebench/splits/train_json.json...
+Saving test set to when2tool_outputs_bigcodebench/splits/test_json.json...
+
+======================================================================
+STEP 2: Feature Extraction (Hidden States)
+======================================================================
+Automatically setting dtype to bfloat16 to optimize VRAM usage on CUDA
+Loading model Qwen/Qwen3-4B using transformers...
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:01<00:02,  1.31s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:02<00:01,  1.30s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:02<00:00,  1.15it/s]
+
+==================================================
+Extracting hidden states for TRAINING set
+==================================================
+Loading dataset from when2tool_outputs_bigcodebench/splits/train_json.json...
+Loaded 570 items
+Extracting hidden states...
+Extracting hidden states:   0%|          | 0/143 [00:00<?, ?it/s]Extracting hidden states:   1%|          | 1/143 [00:00<01:26,  1.64it/s]Extracting hidden states:   1%|▏         | 2/143 [00:00<00:54,  2.59it/s]Extracting hidden states:   2%|▏         | 3/143 [00:00<00:38,  3.59it/s]Extracting hidden states:   3%|▎         | 4/143 [00:01<01:09,  2.01it/s]Extracting hidden states:   3%|▎         | 5/143 [00:02<01:08,  2.01it/s]Extracting hidden states:   4%|▍         | 6/143 [00:02<00:50,  2.71it/s]Extracting hidden states:   5%|▍         | 7/143 [00:02<00:39,  3.45it/s]Extracting hidden states:   6%|▌         | 8/143 [00:02<00:32,  4.17it/s]Extracting hidden states:   7%|▋         | 10/143 [00:02<00:24,  5.46it/s]Extracting hidden states:   8%|▊         | 12/143 [00:03<00:23,  5.50it/s]Extracting hidden states:   9%|▉         | 13/143 [00:03<00:23,  5.57it/s]Extracting hidden states:  10%|▉         | 14/143 [00:03<00:21,  6.05it/s]Extracting hidden states:  10%|█         | 15/143 [00:03<00:22,  5.76it/s]Extracting hidden states:  11%|█         | 16/143 [00:04<00:24,  5.21it/s]Extracting hidden states:  12%|█▏        | 17/143 [00:04<00:23,  5.34it/s]Extracting hidden states:  13%|█▎        | 18/143 [00:04<00:23,  5.42it/s]Extracting hidden states:  13%|█▎        | 19/143 [00:04<00:20,  6.04it/s]Extracting hidden states:  14%|█▍        | 20/143 [00:05<00:38,  3.16it/s]Extracting hidden states:  15%|█▍        | 21/143 [00:05<00:34,  3.54it/s]Extracting hidden states:  16%|█▌        | 23/143 [00:05<00:23,  5.01it/s]Extracting hidden states:  17%|█▋        | 25/143 [00:05<00:19,  5.96it/s]Extracting hidden states:  18%|█▊        | 26/143 [00:05<00:18,  6.40it/s]Extracting hidden states:  19%|█▉        | 27/143 [00:06<00:17,  6.70it/s]Extracting hidden states:  20%|█▉        | 28/143 [00:06<00:20,  5.51it/s]Extracting hidden states:  20%|██        | 29/143 [00:06<00:19,  5.73it/s]Extracting hidden states:  21%|██        | 30/143 [00:06<00:21,  5.16it/s]Extracting hidden states:  22%|██▏       | 31/143 [00:06<00:20,  5.46it/s]Extracting hidden states:  22%|██▏       | 32/143 [00:07<00:23,  4.66it/s]Extracting hidden states:  23%|██▎       | 33/143 [00:07<00:21,  5.14it/s]Extracting hidden states:  24%|██▍       | 35/143 [00:07<00:15,  7.10it/s]Extracting hidden states:  25%|██▌       | 36/143 [00:07<00:15,  7.04it/s]Extracting hidden states:  27%|██▋       | 38/143 [00:07<00:12,  8.08it/s]Extracting hidden states:  28%|██▊       | 40/143 [00:08<00:12,  8.00it/s]Extracting hidden states:  29%|██▊       | 41/143 [00:08<00:15,  6.40it/s]Extracting hidden states:  30%|███       | 43/143 [00:08<00:13,  7.20it/s]Extracting hidden states:  31%|███       | 44/143 [00:08<00:13,  7.37it/s]Extracting hidden states:  32%|███▏      | 46/143 [00:08<00:11,  8.22it/s]Extracting hidden states:  34%|███▎      | 48/143 [00:09<00:14,  6.64it/s]Extracting hidden states:  35%|███▍      | 50/143 [00:09<00:11,  7.76it/s]Extracting hidden states:  36%|███▌      | 51/143 [00:09<00:11,  7.80it/s]Extracting hidden states:  37%|███▋      | 53/143 [00:09<00:10,  8.67it/s]Extracting hidden states:  38%|███▊      | 54/143 [00:09<00:10,  8.58it/s]Extracting hidden states:  38%|███▊      | 55/143 [00:10<00:10,  8.02it/s]Extracting hidden states:  39%|███▉      | 56/143 [00:10<00:13,  6.64it/s]Extracting hidden states:  41%|████      | 58/143 [00:10<00:10,  7.87it/s]Extracting hidden states:  41%|████▏     | 59/143 [00:10<00:11,  7.39it/s]Extracting hidden states:  42%|████▏     | 60/143 [00:10<00:11,  7.20it/s]Extracting hidden states:  43%|████▎     | 61/143 [00:10<00:11,  7.13it/s]Extracting hidden states:  44%|████▍     | 63/143 [00:11<00:12,  6.17it/s]Extracting hidden states:  45%|████▍     | 64/143 [00:11<00:13,  5.70it/s]Extracting hidden states:  46%|████▌     | 66/143 [00:11<00:12,  6.15it/s]Extracting hidden states:  47%|████▋     | 67/143 [00:11<00:11,  6.53it/s]Extracting hidden states:  48%|████▊     | 69/143 [00:12<00:10,  7.14it/s]Extracting hidden states:  49%|████▉     | 70/143 [00:12<00:13,  5.36it/s]Extracting hidden states:  50%|█████     | 72/143 [00:12<00:10,  6.55it/s]Extracting hidden states:  51%|█████     | 73/143 [00:12<00:11,  6.22it/s]Extracting hidden states:  52%|█████▏    | 74/143 [00:13<00:11,  6.13it/s]Extracting hidden states:  52%|█████▏    | 75/143 [00:13<00:10,  6.73it/s]Extracting hidden states:  53%|█████▎    | 76/143 [00:13<00:12,  5.47it/s]Extracting hidden states:  55%|█████▍    | 78/143 [00:13<00:09,  7.05it/s]Extracting hidden states:  55%|█████▌    | 79/143 [00:13<00:09,  6.94it/s]Extracting hidden states:  57%|█████▋    | 81/143 [00:13<00:07,  8.53it/s]Extracting hidden states:  57%|█████▋    | 82/143 [00:14<00:08,  7.43it/s]Extracting hidden states:  58%|█████▊    | 83/143 [00:14<00:07,  7.53it/s]Extracting hidden states:  59%|█████▊    | 84/143 [00:14<00:11,  5.25it/s]Extracting hidden states:  59%|█████▉    | 85/143 [00:14<00:10,  5.79it/s]Extracting hidden states:  60%|██████    | 86/143 [00:14<00:08,  6.55it/s]Extracting hidden states:  62%|██████▏   | 88/143 [00:15<00:07,  7.32it/s]Extracting hidden states:  62%|██████▏   | 89/143 [00:15<00:07,  7.58it/s]Extracting hidden states:  64%|██████▎   | 91/143 [00:15<00:09,  5.43it/s]Extracting hidden states:  64%|██████▍   | 92/143 [00:15<00:08,  5.86it/s]Extracting hidden states:  65%|██████▌   | 93/143 [00:16<00:08,  5.85it/s]Extracting hidden states:  66%|██████▋   | 95/143 [00:16<00:06,  7.13it/s]Extracting hidden states:  67%|██████▋   | 96/143 [00:16<00:06,  7.01it/s]Extracting hidden states:  68%|██████▊   | 97/143 [00:16<00:07,  6.31it/s]Extracting hidden states:  69%|██████▊   | 98/143 [00:16<00:07,  5.90it/s]Extracting hidden states:  69%|██████▉   | 99/143 [00:16<00:06,  6.55it/s]Extracting hidden states:  70%|██████▉   | 100/143 [00:17<00:06,  7.07it/s]Extracting hidden states:  71%|███████▏  | 102/143 [00:17<00:04,  8.72it/s]Extracting hidden states:  72%|███████▏  | 103/143 [00:17<00:04,  8.48it/s]Extracting hidden states:  73%|███████▎  | 105/143 [00:17<00:04,  9.21it/s]Extracting hidden states:  75%|███████▍  | 107/143 [00:17<00:03,  9.77it/s]Extracting hidden states:  76%|███████▌  | 108/143 [00:17<00:03,  8.99it/s]Extracting hidden states:  76%|███████▌  | 109/143 [00:17<00:04,  7.96it/s]Extracting hidden states:  77%|███████▋  | 110/143 [00:18<00:05,  5.75it/s]Extracting hidden states:  78%|███████▊  | 111/143 [00:18<00:05,  6.34it/s]Extracting hidden states:  79%|███████▉  | 113/143 [00:18<00:03,  7.72it/s]Extracting hidden states:  80%|███████▉  | 114/143 [00:18<00:04,  6.42it/s]Extracting hidden states:  81%|████████  | 116/143 [00:19<00:03,  7.84it/s]Extracting hidden states:  82%|████████▏ | 117/143 [00:19<00:03,  8.04it/s]Extracting hidden states:  83%|████████▎ | 118/143 [00:19<00:04,  6.15it/s]Extracting hidden states:  83%|████████▎ | 119/143 [00:19<00:04,  5.91it/s]Extracting hidden states:  84%|████████▍ | 120/143 [00:19<00:03,  6.08it/s]Extracting hidden states:  85%|████████▍ | 121/143 [00:19<00:03,  6.53it/s]Extracting hidden states:  85%|████████▌ | 122/143 [00:20<00:03,  6.25it/s]Extracting hidden states:  87%|████████▋ | 124/143 [00:20<00:02,  6.96it/s]Extracting hidden states:  87%|████████▋ | 125/143 [00:20<00:02,  6.42it/s]Extracting hidden states:  89%|████████▉ | 127/143 [00:20<00:02,  7.41it/s]Extracting hidden states:  90%|█████████ | 129/143 [00:20<00:01,  7.64it/s]Extracting hidden states:  91%|█████████ | 130/143 [00:21<00:01,  7.98it/s]Extracting hidden states:  92%|█████████▏| 131/143 [00:21<00:01,  8.18it/s]Extracting hidden states:  92%|█████████▏| 132/143 [00:21<00:01,  6.83it/s]Extracting hidden states:  93%|█████████▎| 133/143 [00:21<00:02,  4.71it/s]Extracting hidden states:  94%|█████████▎| 134/143 [00:21<00:01,  5.33it/s]Extracting hidden states:  94%|█████████▍| 135/143 [00:22<00:01,  5.96it/s]Extracting hidden states:  96%|█████████▌| 137/143 [00:22<00:00,  6.60it/s]Extracting hidden states:  97%|█████████▋| 138/143 [00:22<00:00,  6.67it/s]Extracting hidden states:  97%|█████████▋| 139/143 [00:22<00:00,  7.03it/s]Extracting hidden states:  98%|█████████▊| 140/143 [00:22<00:00,  5.73it/s]Extracting hidden states:  99%|█████████▊| 141/143 [00:22<00:00,  6.25it/s]Extracting hidden states:  99%|█████████▉| 142/143 [00:23<00:00,  6.49it/s]Extracting hidden states: 100%|██████████| 143/143 [00:23<00:00,  6.17it/s]
+Hidden states shape: (570, 37, 2560)
+Saved hidden states to when2tool_outputs_bigcodebench/features/train/hidden_states.pt
+Saved metadata to when2tool_outputs_bigcodebench/features/train/metadata.json
+Saved items to when2tool_outputs_bigcodebench/features/train/items.json
+
+==================================================
+Extracting hidden states for TEST set
+==================================================
+Loading dataset from when2tool_outputs_bigcodebench/splits/test_json.json...
+Loaded 570 items
+Extracting hidden states...
+Extracting hidden states:   0%|          | 0/143 [00:00<?, ?it/s]Extracting hidden states:   1%|▏         | 2/143 [00:00<00:22,  6.22it/s]Extracting hidden states:   3%|▎         | 4/143 [00:00<00:16,  8.38it/s]Extracting hidden states:   3%|▎         | 5/143 [00:00<00:16,  8.17it/s]Extracting hidden states:   5%|▍         | 7/143 [00:00<00:13,  9.76it/s]Extracting hidden states:   6%|▋         | 9/143 [00:01<00:15,  8.89it/s]Extracting hidden states:   7%|▋         | 10/143 [00:01<00:20,  6.60it/s]Extracting hidden states:   8%|▊         | 11/143 [00:01<00:18,  7.06it/s]Extracting hidden states:   9%|▉         | 13/143 [00:01<00:15,  8.41it/s]Extracting hidden states:  10%|▉         | 14/143 [00:01<00:14,  8.60it/s]Extracting hidden states:  11%|█         | 16/143 [00:01<00:13,  9.22it/s]Extracting hidden states:  13%|█▎        | 18/143 [00:02<00:15,  7.99it/s]Extracting hidden states:  13%|█▎        | 19/143 [00:02<00:19,  6.52it/s]Extracting hidden states:  14%|█▍        | 20/143 [00:02<00:18,  6.75it/s]Extracting hidden states:  15%|█▍        | 21/143 [00:02<00:17,  7.16it/s]Extracting hidden states:  15%|█▌        | 22/143 [00:02<00:18,  6.64it/s]Extracting hidden states:  17%|█▋        | 24/143 [00:03<00:15,  7.49it/s]Extracting hidden states:  17%|█▋        | 25/143 [00:03<00:17,  6.82it/s]Extracting hidden states:  18%|█▊        | 26/143 [00:03<00:22,  5.11it/s]Extracting hidden states:  20%|█▉        | 28/143 [00:03<00:18,  6.22it/s]Extracting hidden states:  20%|██        | 29/143 [00:03<00:16,  6.77it/s]Extracting hidden states:  21%|██        | 30/143 [00:04<00:16,  6.80it/s]Extracting hidden states:  22%|██▏       | 31/143 [00:04<00:15,  7.30it/s]Extracting hidden states:  23%|██▎       | 33/143 [00:04<00:12,  8.88it/s]Extracting hidden states:  24%|██▍       | 34/143 [00:04<00:17,  6.15it/s]Extracting hidden states:  24%|██▍       | 35/143 [00:04<00:16,  6.37it/s]Extracting hidden states:  26%|██▌       | 37/143 [00:05<00:15,  7.05it/s]Extracting hidden states:  27%|██▋       | 38/143 [00:05<00:14,  7.32it/s]Extracting hidden states:  28%|██▊       | 40/143 [00:05<00:12,  8.54it/s]Extracting hidden states:  29%|██▉       | 42/143 [00:05<00:10,  9.61it/s]Extracting hidden states:  30%|███       | 43/143 [00:05<00:11,  8.79it/s]Extracting hidden states:  31%|███       | 44/143 [00:06<00:17,  5.62it/s]Extracting hidden states:  32%|███▏      | 46/143 [00:06<00:15,  6.46it/s]Extracting hidden states:  33%|███▎      | 47/143 [00:06<00:14,  6.61it/s]Extracting hidden states:  34%|███▍      | 49/143 [00:06<00:11,  7.92it/s]Extracting hidden states:  35%|███▍      | 50/143 [00:06<00:12,  7.68it/s]Extracting hidden states:  36%|███▌      | 51/143 [00:07<00:13,  6.72it/s]Extracting hidden states:  36%|███▋      | 52/143 [00:07<00:17,  5.28it/s]Extracting hidden states:  38%|███▊      | 54/143 [00:07<00:12,  6.89it/s]Extracting hidden states:  38%|███▊      | 55/143 [00:07<00:12,  6.84it/s]Extracting hidden states:  39%|███▉      | 56/143 [00:07<00:11,  7.30it/s]Extracting hidden states:  41%|████      | 58/143 [00:07<00:09,  8.57it/s]Extracting hidden states:  42%|████▏     | 60/143 [00:08<00:09,  8.81it/s]Extracting hidden states:  43%|████▎     | 61/143 [00:08<00:12,  6.41it/s]Extracting hidden states:  44%|████▍     | 63/143 [00:08<00:10,  7.68it/s]Extracting hidden states:  45%|████▍     | 64/143 [00:08<00:09,  8.02it/s]Extracting hidden states:  45%|████▌     | 65/143 [00:08<00:09,  8.31it/s]Extracting hidden states:  46%|████▌     | 66/143 [00:09<00:11,  6.68it/s]Extracting hidden states:  47%|████▋     | 67/143 [00:09<00:13,  5.83it/s]Extracting hidden states:  48%|████▊     | 68/143 [00:09<00:11,  6.32it/s]Extracting hidden states:  49%|████▉     | 70/143 [00:09<00:09,  7.58it/s]Extracting hidden states:  50%|█████     | 72/143 [00:09<00:08,  8.21it/s]Extracting hidden states:  52%|█████▏    | 74/143 [00:10<00:08,  7.85it/s]Extracting hidden states:  52%|█████▏    | 75/143 [00:10<00:09,  7.34it/s]Extracting hidden states:  54%|█████▍    | 77/143 [00:10<00:09,  6.86it/s]Extracting hidden states:  55%|█████▍    | 78/143 [00:10<00:11,  5.71it/s]Extracting hidden states:  56%|█████▌    | 80/143 [00:11<00:10,  6.26it/s]Extracting hidden states:  57%|█████▋    | 81/143 [00:11<00:09,  6.77it/s]Extracting hidden states:  57%|█████▋    | 82/143 [00:11<00:08,  7.28it/s]Extracting hidden states:  58%|█████▊    | 83/143 [00:11<00:07,  7.68it/s]Extracting hidden states:  59%|█████▊    | 84/143 [00:11<00:07,  7.97it/s]Extracting hidden states:  59%|█████▉    | 85/143 [00:11<00:08,  6.66it/s]Extracting hidden states:  60%|██████    | 86/143 [00:12<00:11,  5.05it/s]Extracting hidden states:  61%|██████    | 87/143 [00:12<00:10,  5.28it/s]Extracting hidden states:  62%|██████▏   | 89/143 [00:12<00:08,  6.70it/s]Extracting hidden states:  64%|██████▎   | 91/143 [00:12<00:06,  7.93it/s]Extracting hidden states:  65%|██████▌   | 93/143 [00:13<00:07,  7.14it/s]Extracting hidden states:  66%|██████▌   | 94/143 [00:13<00:08,  5.79it/s]Extracting hidden states:  67%|██████▋   | 96/143 [00:13<00:06,  7.04it/s]Extracting hidden states:  69%|██████▊   | 98/143 [00:13<00:05,  8.01it/s]Extracting hidden states:  69%|██████▉   | 99/143 [00:13<00:05,  7.56it/s]Extracting hidden states:  71%|███████   | 101/143 [00:14<00:04,  8.69it/s]Extracting hidden states:  71%|███████▏  | 102/143 [00:14<00:04,  8.75it/s]Extracting hidden states:  72%|███████▏  | 103/143 [00:14<00:07,  5.64it/s]Extracting hidden states:  73%|███████▎  | 104/143 [00:14<00:06,  6.29it/s]Extracting hidden states:  74%|███████▍  | 106/143 [00:14<00:05,  7.32it/s]Extracting hidden states:  75%|███████▍  | 107/143 [00:14<00:04,  7.77it/s]Extracting hidden states:  76%|███████▌  | 108/143 [00:15<00:04,  8.13it/s]Extracting hidden states:  77%|███████▋  | 110/143 [00:15<00:03,  9.14it/s]Extracting hidden states:  78%|███████▊  | 112/143 [00:15<00:05,  6.17it/s]Extracting hidden states:  80%|███████▉  | 114/143 [00:15<00:03,  7.26it/s]Extracting hidden states:  80%|████████  | 115/143 [00:16<00:03,  7.58it/s]Extracting hidden states:  82%|████████▏ | 117/143 [00:16<00:03,  8.31it/s]Extracting hidden states:  83%|████████▎ | 118/143 [00:16<00:02,  8.37it/s]Extracting hidden states:  83%|████████▎ | 119/143 [00:16<00:03,  7.47it/s]Extracting hidden states:  84%|████████▍ | 120/143 [00:16<00:04,  5.65it/s]Extracting hidden states:  85%|████████▌ | 122/143 [00:17<00:03,  6.90it/s]Extracting hidden states:  87%|████████▋ | 124/143 [00:17<00:02,  8.18it/s]Extracting hidden states:  88%|████████▊ | 126/143 [00:17<00:01,  9.38it/s]Extracting hidden states:  90%|████████▉ | 128/143 [00:17<00:01,  9.37it/s]Extracting hidden states:  90%|█████████ | 129/143 [00:17<00:01,  8.47it/s]Extracting hidden states:  91%|█████████ | 130/143 [00:17<00:01,  6.82it/s]Extracting hidden states:  92%|█████████▏| 132/143 [00:18<00:01,  7.86it/s]Extracting hidden states:  94%|█████████▎| 134/143 [00:18<00:01,  8.92it/s]Extracting hidden states:  94%|█████████▍| 135/143 [00:18<00:00,  8.14it/s]Extracting hidden states:  96%|█████████▌| 137/143 [00:18<00:00,  6.48it/s]Extracting hidden states:  97%|█████████▋| 138/143 [00:19<00:00,  6.76it/s]Extracting hidden states:  98%|█████████▊| 140/143 [00:19<00:00,  7.67it/s]Extracting hidden states:  99%|█████████▊| 141/143 [00:19<00:00,  7.98it/s]Extracting hidden states: 100%|██████████| 143/143 [00:19<00:00,  9.40it/s]Extracting hidden states: 100%|██████████| 143/143 [00:19<00:00,  7.33it/s]
+[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:    0.0s finished
+Hidden states shape: (570, 37, 2560)
+Saved hidden states to when2tool_outputs_bigcodebench/features/test/hidden_states.pt
+Saved metadata to when2tool_outputs_bigcodebench/features/test/metadata.json
+Saved items to when2tool_outputs_bigcodebench/features/test/items.json
+
+==================================================
+Hidden state extraction completed!
+Train: (570, 37, 2560)
+Test: (570, 37, 2560)
+==================================================
+
+======================================================================
+STEP 3: Linear Probe Training
+======================================================================
+Loading hidden states...
+Train hidden states shape: (570, 37, 2560)
+Test hidden states shape: (570, 37, 2560)
+Loading labels from when2tool_outputs_bigcodebench/features/train/items.json...
+Loading evaluation results from results/eval_noskill_bigcodebench.json...
+Loaded eval mapping for 1140 instances
+Labels distribution: [220 350]
+
+Preparing features...
+Prepared features shape: (570, 2560)
+Prepared features shape: (570, 2560)
+
+==================================================
+Training Linear Probe
+==================================================
+Training set shape: (570, 2560)
+Labels distribution: [220 350]
+
+Train set: (513, 2560), Labels: [194 319]
+Val set: (57, 2560), Labels: [26 31]
+
+Fitting scaler...
+Fitting PCA (32 components): (513, 2560) → (513, 32)  (explained variance: 65.1%)
+Training classifier...
+
+Training Results:
+  train_accuracy: 0.6452
+  val_accuracy: 0.6316
+  train_auc: 0.6909
+  val_auc: 0.6464
+
+==================================================
+Test Set Evaluation
+==================================================
+Test predictions shape: (570,)
+Test predictions distribution: [ 90 480]
+Probe saved to when2tool_outputs_bigcodebench/probe/probe.pkl
+
+Probe saved to when2tool_outputs_bigcodebench/probe/probe.pkl
+Results saved to when2tool_outputs_bigcodebench/probe/results.json
+
+======================================================================
+Pipeline Completed!
+Results saved to when2tool_outputs_bigcodebench
+======================================================================
+✅ Completed pipeline for bigcodebench!
+Results saved to: ./when2tool_outputs_bigcodebench
+
+----------------------------------------------------------------------
+Processing dataset: toolqa
+----------------------------------------------------------------------
+`torch_dtype` is deprecated! Use `dtype` instead!
+Pipeline output directory: when2tool_outputs_toolqa
+Configuration saved to when2tool_outputs_toolqa/config.json
+
+======================================================================
+When2Tool Pipeline for SR-Agents
+======================================================================
+
+======================================================================
+STEP 1: Dataset Splitting (30% train / 70% test)
+======================================================================
+Splitting uniformly...
+Loading dataset from data/bench/instances/toolqa.json...
+Total items loaded: 1430
+Train set: 715 items (50.0%)
+Test set: 715 items (50.0%)
+
+Saving train set to when2tool_outputs_toolqa/splits/train_json.json...
+Saving test set to when2tool_outputs_toolqa/splits/test_json.json...
+
+======================================================================
+STEP 2: Feature Extraction (Hidden States)
+======================================================================
+Automatically setting dtype to bfloat16 to optimize VRAM usage on CUDA
+Loading model Qwen/Qwen3-4B using transformers...
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:01,  1.24it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:01<00:00,  1.23it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  1.83it/s]
+
+==================================================
+Extracting hidden states for TRAINING set
+==================================================
+Loading dataset from when2tool_outputs_toolqa/splits/train_json.json...
+Loaded 715 items
+Extracting hidden states...
+Extracting hidden states:   0%|          | 0/179 [00:00<?, ?it/s]Extracting hidden states:   1%|          | 1/179 [00:00<01:26,  2.07it/s]Extracting hidden states:   1%|          | 2/179 [00:00<00:46,  3.78it/s]Extracting hidden states:   2%|▏         | 3/179 [00:00<00:55,  3.20it/s]Extracting hidden states:   3%|▎         | 5/179 [00:01<00:30,  5.66it/s]Extracting hidden states:   4%|▍         | 8/179 [00:01<00:17,  9.70it/s]Extracting hidden states:   6%|▌         | 11/179 [00:01<00:12, 13.09it/s]Extracting hidden states:   7%|▋         | 13/179 [00:01<00:11, 14.54it/s]Extracting hidden states:   9%|▉         | 16/179 [00:01<00:09, 16.47it/s]Extracting hidden states:  10%|█         | 18/179 [00:01<00:09, 16.45it/s]Extracting hidden states:  12%|█▏        | 21/179 [00:01<00:08, 18.14it/s]Extracting hidden states:  13%|█▎        | 24/179 [00:01<00:07, 19.72it/s]Extracting hidden states:  15%|█▌        | 27/179 [00:02<00:07, 20.52it/s]Extracting hidden states:  17%|█▋        | 30/179 [00:02<00:06, 22.09it/s]Extracting hidden states:  18%|█▊        | 33/179 [00:02<00:06, 22.79it/s]Extracting hidden states:  20%|██        | 36/179 [00:02<00:06, 22.73it/s]Extracting hidden states:  22%|██▏       | 39/179 [00:02<00:06, 22.50it/s]Extracting hidden states:  23%|██▎       | 42/179 [00:02<00:05, 22.95it/s]Extracting hidden states:  25%|██▌       | 45/179 [00:02<00:05, 23.71it/s]Extracting hidden states:  27%|██▋       | 48/179 [00:02<00:05, 24.04it/s]Extracting hidden states:  28%|██▊       | 51/179 [00:03<00:05, 24.22it/s]Extracting hidden states:  30%|███       | 54/179 [00:03<00:06, 18.77it/s]Extracting hidden states:  32%|███▏      | 57/179 [00:03<00:06, 19.74it/s]Extracting hidden states:  34%|███▎      | 60/179 [00:03<00:05, 21.07it/s]Extracting hidden states:  35%|███▌      | 63/179 [00:03<00:05, 21.33it/s]Extracting hidden states:  37%|███▋      | 66/179 [00:03<00:04, 22.61it/s]Extracting hidden states:  39%|███▊      | 69/179 [00:03<00:04, 23.48it/s]Extracting hidden states:  40%|████      | 72/179 [00:04<00:06, 16.58it/s]Extracting hidden states:  42%|████▏     | 75/179 [00:04<00:05, 18.26it/s]Extracting hidden states:  44%|████▎     | 78/179 [00:04<00:05, 19.54it/s]Extracting hidden states:  45%|████▌     | 81/179 [00:04<00:04, 20.74it/s]Extracting hidden states:  47%|████▋     | 84/179 [00:04<00:04, 22.17it/s]Extracting hidden states:  49%|████▊     | 87/179 [00:04<00:04, 22.86it/s]Extracting hidden states:  50%|█████     | 90/179 [00:05<00:03, 22.93it/s]Extracting hidden states:  52%|█████▏    | 93/179 [00:05<00:03, 23.48it/s]Extracting hidden states:  54%|█████▎    | 96/179 [00:05<00:03, 24.11it/s]Extracting hidden states:  55%|█████▌    | 99/179 [00:05<00:03, 24.49it/s]Extracting hidden states:  57%|█████▋    | 102/179 [00:05<00:03, 24.36it/s]Extracting hidden states:  59%|█████▊    | 105/179 [00:05<00:03, 24.26it/s]Extracting hidden states:  60%|██████    | 108/179 [00:05<00:02, 24.84it/s]Extracting hidden states:  62%|██████▏   | 111/179 [00:05<00:02, 24.46it/s]Extracting hidden states:  64%|██████▎   | 114/179 [00:05<00:02, 24.82it/s]Extracting hidden states:  65%|██████▌   | 117/179 [00:06<00:02, 24.89it/s]Extracting hidden states:  67%|██████▋   | 120/179 [00:06<00:02, 25.30it/s]Extracting hidden states:  69%|██████▊   | 123/179 [00:06<00:02, 25.49it/s]Extracting hidden states:  70%|███████   | 126/179 [00:06<00:02, 25.23it/s]Extracting hidden states:  72%|███████▏  | 129/179 [00:06<00:01, 25.44it/s]Extracting hidden states:  74%|███████▎  | 132/179 [00:06<00:01, 23.92it/s]Extracting hidden states:  75%|███████▌  | 135/179 [00:06<00:01, 24.51it/s]Extracting hidden states:  77%|███████▋  | 138/179 [00:06<00:01, 24.78it/s]Extracting hidden states:  79%|███████▉  | 141/179 [00:07<00:01, 24.38it/s]Extracting hidden states:  80%|████████  | 144/179 [00:07<00:01, 24.80it/s]Extracting hidden states:  82%|████████▏ | 147/179 [00:07<00:01, 25.00it/s]Extracting hidden states:  84%|████████▍ | 150/179 [00:07<00:01, 25.32it/s]Extracting hidden states:  85%|████████▌ | 153/179 [00:07<00:01, 25.37it/s]Extracting hidden states:  87%|████████▋ | 156/179 [00:07<00:00, 25.64it/s]Extracting hidden states:  89%|████████▉ | 159/179 [00:07<00:00, 25.72it/s]Extracting hidden states:  91%|█████████ | 162/179 [00:07<00:00, 25.63it/s]Extracting hidden states:  92%|█████████▏| 165/179 [00:08<00:00, 25.66it/s]Extracting hidden states:  94%|█████████▍| 168/179 [00:08<00:00, 25.72it/s]Extracting hidden states:  96%|█████████▌| 171/179 [00:08<00:00, 24.35it/s]Extracting hidden states:  97%|█████████▋| 174/179 [00:08<00:00, 22.53it/s]Extracting hidden states:  99%|█████████▉| 177/179 [00:08<00:00, 22.03it/s]Extracting hidden states: 100%|██████████| 179/179 [00:08<00:00, 20.67it/s]
+Hidden states shape: (715, 37, 2560)
+Saved hidden states to when2tool_outputs_toolqa/features/train/hidden_states.pt
+Saved metadata to when2tool_outputs_toolqa/features/train/metadata.json
+Saved items to when2tool_outputs_toolqa/features/train/items.json
+
+==================================================
+Extracting hidden states for TEST set
+==================================================
+Loading dataset from when2tool_outputs_toolqa/splits/test_json.json...
+Loaded 715 items
+Extracting hidden states...
+Extracting hidden states:   0%|          | 0/179 [00:00<?, ?it/s]Extracting hidden states:   2%|▏         | 3/179 [00:00<00:07, 23.51it/s]Extracting hidden states:   3%|▎         | 6/179 [00:00<00:06, 25.24it/s]Extracting hidden states:   5%|▌         | 9/179 [00:00<00:07, 22.47it/s]Extracting hidden states:   7%|▋         | 12/179 [00:00<00:10, 16.33it/s]Extracting hidden states:   8%|▊         | 14/179 [00:00<00:12, 13.02it/s]Extracting hidden states:   9%|▉         | 16/179 [00:01<00:15, 10.60it/s]Extracting hidden states:  10%|█         | 18/179 [00:01<00:14, 11.44it/s]Extracting hidden states:  11%|█         | 20/179 [00:01<00:13, 11.70it/s]Extracting hidden states:  13%|█▎        | 23/179 [00:01<00:10, 14.44it/s]Extracting hidden states:  15%|█▍        | 26/179 [00:01<00:09, 16.38it/s]Extracting hidden states:  16%|█▌        | 28/179 [00:01<00:08, 17.01it/s]Extracting hidden states:  17%|█▋        | 31/179 [00:02<00:08, 17.36it/s]Extracting hidden states:  18%|█▊        | 33/179 [00:02<00:08, 17.79it/s]Extracting hidden states:  20%|██        | 36/179 [00:02<00:07, 18.79it/s]Extracting hidden states:  22%|██▏       | 39/179 [00:02<00:07, 19.34it/s]Extracting hidden states:  23%|██▎       | 41/179 [00:02<00:07, 19.48it/s]Extracting hidden states:  24%|██▍       | 43/179 [00:02<00:07, 19.20it/s]Extracting hidden states:  26%|██▌       | 46/179 [00:02<00:06, 19.56it/s]Extracting hidden states:  27%|██▋       | 49/179 [00:02<00:06, 19.78it/s]Extracting hidden states:  28%|██▊       | 51/179 [00:03<00:06, 19.52it/s]Extracting hidden states:  30%|██▉       | 53/179 [00:03<00:06, 18.58it/s]Extracting hidden states:  31%|███       | 55/179 [00:03<00:06, 18.04it/s]Extracting hidden states:  32%|███▏      | 57/179 [00:03<00:07, 16.83it/s]Extracting hidden states:  34%|███▎      | 60/179 [00:03<00:06, 18.38it/s]Extracting hidden states:  35%|███▍      | 62/179 [00:03<00:06, 17.36it/s]Extracting hidden states:  36%|███▌      | 64/179 [00:03<00:06, 16.75it/s]Extracting hidden states:  37%|███▋      | 67/179 [00:03<00:06, 18.39it/s]Extracting hidden states:  39%|███▉      | 70/179 [00:04<00:05, 19.21it/s]Extracting hidden states:  41%|████      | 73/179 [00:04<00:05, 20.30it/s]Extracting hidden states:  42%|████▏     | 76/179 [00:04<00:05, 20.34it/s]Extracting hidden states:  44%|████▍     | 79/179 [00:04<00:04, 20.67it/s]Extracting hidden states:  46%|████▌     | 82/179 [00:04<00:05, 18.90it/s]Extracting hidden states:  47%|████▋     | 84/179 [00:04<00:06, 15.00it/s]Extracting hidden states:  48%|████▊     | 86/179 [00:05<00:05, 15.92it/s]Extracting hidden states:  50%|████▉     | 89/179 [00:05<00:05, 17.54it/s]Extracting hidden states:  51%|█████▏    | 92/179 [00:05<00:04, 18.38it/s]Extracting hidden states:  53%|█████▎    | 95/179 [00:05<00:04, 19.11it/s]Extracting hidden states:  55%|█████▍    | 98/179 [00:05<00:04, 19.32it/s]Extracting hidden states:  56%|█████▋    | 101/179 [00:05<00:03, 20.24it/s]Extracting hidden states:  58%|█████▊    | 104/179 [00:05<00:03, 19.81it/s]Extracting hidden states:  60%|█████▉    | 107/179 [00:06<00:04, 16.50it/s]Extracting hidden states:  61%|██████▏   | 110/179 [00:06<00:03, 18.14it/s]Extracting hidden states:  63%|██████▎   | 113/179 [00:06<00:03, 19.34it/s]Extracting hidden states:  65%|██████▍   | 116/179 [00:06<00:03, 20.25it/s]Extracting hidden states:  66%|██████▋   | 119/179 [00:06<00:02, 20.60it/s]Extracting hidden states:  68%|██████▊   | 122/179 [00:06<00:02, 20.43it/s]Extracting hidden states:  70%|██████▉   | 125/179 [00:06<00:02, 21.28it/s]Extracting hidden states:  72%|███████▏  | 128/179 [00:07<00:02, 21.77it/s]Extracting hidden states:  73%|███████▎  | 131/179 [00:07<00:02, 22.53it/s]Extracting hidden states:  75%|███████▍  | 134/179 [00:07<00:01, 22.68it/s]Extracting hidden states:  77%|███████▋  | 137/179 [00:07<00:01, 22.80it/s]Extracting hidden states:  78%|███████▊  | 140/179 [00:07<00:01, 22.34it/s]Extracting hidden states:  80%|███████▉  | 143/179 [00:07<00:01, 22.42it/s]Extracting hidden states:  82%|████████▏ | 146/179 [00:07<00:01, 23.06it/s]Extracting hidden states:  83%|████████▎ | 149/179 [00:07<00:01, 23.08it/s]Extracting hidden states:  85%|████████▍ | 152/179 [00:08<00:01, 22.65it/s]Extracting hidden states:  87%|████████▋ | 155/179 [00:08<00:01, 21.75it/s]Extracting hidden states:  88%|████████▊ | 158/179 [00:08<00:00, 21.89it/s]Extracting hidden states:  90%|████████▉ | 161/179 [00:08<00:00, 22.52it/s]Extracting hidden states:  92%|█████████▏| 164/179 [00:08<00:00, 22.78it/s]Extracting hidden states:  93%|█████████▎| 167/179 [00:08<00:00, 21.96it/s]Extracting hidden states:  95%|█████████▍| 170/179 [00:08<00:00, 21.68it/s]Extracting hidden states:  97%|█████████▋| 173/179 [00:09<00:00, 21.40it/s]Extracting hidden states:  98%|█████████▊| 176/179 [00:09<00:00, 21.86it/s]Extracting hidden states: 100%|██████████| 179/179 [00:09<00:00, 22.10it/s]Extracting hidden states: 100%|██████████| 179/179 [00:09<00:00, 19.14it/s]
+[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:    0.1s finished
+Hidden states shape: (715, 37, 2560)
+Saved hidden states to when2tool_outputs_toolqa/features/test/hidden_states.pt
+Saved metadata to when2tool_outputs_toolqa/features/test/metadata.json
+Saved items to when2tool_outputs_toolqa/features/test/items.json
+
+==================================================
+Hidden state extraction completed!
+Train: (715, 37, 2560)
+Test: (715, 37, 2560)
+==================================================
+
+======================================================================
+STEP 3: Linear Probe Training
+======================================================================
+Loading hidden states...
+Train hidden states shape: (715, 37, 2560)
+Test hidden states shape: (715, 37, 2560)
+Loading labels from when2tool_outputs_toolqa/features/train/items.json...
+Loading evaluation results from results/eval_noskill_toolqa.json...
+Loaded eval mapping for 1430 instances
+Labels distribution: [ 13 702]
+
+Preparing features...
+Prepared features shape: (715, 2560)
+Prepared features shape: (715, 2560)
+
+==================================================
+Training Linear Probe
+==================================================
+Training set shape: (715, 2560)
+Labels distribution: [ 13 702]
+
+Train set: (644, 2560), Labels: [ 11 633]
+Val set: (71, 2560), Labels: [ 2 69]
+
+Fitting scaler...
+Fitting PCA (32 components): (644, 2560) → (644, 32)  (explained variance: 65.9%)
+Training classifier...
+
+Training Results:
+  train_accuracy: 0.9829
+  val_accuracy: 0.9718
+  train_auc: 0.9516
+  val_auc: 0.3333
+
+==================================================
+Test Set Evaluation
+==================================================
+Test predictions shape: (715,)
+Test predictions distribution: [  0 715]
+Probe saved to when2tool_outputs_toolqa/probe/probe.pkl
+
+Probe saved to when2tool_outputs_toolqa/probe/probe.pkl
+Results saved to when2tool_outputs_toolqa/probe/results.json
+
+======================================================================
+Pipeline Completed!
+Results saved to when2tool_outputs_toolqa
+======================================================================
+✅ Completed pipeline for toolqa!
+Results saved to: ./when2tool_outputs_toolqa
+
+======================================================================
+🎉 When2Tool Pipeline run completed successfully for all 6 datasets!
+======================================================================

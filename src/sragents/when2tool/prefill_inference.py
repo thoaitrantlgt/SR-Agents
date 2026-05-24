@@ -47,6 +47,19 @@ class PrefillInference:
             config: Prefill configuration
         """
         self.device = device
+        # Automatically select float16/bfloat16 on CUDA to save 50% VRAM and prevent NVML/OOM failures
+        if device == "cuda" and dtype == torch.float32:
+            try:
+                if torch.cuda.is_bf16_supported():
+                    dtype = torch.bfloat16
+                    print("Automatically setting dtype to bfloat16 to optimize VRAM usage on CUDA")
+                else:
+                    dtype = torch.float16
+                    print("Automatically setting dtype to float16 to optimize VRAM usage on CUDA")
+            except Exception:
+                dtype = torch.float16
+                print("Automatically setting dtype to float16 to optimize VRAM usage on CUDA")
+                
         self.dtype = dtype
         self.config = config or PrefillConfig()
         

@@ -1,0 +1,44 @@
+Probe decision summary across 6 datasets
+========================================
+
+Dataset: medcalcbench
+  no-skill wrong:  load_skill=416, no_skill=0, total=416
+  no-skill correct: load_skill=134, no_skill=0, total=134
+    wrong load rate: 100.0%
+    correct load rate: 100.0%
+
+Dataset: theoremqa
+  no-skill wrong:  load_skill=132, no_skill=62, total=194
+  no-skill correct: load_skill=70, no_skill=110, total=180
+    wrong load rate: 68.0%
+    correct load rate: 38.9%
+
+Dataset: logicbench
+  no-skill wrong:  load_skill=1, no_skill=100, total=101
+  no-skill correct: load_skill=1, no_skill=278, total=279
+    wrong load rate: 1.0%
+    correct load rate: 0.4%
+
+Dataset: champ
+  no-skill wrong:  load_skill=23, no_skill=31, total=54
+  no-skill correct: load_skill=20, no_skill=38, total=58
+    wrong load rate: 42.6%
+    correct load rate: 34.5%
+
+Dataset: bigcodebench
+  no-skill wrong:  load_skill=315, no_skill=41, total=356
+  no-skill correct: load_skill=165, no_skill=49, total=214
+    wrong load rate: 88.5%
+    correct load rate: 77.1%
+
+Dataset: toolqa
+  no-skill wrong:  load_skill=695, no_skill=0, total=695
+  no-skill correct: load_skill=20, no_skill=0, total=20
+    wrong load rate: 100.0%
+    correct load rate: 100.0%
+
+Aggregate across all datasets:
+  no-skill wrong:  load_skill=1582, no_skill=234, total=1816
+  no-skill correct: load_skill=410, no_skill=475, total=885
+    wrong load rate: 87.1%
+    correct load rate: 46.3%

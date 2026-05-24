@@ -23,3 +23,11 @@ dist/
 # IDE
 .idea/
 .vscode/
+when2tool_outputs_bigcodebench
+when2tool_outputs_champ
+when2tool_outputs_medcalcbench
+when2tool_outputs_logicbench
+when2tool_outputs_final
+when2tool_outputs_test
+when2tool_outputs_theoremqa
+when2tool_outputs_toolqa
